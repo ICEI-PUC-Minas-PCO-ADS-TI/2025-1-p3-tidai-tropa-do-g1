@@ -4,22 +4,22 @@
 
 `DISCIPLINA: Trabalho Interdisciplinar Desenvolvimento de Aplicação Interativa`
 
-`Xº semestre/ANO`
+`1º semestre/2025`
 
-Escreva um ou dois parágrafos resumindo o objetivo do seu projeto.
+O projeto busca oferecer uma solução tecnológica avançada para pequenos e médios negócios que enfrentam dificuldades na organização e acessibilidade de informações armazenadas virtualmente. 
+Com o uso de inteligência artificial, a plataforma permitirá o gerenciamento mais eficiente de dados, garantindo maior produtividade e tomada de decisões assertivas. Além disso, há uma grande oportunidade de mercado, visto que essa proposta ainda não foi muito trabalhada no ramo tecnlógico, tornando a solução inovadora e acessível para empresas que buscam otimizar seus processos sem a necessidade de grandes investimentos em tecnologia.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Igor Maia Moreira Fernandes
+* Igor Pereira dos Santos
+* Victor Schneider do Vale
+* Thiago Moreira de Queiroz
+* Luis Henrique Sampaio Vieira
 
 ## Professor
 
-* Nome completo do(a) professor(a)
+* Kleber Jacques Ferreira de Souza
 
 ## Instruções de utilização
 
