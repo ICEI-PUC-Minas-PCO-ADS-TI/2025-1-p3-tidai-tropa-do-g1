@@ -17,14 +17,14 @@ O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permit
 ## Objetivos
 
 > **Objetivo Geral**:
-> - [Desenvolver uma aplicação web que permita a pequenos e médios empreendedores armazenar documentos, extrair informações relevantes e realizar consultas por meio de um chatbot integrado a um sistema de IA.]
+> - Desenvolver uma aplicação web que permita a pequenos e médios empreendedores armazenar documentos, extrair informações relevantes e realizar consultas por meio de um chatbot integrado a um sistema de IA.
 
 
 > **Objetivos Específicos**:
-> - [Criar um sistema seguro de autenticação e gerenciamento de usuários para garantir o acesso autorizado aos dados.]
-> - [Implementar um mecanismo de upload e armazenamento de documentos, permitindo a extração automática de informações.]
-> - [Fornecer uma interface intuitiva para facilitar a interação do usuário com o sistema e a IA.]
-> - [Integrar uma solução de inteligência artificial ao sistema para interpretar documentos e fornecer respostas precisas às consultas dos usuários.]
+> - Criar um sistema seguro de autenticação e gerenciamento de usuários para garantir o acesso autorizado aos dados.
+> - Implementar um mecanismo de upload e armazenamento de documentos, permitindo a extração automática de informações.
+> - Fornecer uma interface intuitiva para facilitar a interação do usuário com o sistema e a IA.
+> - Integrar uma solução de inteligência artificial ao sistema para interpretar documentos e fornecer respostas precisas às consultas dos usuários.
 
 
 ## Justificativa
