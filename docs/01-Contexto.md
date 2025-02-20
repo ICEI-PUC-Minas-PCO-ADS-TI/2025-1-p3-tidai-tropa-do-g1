@@ -1,6 +1,6 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+O projeto propõe o desenvolvimento de uma aplicação web para auxiliar pequenos e médios negócios na organização e recuperação de informações armazenadas em documentos digitais. Com a crescente digitalização e a necessidade de acesso rápido a dados, muitos empreendedores ainda enfrentam dificuldades na gestão eficiente de seus arquivos. A solução permitirá o armazenamento seguro de documentos e a consulta automatizada das informações por meio da integração com uma inteligência artificial, proporcionando agilidade, precisão e acessibilidade no gerenciamento de dados empresariais.
 
 ## Problema
 Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
