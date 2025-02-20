@@ -62,12 +62,12 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 Atualizado em: 19/02/2025
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Thiago M.        | Objetivos | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025      |
-| Igor Maia        | Justificativa    | 19/02/2024     | 26/02/2025 | ✔️    |    19/02/2025             |
-| Igor Pereira     | Público Alvo     | 19/02/2025     | 26/02/2025 | ✔️     |    19/02/2025             |
-| AlunoK        | Personas 1  |    01/01/2024        | 26/02/2025 | ❌    |       |
+| Responsável      | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
+| :----            |    :----         |      :----:    | :----:     | :----: | :----:          |
+| Thiago M.        | Objetivos                                  | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
+| Igor Maia        | Justificativa                              | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
+| Igor Pereira     | Público Alvo                               | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
+| Victor Schneider | Levantamento do Contexto e Especificações  | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 
 #### Sprint 2
 
