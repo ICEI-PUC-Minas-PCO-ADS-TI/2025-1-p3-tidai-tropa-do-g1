@@ -48,8 +48,20 @@ As tabelas a seguir apresentam os requisitos funcionais e não funcionais que de
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve permitir o registro de um usuário administrador, nomeado organização, que representará virtualmente o cliente contratante                                                                                    | ALTA  |
+|RF-002| O sistema deve permitir que o usuário faça login, seja com um perfil de organização ou como um usuário comum                                                                                                                | ALTA  | 
+|RF-003| O sistema deve permitir que o usuário utilize 2 fatores de autenticação em seu login                                                                                                                                        | BAIXA |
+|RF-004| O sistema deve permitir que as organizações criem usuários para seus colaboradores acesarem a plataforma                                                                                                                    | MÉDIA |
+|RF-005| O sistema deve permitir que as organizações criem filtros e gerenciem o nível de acesso de seus usuários colaboradores às informações                                                                                       | BAIXA |
+|RF-006| O sistema deve permitir que as organizações selecionem o papel de cada colaborador no sistema (Leitor, Editor, Etc)                                                                                                         | BAIXA |
+|RF-007| As organizações e os colaboradores devem conseguir anexar documentos, arquivos e/ou pastas completas para serem armazenados em seu banco de dados                                                                           | ALTA  |
+|RF-008| O sistema deve permitir a conexão com ambientes cloud (GoogleDrive, Sharepoint, OneDrive, etc) para alimentação dos bancos de dados                                                                                         | MÉDIA |
+|RF-009| O sistema deve receber os arquivos enviados pelos usuários e armazená-los de forma segura num banco de dados próprio                                                                                                        | ALTA  |
+|RF-010| O sistema deve processar os arquivos armazenados no banco de dados, extrair seu conteúdo e convertê-lo em um formato adequado para alimentar uma rede neural com as informações contidas nesses documentos                  | ALTA  |
+|RF-011| Criar um ambiente de ChatBot no qual o usuário possa fazer consultas sobre seu banco de dados por meio de uma inteligência artificial                                                                                       | ALTA  |
+|RF-011| O sistema deve retornar pelo ChatBot as informações contidas nos documentos solicitados pelo usuário via requisição no chat                                                                                                 | ALTA  |
+|RF-012| A rede neural do sistema deve se adaptar às requisições do usuário para entregar informações mais precisas e coesas                                                                                                         | BAIXA |
+
 
 ### Requisitos não funcionais
 
