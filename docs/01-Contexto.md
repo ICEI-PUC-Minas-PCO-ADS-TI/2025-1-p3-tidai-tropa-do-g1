@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/16c71184-e75c-48f0-8f3d-502c4f8ae913)# Introdução
+# Introdução
 
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
@@ -38,6 +38,13 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-alvo
 
-> - A aplicação será voltada para pequenos e médios empreendedores que enfrentam dificuldades na organização e no acesso às suas informações digitais. Além disso, entusiastas da tecnologia podem se interessar pelo uso de Inteligência Artificial na gestão de dados.
-> - Os usuários terão diferentes níveis de familiaridade com tecnologia, desde iniciantes até aqueles que já utilizam soluções digitais, mas buscam maior automação e eficiência. O público inclui proprietários, gestores e funcionários responsáveis pela administração de informações.
-> - Para uma melhor compreensão dos usuários, serão elaborados diagramas de personas, representando perfis distintos dentro do público-alvo, e um mapa de stakeholders, identificando os principais interessados na solução.
+A aplicação será utilizada por pequenos e médios empreendedores, bem como por entusiastas da tecnologia, que buscam uma forma eficiente de organizar e acessar informações. Os usuários podem ser categorizados nos seguintes perfis:  
+
+### **Empreendedores e Gestores de Pequenos e Médios Negócios**  
+Possuem conhecimentos que variam entre básicos e intermediários em tecnologia e gestão de dados. Muitos utilizam planilhas e sistemas simples para organizar informações, mas enfrentam dificuldades em estruturar grandes volumes de dados de forma eficiente. Estão familiarizados com ferramentas como Google Drive, OneDrive e SharePoint, embora nem sempre as utilizem de maneira otimizada. Têm pouca experiência com inteligência artificial e precisam de uma solução acessível e intuitiva que facilite a organização e recuperação de informações importantes para a gestão do negócio.  
+
+### **Profissionais de TI e Analistas de Dados**  
+Possuem experiência intermediária a avançada com tecnologia, especialmente no uso de bancos de dados, APIs e integração de sistemas. Lidam frequentemente com grandes volumes de informações e precisam de ferramentas que facilitem a consulta e estruturação desses dados. Estão habituados a interagir com diferentes plataformas e buscam soluções que otimizem processos e garantam acessibilidade rápida e precisa às informações relevantes.  
+
+### **Colaboradores e Equipes Operacionais**  
+Têm conhecimentos básicos a intermediários no uso de softwares empresariais e ferramentas de produtividade. Geralmente trabalham com sistemas pré-definidos pela empresa e podem encontrar dificuldades ao lidar com soluções mais complexas. Precisam de uma interface intuitiva que permita acessar rapidamente as informações necessárias para suas funções diárias, sem a necessidade de conhecimentos técnicos aprofundados.
