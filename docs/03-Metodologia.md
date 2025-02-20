@@ -64,10 +64,10 @@ Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Thiago M.        | Objetivos | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025      |
+| AlunaZ        | Objetivos    | 03/02/2024     | 26/02/2025 | 📝    |                 |
+| AlunoY        | Histórias de usuário  | 01/01/2024     | 26/02/2025 | ⌛     |                 |
+| AlunoK        | Personas 1  |    01/01/2024        | 26/02/2025 | ❌    |       |
 
 #### Sprint 2
 
