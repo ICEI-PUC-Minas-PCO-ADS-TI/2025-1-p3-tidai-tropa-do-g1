@@ -38,13 +38,13 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+A aplicação será utilizada por pequenos e médios empreendedores, bem como por entusiastas da tecnologia, que buscam uma forma eficiente de organizar e acessar informações. Os usuários podem ser categorizados nos seguintes perfis:  
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+### **Empreendedores e Gestores de Pequenos e Médios Negócios**  
+Possuem conhecimentos que variam entre básicos e intermediários em tecnologia e gestão de dados. Muitos utilizam planilhas e sistemas simples para organizar informações, mas enfrentam dificuldades em estruturar grandes volumes de dados de forma eficiente. Estão familiarizados com ferramentas como Google Drive, OneDrive e SharePoint, embora nem sempre as utilizem de maneira otimizada. Têm pouca experiência com inteligência artificial e precisam de uma solução acessível e intuitiva que facilite a organização e recuperação de informações importantes para a gestão do negócio.  
 
-> **Links úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público-alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+### **Profissionais de TI e Analistas de Dados**  
+Possuem experiência intermediária a avançada com tecnologia, especialmente no uso de bancos de dados, APIs e integração de sistemas. Lidam frequentemente com grandes volumes de informações e precisam de ferramentas que facilitem a consulta e estruturação desses dados. Estão habituados a interagir com diferentes plataformas e buscam soluções que otimizem processos e garantam acessibilidade rápida e precisa às informações relevantes.  
+
+### **Colaboradores e Equipes Operacionais**  
+Têm conhecimentos básicos a intermediários no uso de softwares empresariais e ferramentas de produtividade. Geralmente trabalham com sistemas pré-definidos pela empresa e podem encontrar dificuldades ao lidar com soluções mais complexas. Precisam de uma interface intuitiva que permita acessar rapidamente as informações necessárias para suas funções diárias, sem a necessidade de conhecimentos técnicos aprofundados.
