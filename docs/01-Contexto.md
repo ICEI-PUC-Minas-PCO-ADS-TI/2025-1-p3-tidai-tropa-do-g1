@@ -35,7 +35,6 @@ A inteligência artificial vem se consolidando como uma ferramenta essencial par
 
 Além da oportunidade de mercado, a baixa concorrência direta de soluções acessíveis voltadas para esse público reforça a viabilidade do projeto. O desenvolvimento deste software não apenas preenche uma lacuna no mercado, mas também possibilita maior inclusão tecnológica, permitindo que pequenos e médios empresários aproveitem os benefícios da automação e inteligência artificial para otimizar seus negócios.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
 
 ## Público-alvo
 
