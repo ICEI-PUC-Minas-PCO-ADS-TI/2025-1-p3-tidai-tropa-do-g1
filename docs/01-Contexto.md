@@ -38,6 +38,6 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-alvo
 
-A aplicação será voltada para pequenos e médios empreendedores que enfrentam dificuldades na organização e no acesso às suas informações digitais. Além disso, entusiastas da tecnologia podem se interessar pelo uso de Inteligência Artificial na gestão de dados.
-Os usuários terão diferentes níveis de familiaridade com tecnologia, desde iniciantes até aqueles que já utilizam soluções digitais, mas buscam maior automação e eficiência. O público inclui proprietários, gestores e funcionários responsáveis pela administração de informações.
-Para uma melhor compreensão dos usuários, serão elaborados diagramas de personas, representando perfis distintos dentro do público-alvo, e um mapa de stakeholders, identificando os principais interessados na solução.
+> - A aplicação será voltada para pequenos e médios empreendedores que enfrentam dificuldades na organização e no acesso às suas informações digitais. Além disso, entusiastas da tecnologia podem se interessar pelo uso de Inteligência Artificial na gestão de dados.
+> - Os usuários terão diferentes níveis de familiaridade com tecnologia, desde iniciantes até aqueles que já utilizam soluções digitais, mas buscam maior automação e eficiência. O público inclui proprietários, gestores e funcionários responsáveis pela administração de informações.
+> - Para uma melhor compreensão dos usuários, serão elaborados diagramas de personas, representando perfis distintos dentro do público-alvo, e um mapa de stakeholders, identificando os principais interessados na solução.
