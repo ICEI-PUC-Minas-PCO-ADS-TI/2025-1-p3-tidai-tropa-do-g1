@@ -66,7 +66,7 @@ Atualizado em: 19/02/2025
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Thiago M.        | Objetivos | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025      |
 | Igor Maia        | Justificativa    | 19/02/2024     | 26/02/2025 | ✔️    |    19/02/2025             |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 26/02/2025 | ⌛     |                 |
+| Igor Pereira     | Público Alvo     | 19/02/2025     | 26/02/2025 | ✔️     |                 |
 | AlunoK        | Personas 1  |    01/01/2024        | 26/02/2025 | ❌    |       |
 
 #### Sprint 2
