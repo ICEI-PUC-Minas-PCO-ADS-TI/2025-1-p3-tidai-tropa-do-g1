@@ -29,12 +29,13 @@ O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permit
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A crescente digitalização das empresas trouxe consigo o desafio da organização e acessibilidade às informações. Pequenos e médios negócios, que frequentemente não possuem estrutura ou conhecimento técnico para gerenciar grandes volumes de dados, enfrentam dificuldades na recuperação e utilização eficiente dessas informações. Essa desorganização impacta diretamente a produtividade, a tomada de decisão e a competitividade no mercado.  
+
+A inteligência artificial vem se consolidando como uma ferramenta essencial para otimizar processos e automatizar a análise de dados. No entanto, seu uso ainda é pouco explorado por empresas de menor porte, seja por falta de conhecimento, alto custo de implementação ou complexidade técnica. Criar uma aplicação que utilize IA para auxiliar na organização e recuperação de informações permite democratizar essa tecnologia, tornando-a acessível e funcional para negócios que precisam estruturar seus dados de forma eficiente.  
+
+Além da oportunidade de mercado, a baixa concorrência direta de soluções acessíveis voltadas para esse público reforça a viabilidade do projeto. O desenvolvimento deste software não apenas preenche uma lacuna no mercado, mas também possibilita maior inclusão tecnológica, permitindo que pequenos e médios empresários aproveitem os benefícios da automação e inteligência artificial para otimizar seus negócios.
 
 O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-alvo
 
