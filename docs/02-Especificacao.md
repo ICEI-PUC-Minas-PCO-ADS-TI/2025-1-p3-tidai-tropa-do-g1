@@ -42,8 +42,7 @@ Apresente aqui as histórias de usuários que são relevantes para o projeto da 
 
 ## Requisitos
 
-As tabelas a seguir apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade dos requisitos, aplique uma técnica de priorização e detalhe como essa técnica foi aplicada.
-
+A tabelas inserida abaixo indica os requisitos funcionais do projeto, assim como o grau de prioridade estabelecido para cada um deles. Esses requisitos apontam todos as funcionalidades previstas para a implementação da plataforma.
 ### Requisitos funcionais
 
 |ID    | Descrição do Requisito                                                                                                                                                                                                      | Prioridade |
