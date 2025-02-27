@@ -3,7 +3,7 @@
 O projeto propõe o desenvolvimento de uma aplicação web para auxiliar pequenos e médios negócios na organização e recuperação de informações armazenadas em documentos digitais. Com a crescente digitalização e a necessidade de acesso rápido a dados, muitos empreendedores ainda enfrentam dificuldades na gestão eficiente de seus arquivos. A solução permitirá o armazenamento seguro de documentos e a consulta automatizada das informações por meio da integração com uma inteligência artificial, proporcionando agilidade, precisão e acessibilidade no gerenciamento de dados empresariais.
 
 ## Problema
-Pequenas e médias empresas enfrentam dificuldades para gerenciar grandes volumes de dados devido à falta de acesso a tecnologias avançadas e à pouca preparação para lidar com essas informações. As ferramentas atuais oferecem apenas buscas básicas, sem interpretar o conteúdo, tornando a recuperação de dados lenta e ineficiente. O projeto busca solucionar esse problema integrando um gerenciador de arquivos com uma IA capaz de compreender documentos e fornecer respostas precisas via chatbot.
+Ao observar atentamente o mercado brasileiro, observamos que pequenas e médias empresas enfrentam dificuldades para gerenciar grandes volumes de dados devido à falta de acesso a tecnologias avançadas e à pouca preparação para lidar com essas informações. As ferramentas atuais oferecem apenas buscas básicas, sem interpretar o conteúdo, tornando a recuperação de dados lenta e ineficiente. O projeto busca solucionar esse problema integrando um gerenciador de arquivos com uma IA capaz de compreender documentos e fornecer respostas precisas via chatbot.
 
 ## Objetivos
 
