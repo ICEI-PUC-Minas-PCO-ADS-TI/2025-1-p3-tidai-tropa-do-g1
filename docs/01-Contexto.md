@@ -3,16 +3,7 @@
 O projeto propõe o desenvolvimento de uma aplicação web para auxiliar pequenos e médios negócios na organização e recuperação de informações armazenadas em documentos digitais. Com a crescente digitalização e a necessidade de acesso rápido a dados, muitos empreendedores ainda enfrentam dificuldades na gestão eficiente de seus arquivos. A solução permitirá o armazenamento seguro de documentos e a consulta automatizada das informações por meio da integração com uma inteligência artificial, proporcionando agilidade, precisão e acessibilidade no gerenciamento de dados empresariais.
 
 ## Problema
-Aqui, a equipe deve fornecer uma descrição detalhada do problema a ser resolvido. Não é o momento adequado para abordar questões técnicas relacionadas ao desenvolvimento da aplicação. O objetivo é compreender e comunicar de maneira precisa qual é o desafio ou necessidade que motiva a criação da aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
-
-O grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite uma visão completa do problema.
-
-> **Links úteis**:
-> - [Objetivos, problema de pesquisa e justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz certezas, suposições e dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Pequenas e médias empresas enfrentam dificuldades para gerenciar grandes volumes de dados devido à falta de acesso a tecnologias avançadas e à pouca preparação para lidar com essas informações. As ferramentas atuais oferecem apenas buscas básicas, sem interpretar o conteúdo, tornando a recuperação de dados lenta e ineficiente. O projeto busca solucionar esse problema integrando um gerenciador de arquivos com uma IA capaz de compreender documentos e fornecer respostas precisas via chatbot.
 
 ## Objetivos
 
