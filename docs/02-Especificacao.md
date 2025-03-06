@@ -7,38 +7,64 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
 
 ## Personas
+Durante o processo de análise e compreensão do problema, foram identificadas e detalhadas as seguintes personas, representando os principais perfis de usuários alvos da plataforma:
 
-Exemplo: _Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente por meio de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros._
+### Mariana Souza
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+| **Nome**         | **Imagem** | **Idade** | **Profissão**                 | **Frustrações**                                                                                   | **Hobbies**                  |
+|-----------------|-----------|:--------:|:----------------------------:|--------------------------------------------------------------------------------------------------|:----------------------------:|
+| Mariana Souza  | ![image](https://github.com/user-attachments/assets/d800f002-a2de-43c8-816c-de09ddd5fe03) | 34 anos   | Proprietária de clínica odontológica | Dificuldade em acessar rapidamente informações dos pacientes <br> Falta de um sistema integrado | Ler <br> Viajar              |
 
-> **Links úteis**:
-> - [Rock content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Mariana é proprietária de uma pequena clínica odontológica em Belo Horizonte. Trabalha com uma equipe reduzida e administra todas as informações dos pacientes, desde prontuários até pagamentos, utilizando planilhas e anotações manuais. Seu maior problema é a falta de organização digital, tornando difícil acessar rapidamente informações importantes. Ela gostaria de automatizar esse processo, mas não sabe por onde começar.
+
+---
+
+### Rafael Campos
+
+| **Nome**         | **Imagem** | **Idade** | **Profissão**                 | **Frustrações**                                                                                   | **Hobbies**                  |
+|-----------------|-----------|:--------:|:----------------------------:|--------------------------------------------------------------------------------------------------|:----------------------------:|
+| Rafael Campos  | ![image](https://github.com/user-attachments/assets/39e8e9fc-498c-4fb8-aef3-f83ada777a12) | 28 anos   | Dono de e-commerce de eletrônicos | Perde tempo procurando informações sobre pedidos e estoque <br> Falta de automação no negócio   | Tecnologia <br> Games        |
+
+Rafael é dono de uma loja virtual de eletrônicos e faz a gestão do seu estoque, pedidos e atendimento ao cliente praticamente sozinho. Ele usa várias planilhas, notas fiscais digitais e documentos espalhados no Google Drive e OneDrive, mas tem dificuldade em encontrar rapidamente as informações que precisa. Muitas vezes, perde oportunidades de venda porque demora a localizar dados sobre produtos e clientes.
+
+---
+
+### Carla Menezes
+
+| **Nome**         | **Imagem** | **Idade** | **Profissão**                 | **Frustrações**                                                                                   | **Hobbies**                  |
+|-----------------|-----------|:--------:|:----------------------------:|--------------------------------------------------------------------------------------------------|:----------------------------:|
+| Carla Menezes  | ![image](https://github.com/user-attachments/assets/69b590cf-8e89-4bcc-a3a8-104318ce98aa) | 40 anos   | Gerente administrativa de construtora | Documentação de obras desorganizada <br> Equipe perde tempo buscando arquivos                   | Caminhadas <br> Cozinhar     |
+
+Carla trabalha em uma construtora e gerencia toda a parte administrativa da empresa. Sua equipe lida diariamente com contratos, orçamentos, cronogramas e relatórios técnicos, que ficam espalhados entre e-mails, pastas no computador e serviços de nuvem. A falta de um sistema integrado faz com que sua equipe perca tempo buscando documentos e informações importantes. Ela deseja uma solução que organize os arquivos e permita acessá-los rapidamente.
+
+---
+
+### Vinícius Oliveira
+
+| **Nome**         | **Imagem** | **Idade** | **Profissão**                 | **Frustrações**                                                                                   | **Hobbies**                  |
+|-----------------|-----------|:--------:|:----------------------------:|--------------------------------------------------------------------------------------------------|:----------------------------:|
+| Vinícius Oliveira | ![image](https://github.com/user-attachments/assets/0e08b4e1-03fe-4b55-902f-4d51f9290535) | 31 anos   | Dono de agência de marketing digital | Dificuldade em localizar documentos antigos <br> Volume excessivo de arquivos no Google Drive  | Fotografia <br> Música       |
+
+Vinícius é dono de uma agência de marketing digital e trabalha com criação de conteúdo, campanhas publicitárias e gerenciamento de mídias sociais para clientes. Com o passar dos anos, acumulou uma grande quantidade de arquivos, como imagens, vídeos, textos e relatórios, armazenados no Google Drive e outros serviços. O problema é que encontrar um arquivo específico entre milhares se tornou um desafio. Ele precisa de uma ferramenta que facilite a busca e organização dos documentos da agência.
 
 ## Histórias de usuários
 
 Com base na análise das personas, foram identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuários que são relevantes para o projeto da sua solução. As histórias de usuários consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuários por contexto, para facilitar consultas recorrentes a esta parte do documento.
-
-> **Links úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (user stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 common user story mistakes](https://airfocus.com/blog/user-story-mistakes/)
+| EU COMO...  | QUERO/PRECISO ...  | PARA ...  |
+|----------------------|-----------------------------------|-------------------------|
+| Mariana Souza | Quero acessar rapidamente os documentos dos pacientes via chatbot | Para agilizar o atendimento e evitar a perda de tempo procurando arquivos |
+| Mariana Souza | Quero poder anexar prontuários e documentos de pacientes ao sistema | Para manter todas as informações organizadas e acessíveis digitalmente |
+| Mariana Souza | Preciso garantir que apenas minha equipe tenha acesso aos documentos dos pacientes | Para manter a segurança e privacidade das informações |
+| Rafael Campos | Preciso de um chatbot que busque informações sobre pedidos e estoque | Para agilizar meu atendimento ao cliente e melhorar a gestão do negócio |
+| Rafael Campos | Quero integrar o sistema ao Google Drive e OneDrive | Para centralizar minhas informações de estoque e pedidos num único local |
+| Rafael Campos | Quero definir permissões de acesso para funcionários | Para garantir que cada colaborador veja apenas as informações necessárias |
+| Carla Menezes | Quero que minha equipe consiga acessar documentos de obras rapidamente | Para evitar perda de tempo e aumentar a produtividade na construtora |
+| Carla Menezes | Preciso organizar e filtrar os documentos anexados no sistema | Para facilitar a busca por contratos e orçamentos antigos |
+| Carla Menezes | Quero poder anexar documentos de obras diretamente do SharePoint | Para manter tudo armazenado em um só lugar de forma prática |
+| Vinícius Oliveira | Quero pesquisar rapidamente arquivos de campanhas passadas via chatbot | Para agilizar a recuperação de materiais e otimizar o trabalho da equipe |
+| Vinícius Oliveira | Preciso que o sistema me ajude a organizar e categorizar documentos | Para melhorar a gestão de arquivos antigos e recentes |
+| Vinícius Oliveira | Quero garantir que meus arquivos de mídia estejam seguros e acessíveis apenas para minha equipe | Para evitar perda de informações e vazamento de dados |
 
 ## Requisitos
 
