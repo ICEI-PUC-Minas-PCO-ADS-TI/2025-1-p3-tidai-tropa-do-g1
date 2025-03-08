@@ -92,8 +92,12 @@ A tabelas inserida abaixo indica os requisitos funcionais do projeto, assim como
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em dispositivos móveis | MÉDIA | 
-|RNF-002| Deve processar as requisições do usuário em no máximo 3 segundos |  BAIXA | 
+|RNF-001| O sistema deve ser responsivo                                                       | MÉDIA | 
+|RNF-002| O sistema deve garantir autenticação e autorização de usuários                      | ALTA  | 
+|RNF-003| A interface deve ser intuitiva e de fácil utilização                                | ALTA  |
+|RNF-004| A aplicação deve ser compatível com os principais navegadores e dispositivos móveis | MÉDIA |
+|RNF-005| O sistema deve fornecer feedback claro e conciso aos usuários                       | ALTA  |
+|RNF-006| O sistema deve responder às consultas do chatbot em um tempo máximo de 6 segundos   | ALTA  |
 
 Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -121,8 +125,14 @@ O projeto está restrito aos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|001| O projeto deverá ser entregue até o final do semestre |
-|002| O custo total do projeto não deve exceder o orçamento definido       |
+|001| O acesso aos dados sensíveis deve ser restrito a usuários autorizados                                         |
+|002| O desenvolvimento deve ser feito com ferramentas acessíveis, evitando custos elevados de infraestrutura       |
+|003| A aplicação será desenvolvida utilizando React.js (frontend), Python (backend) e SQL (banco de dados)         |
+|004| O projeto deve ser concluído dentro de um período específico para atender às expectativas dos stakeholders    |
+|005|A integração com a solução de inteligência artificial deve ser feita por meio de APIs específicas              |
+|006| A equipe de desenvolvimento é composta por um número limitado de pessoas (5)                                  |
+|007| A equipe possui conhecimentos específicos em determinadas tecnologias                                         |
+|008| A aplicação deve seguir as normas de segurança da informação da empresa                                       |
 
 ## Diagrama de casos de uso
 
