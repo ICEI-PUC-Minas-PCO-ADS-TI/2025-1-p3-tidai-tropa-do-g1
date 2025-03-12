@@ -5,6 +5,8 @@ Para garantir uma execução eficiente do projeto, foi adotada uma metodologia q
 
 ## Relação de ambientes de trabalho
 
+Para agilizar o desenvolvimento do projeto, foram utilizados diversos ambientes/plataformas para atingir os objetivos listados. São eles:
+
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                            |
