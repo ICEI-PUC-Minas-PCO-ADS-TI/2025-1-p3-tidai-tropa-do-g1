@@ -70,9 +70,11 @@ Atualizado em: 19/02/2025
 | Victor Schneider | Levantamento do Contexto e Especificações  | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 | Victor Schneider | Preenchimento do Requisitos Funcionais     | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 | Luis Sampaio     | Preenchimento do READ.ME                   | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
+| Luis Sampaio     | Diagrama de casos de uso                   | 26/02/2025     | 26/02/2025 | ✔️    | 05/03/2025 |
+| Thiago M.        | Diagrama de casos de uso                   | 26/02/2025     | 26/02/2025 | ✔️    | 05/03/2025 |
 
 
-#### Sprint 2
+<!-- #### Sprint 2
 
 Atualizado em: 21/04/2024
 
@@ -81,7 +83,7 @@ Atualizado em: 21/04/2024
 | AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
 | AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
 | AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
+| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       | -->
 
 
 Legenda:
