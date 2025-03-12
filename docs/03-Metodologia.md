@@ -1,52 +1,43 @@
 
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="02-Especificacao.md"> Especificação do projeto</a></span>
-
-Descreva aqui a metodologia de trabalho do grupo para abordar o problema. Inclua definições sobre os ambientes de trabalho utilizados pela equipe para desenvolver o projeto. Isso abrange a relação dos ambientes utilizados, a estrutura para a gestão do código-fonte, além da definição do processo e das ferramentas por meio dos quais a equipe se organiza (gestão de equipes).
+Para garantir uma execução eficiente do projeto, foi adotada uma metodologia que organiza o desenvolvimento por meio de versionamento de código, uso de ferramentas apropriadas e divisão estruturada de tarefas ao longo das sprints. Esse processo visa manter a rastreabilidade das mudanças, otimizar a colaboração entre os integrantes da equipe e assegurar a entrega contínua de funcionalidades. A definição dessa abordagem permite um fluxo de trabalho ágil e adaptável às necessidades do projeto.
 
 ## Relação de ambientes de trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas. A relação dos ambientes com seus respectivos propósitos deverá ser apresentada em uma tabela que especifique e detalhe Ambiente, Plataforma e Link de Acesso. Defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+| Ambiente                            | Plataforma                         | Link de acesso                         |
+|-------------------------------------|------------------------------------|----------------------------------------|
+| Repositório de código fonte         | GitHub                             | [http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                            |
+| Documentos do projeto               | GitHub                             | [http://....  ](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                          |
 
 ## Controle de versão
 
-A ferramenta de controle de versão adotada no projeto foi o [Git](https://git-scm.com/), sendo que o [GitHub](https://github.com) foi utilizado para hospedagem do repositório.
+Para garantir um desenvolvimento organizado e colaborativo, o projeto utilizará o GitHub como ferramenta de versionamento de código. A estrutura de branches será adotada para separar as diferentes etapas do desenvolvimento, facilitando a rastreabilidade das alterações e evitando conflitos entre implementações simultâneas.
 
 O projeto segue a seguinte convenção para o nome de branches:
 
-- `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
+-Branch `main`: Contém a versão mais estável e atualizada do projeto, reunindo todas as funcionalidades implementadas e testadas até o momento. Nenhuma alteração será feita diretamente nesta branch, garantindo a integridade do código.
+-Branches de Sprint (`sprint-X`): Para cada sprint, será criada uma branch nomeada de acordo com o número da sprint correspondente (exemplo: sprint-1, sprint-2). Nessas branches, as novas funcionalidades e ajustes serão desenvolvidos, testados e validados antes de serem unificados na branch principal, tanto quanto aos códigos quanto à documentação recorrente do projeto.
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
+Quanto ao processo de integração, o projeto adota a seguinte padronização de ações:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+-Criação da Branch da Sprint: No início de cada sprint, uma nova branch será criada a partir da main.
+-Desenvolvimento e Testes: As funcionalidades serão implementadas e testadas dentro da branch específica da sprint, garantindo que cada alteração seja validada antes da unificação.
+-Revisão e Merge: Ao final da sprint, as mudanças serão revisadas e, se aprovadas, serão mescladas na main para manter o projeto atualizado e pronto para a próxima fase de desenvolvimento.
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gestão de tags, merges, commits e branches é realizada. Discuta também como a gestão de issues foi feita.
-
-> **Links úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e GitHub](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
-> - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
+Essa abordagem permite um fluxo de trabalho estruturado, garantindo a estabilidade do código e facilitando a colaboração entre os membros da equipe.
 
 ## Planejamento do projeto
 
 ###  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
+Durante o desenvolvimento do projeto, a seguinte divisão de papéis foi estabelecida em cada Sprint: 
 
 #### Sprint 1
-- _Scrum master_: AlunaX
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: AlunaZ
+- _Scrum master_: Não se aplica
+- Levantamento de informações: Victor Schneider
+- Diagramas: Luis Sampaio
+- Documentação: Thiago Moreira, Igor Maia e Igor Pereira
 
 #### Sprint 2
 - _Scrum master_: AlunaY
@@ -69,6 +60,8 @@ Atualizado em: 19/02/2025
 | Igor Pereira     | Público Alvo                               | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 | Victor Schneider | Levantamento do Contexto e Especificações  | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 | Victor Schneider | Preenchimento do Requisitos Funcionais     | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
+| Victor Schneider | Finalização do arquivo de especificações   | 19/02/2025     | 12/03/2025 | ✔️    | 11/03/2025 |
+| Victor Schneider | Finalização do arquivo de metodologia      | 19/02/2025     | 12/03/2025 | ✔️    | 11/03/2025 |
 | Luis Sampaio     | Preenchimento do READ.ME                   | 19/02/2025     | 26/02/2025 | ✔️    | 19/02/2025 |
 
 
@@ -91,21 +84,11 @@ Legenda:
 - ❌: não iniciado
 
 
-> **Links úteis**:
-> - [11 passos essenciais para implantar Scrum no seu projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
-
 ### Processo
 
-Coloque informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links úteis**:
-> - [Planejamento e gestão ágil de projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Como criar backlogs no GitHub](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial slack](https://slack.com/intl/en-br/)
+O desenvolvimento do projeto seguirá a metodologia ágil Scrum, permitindo uma abordagem iterativa e incremental. O trabalho será organizado em sprints, cada uma com um período determinado para o desenvolvimento de funcionalidades específicas. Ao final de cada sprint, serão realizadas entregas parciais do sistema, garantindo um progresso contínuo e validado ao longo do tempo. As atividades serão distribuídas entre os membros da equipe com base na carga de trabalho e nas habilidades individuais, promovendo um fluxo de desenvolvimento equilibrado.
+
+Diferente do modelo tradicional do Scrum, o projeto não contará com um Scrum Master, uma vez que todos os membros participam ativamente do desenvolvimento. A organização das tarefas e artefatos será feita de forma colaborativa, garantindo que todos tenham visibilidade sobre o andamento do projeto. Esse modelo proporciona flexibilidade e eficiência na execução das atividades, mantendo a equipe alinhada e garantindo a entrega contínua de valor ao projeto.
 
 ### Ferramentas
 
