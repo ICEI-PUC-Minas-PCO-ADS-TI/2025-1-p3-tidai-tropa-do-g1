@@ -1,10 +1,6 @@
 # Especificação do projeto
 
-<span style="color:red">Pré-requisitos: <a href="01-Contexto.md"> Documentação de contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
+Para garantir que o desenvolvimento do projeto atenda às necessidades do público-alvo, foi realizado um estudo observacional para identificar as principais funcionalidades e restrições da solução. Esse estudo permitiu compreender os desafios enfrentados pelos usuários e as demandas do mercado, fornecendo uma base sólida para a definição das especificações do sistema. A partir dessa análise, foram estabelecidos os elementos essenciais para o planejamento e implementação do projeto.
 
 ## Personas
 Durante o processo de análise e compreensão do problema, foram identificadas e detalhadas as seguintes personas, representando os principais perfis de usuários alvos da plataforma:
@@ -98,24 +94,6 @@ A tabelas inserida abaixo indica os requisitos funcionais do projeto, assim como
 |RNF-004| A aplicação deve ser compatível com os principais navegadores e dispositivos móveis | MÉDIA |
 |RNF-005| O sistema deve fornecer feedback claro e conciso aos usuários                       | ALTA  |
 |RNF-006| O sistema deve responder às consultas do chatbot em um tempo máximo de 6 segundos   | ALTA  |
-
-Com base nas histórias de usuários, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos não funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-
-Lembre-se de que cada requisito deve corresponder a uma e somente uma característica-alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas histórias de usuários foram cobertos.
-
-> **Links úteis**:
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [Entenda o que são requisitos de software, a diferença entre requisito funcional e não funcional, e como identificar e documentar cada um deles](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Restrições
 
