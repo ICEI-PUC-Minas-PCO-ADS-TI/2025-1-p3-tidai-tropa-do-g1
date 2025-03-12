@@ -16,14 +16,14 @@ Para garantir um desenvolvimento organizado e colaborativo, o projeto utilizará
 
 O projeto segue a seguinte convenção para o nome de branches:
 
--Branch `main`: Contém a versão mais estável e atualizada do projeto, reunindo todas as funcionalidades implementadas e testadas até o momento. Nenhuma alteração será feita diretamente nesta branch, garantindo a integridade do código.
--Branches de Sprint (`sprint-X`): Para cada sprint, será criada uma branch nomeada de acordo com o número da sprint correspondente (exemplo: sprint-1, sprint-2). Nessas branches, as novas funcionalidades e ajustes serão desenvolvidos, testados e validados antes de serem unificados na branch principal, tanto quanto aos códigos quanto à documentação recorrente do projeto.
+- Branch `main`: Contém a versão mais estável e atualizada do projeto, reunindo todas as funcionalidades implementadas e testadas até o momento. Nenhuma alteração será feita diretamente nesta branch, garantindo a integridade do código.
+- Branches de Sprint (`sprint-X`): Para cada sprint, será criada uma branch nomeada de acordo com o número da sprint correspondente (exemplo: sprint-1, sprint-2). Nessas branches, as novas funcionalidades e ajustes serão desenvolvidos, testados e validados antes de serem unificados na branch principal, tanto quanto aos códigos quanto à documentação recorrente do projeto.
 
 Quanto ao processo de integração, o projeto adota a seguinte padronização de ações:
 
--Criação da Branch da Sprint: No início de cada sprint, uma nova branch será criada a partir da main.
--Desenvolvimento e Testes: As funcionalidades serão implementadas e testadas dentro da branch específica da sprint, garantindo que cada alteração seja validada antes da unificação.
--Revisão e Merge: Ao final da sprint, as mudanças serão revisadas e, se aprovadas, serão mescladas na main para manter o projeto atualizado e pronto para a próxima fase de desenvolvimento.
+- Criação da Branch da Sprint: No início de cada sprint, uma nova branch será criada a partir da main.
+- Desenvolvimento e Testes: As funcionalidades serão implementadas e testadas dentro da branch específica da sprint, garantindo que cada alteração seja validada antes da unificação.
+- Revisão e Merge: Ao final da sprint, as mudanças serão revisadas e, se aprovadas, serão mescladas na main para manter o projeto atualizado e pronto para a próxima fase de desenvolvimento.
 
 Essa abordagem permite um fluxo de trabalho estruturado, garantindo a estabilidade do código e facilitando a colaboração entre os membros da equipe.
 
