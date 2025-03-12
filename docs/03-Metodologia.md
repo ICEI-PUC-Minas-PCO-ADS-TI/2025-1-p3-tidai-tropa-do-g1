@@ -7,8 +7,8 @@ Para garantir uma execução eficiente do projeto, foi adotada uma metodologia q
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | [http://....](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                            |
-| Documentos do projeto               | GitHub                             | [http://....  ](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                          |
+| Repositório de código fonte         | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                            |
+| Documentos do projeto               | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                          |
 
 ## Controle de versão
 
