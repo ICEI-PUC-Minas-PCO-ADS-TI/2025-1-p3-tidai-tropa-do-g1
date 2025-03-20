@@ -1,4 +1,4 @@
-# Nome do projeto
+# DocMind – Inteligência artificial para gestão inteligente de documentos.
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
@@ -21,7 +21,7 @@ Com o uso de inteligência artificial, a plataforma permitirá o gerenciamento m
 
 * Kleber Jacques Ferreira de Souza
 
-## Instruções de utilização
+<!-- ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
@@ -29,7 +29,7 @@ Não deixe de informar o link onde a aplicação estará disponível para acesso
 
 Se houver usuário de teste, o login e a senha também deverão ser informados aqui (por exemplo: usuário - admin / senha - admin).
 
-O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas.
+O link e o usuário/senha descritos acima são apenas exemplos de como tais informações deverão ser apresentadas. -->
 
 # Documentação
 

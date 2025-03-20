@@ -9,8 +9,8 @@ Para agilizar o desenvolvimento do projeto, foram utilizados diversos ambientes/
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                            |
-| Documentos do projeto               | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/Doc-sprint1)                          |
+| Repositório de código fonte         | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main)                            |
+| Documentos do projeto               | GitHub                             | [Repositório do Projeto](https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main)                          |
 
 ## Controle de versão
 
@@ -36,20 +36,20 @@ Essa abordagem permite um fluxo de trabalho estruturado, garantindo a estabilida
 Durante o desenvolvimento do projeto, a seguinte divisão de papéis foi estabelecida em cada Sprint: 
 
 #### Sprint 1
-- _Scrum master_: Não se aplica
-- Levantamento de informações: Victor Schneider
-- Diagramas: Luis Sampaio
-- Documentação: Thiago Moreira, Igor Maia e Igor Pereira
+- _Scrum master_: Victor Schneider
+- Levantamento de informações: Victor Schneider.
+- Diagramas: Luis Sampaio.
+- Documentação: Thiago Moreira, Igor Maia e Igor Pereira.
 
 #### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- _Scrum master_: Victor Schneider.
+- Desenvolvedor _front-end_: Igor Maia e Igor Pereira, Luis Sampaio.
+- Desenvolvedor _back-end_: Victor Schneider, Luis Sampaio, Thiago Moreira.
+- Testes: Thiago Moreira, Igor Maia e Igor Pereira, Victor Schneider, Luis Sampaio.
 
 ###  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
+<!-- > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo. -->
 
 #### Sprint 1
 
@@ -96,15 +96,22 @@ Diferente do modelo tradicional do Scrum, o projeto não contará com um Scrum M
 
 ### Ferramentas
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
+Para o desenvolvimento do projeto, o grupo adotará as tecnologias listadas a seguir, com o objetivo de criar um ambiente intuitivo e acessível para os desenvolvedores. Além disso, busca-se garantir uma integração prática e dinâmica, otimizando o fluxo de trabalho e promovendo maior eficiência no desenvolvimento.
 
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
+| Ambiente                            | Plataforma                         | Link de acesso                                                                         |
+|-------------------------------------|------------------------------------|----------------------------------------                                                |
+| Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main     |
+| Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main     |
+| Projeto de interface                | Figma                              | http://....                                                                            |
+| Gerenciamento do projeto            | GitHub Projects                    | https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/42/views/1                  |
+| Hospedagem                          | Vercel                             | http://....                                                                            |
 
-| Ambiente                            | Plataforma                         | Link de acesso                         |
-|-------------------------------------|------------------------------------|----------------------------------------|
-| Repositório de código fonte         | GitHub                             | http://....                            |
-| Documentos do projeto               | GitHub                             | http://....                            |
-| Projeto de interface                | Figma                              | http://....                            |
-| Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
-| Hospedagem                          | Vercel                             | http://....                            |
- 
+### Tecnologias
+
+| Ambiente                            | Linguagem                          |
+|-------------------------------------|------------------------------------|
+| Tecnologia back-end                 | Python                             |
+| Framework back-end                  | Django                             |
+| Tecnologia front-end                | HTML + CSS                         |
+| Framework  front-end                | Node.js                            |
+| Framework  front-end                | React                              |
