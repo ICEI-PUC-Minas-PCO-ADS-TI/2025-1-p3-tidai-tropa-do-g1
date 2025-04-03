@@ -6,9 +6,9 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #555;
-  width: 100%; /* Define um tamanho fixo */
-  max-width: 1200px; /* Opcional: Define um limite máximo */
-  margin: 0 auto; /* Centraliza na tela */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   opacity: 100%;
 }
 

@@ -4,7 +4,6 @@ import "../styles/ChatWindow.css";
 function ChatWindow() {
   return (
     <div className="chat-window">
-      {/* Área com as mensagens */}
       <div className="messages-container">
         <div className="message left">
           <img src="/logo_semletra.png" alt="IA" className="ia" />

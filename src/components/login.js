@@ -1,7 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/ChatPage");
+  };
   return (
     <div className="login-container">
       <div className="logo-container">
@@ -25,7 +31,9 @@ function Login() {
           <input type="text" placeholder="Código da organização" />
         </div>
 
-        <button className="btn-entrar">Entrar</button>
+        <button className="btn-entrar" onClick={handleClick}>
+          Entrar
+        </button>
         <button className="btn-cadastro">Não tenho Login</button>
       </div>
 

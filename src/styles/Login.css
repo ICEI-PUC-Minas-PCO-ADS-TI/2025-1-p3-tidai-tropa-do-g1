@@ -32,11 +32,11 @@ body {
 /* Formulário */
 .login-form {
   width: 300px;
-  margin: 0 auto; /* Centraliza */
+  margin: 0 auto;
   background-color: #3c3b3b;
   padding: 20px;
   border-radius: 8px;
-  margin-top: 5px; /* Reduz o espaço entre a logo e o formulário */
+  margin-top: 5px;
 }
 
 .form-group {

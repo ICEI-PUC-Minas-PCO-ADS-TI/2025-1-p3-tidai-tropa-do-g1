@@ -4,9 +4,8 @@
   overflow: hidden;
 }
 
-/* Sidebar com largura fixa */
 .sidebar-container {
-  flex: 0 0 250px; /* Largura fixa de 250px */
+  flex: 0 0 250px;
 }
 
 .main-content {
