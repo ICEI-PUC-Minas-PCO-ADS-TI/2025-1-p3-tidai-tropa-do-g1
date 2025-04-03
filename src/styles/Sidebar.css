@@ -1,0 +1,145 @@
+.sidebar-container {
+  width: 250px;
+  background-color: #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+  flex: 0 0 250px;
+  border-right: 1px solid #fff;
+  height: 100vh;
+}
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon-left,
+.icon-right {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon-left {
+  margin-left: 10px;
+}
+
+.icon-right {
+  margin-right: 10px;
+}
+
+/* Informações do usuário */
+.user-info {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3a3a3a;
+}
+
+.user-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid black;
+}
+
+.btn-gerenciar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #313131;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Tornar apenas o menu rolável */
+.menu {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.submenu,
+.sub-submenu {
+  max-height: 200px;
+  overflow-y: auto; /* Permite scroll apenas dentro dos menus internos */
+}
+
+.menu::-webkit-scrollbar,
+.submenu::-webkit-scrollbar,
+.sub-submenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb,
+.submenu::-webkit-scrollbar-thumb,
+.sub-submenu::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb:hover,
+.submenu::-webkit-scrollbar-thumb:hover,
+.sub-submenu::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor quando o mouse passa por cima */
+}
+
+/* Estilos para listas */
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  display: flex;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.menu ul li:hover {
+  text-decoration: underline;
+}
+
+.menu ul li ul {
+  margin-left: 15px;
+  padding-left: 10px;
+  border-left: 1px solid #555;
+}
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.submenu {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #555;
+}
+
+.sub-submenu {
+  list-style: none;
+  margin-left: 40px;
+  padding-left: 10px;
+  border-left: 2px solid #777;
+}
+
+.sub-submenu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
