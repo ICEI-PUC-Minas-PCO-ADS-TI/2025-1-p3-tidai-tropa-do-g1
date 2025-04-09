@@ -8,6 +8,11 @@ function Login() {
   const handleClick = () => {
     navigate("/ChatPage");
   };
+
+  const handleRegisterClick = () => {
+    navigate("/register");
+  };
+
   return (
     <div className="login-container">
       <div className="logo-container">
@@ -34,7 +39,7 @@ function Login() {
         <button className="btn-entrar" onClick={handleClick}>
           Entrar
         </button>
-        <button className="btn-cadastro">Não tenho Login</button>
+        <button className="btn-cadastro" onClick={handleRegisterClick}>Não tenho Login</button>
       </div>
 
       <footer className="rodape">
