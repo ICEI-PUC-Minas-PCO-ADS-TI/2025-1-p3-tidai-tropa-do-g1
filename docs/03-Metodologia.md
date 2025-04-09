@@ -69,16 +69,17 @@ Atualizado em: 19/02/2025
 | Thiago M.        | Diagrama de casos de uso                   | 26/02/2025     | 26/02/2025 | ✔️    | 05/03/2025 |
 
 
-<!-- #### Sprint 2
+#### Sprint 2
 
-Atualizado em: 21/04/2024
+Atualizado em: 08/04/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
-| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       | -->
+| Luis Sampaio  | Wireframes       | 01/04/2025     | 09/04/2025 | ✔️    | 02/04/2025      |
+| Luis Sampaio  | User Flow        | 02/04/2025     | 09/04/2025 | ✔️    | 03/04/2025      |
+| Luis Sampaio  | Diagrama de fluxo| 05/04/2025     | 09/04/2025 | ✔️    | 07/04/2025      |
+| AlunoY        | Página de login  | 01/02/2024     | 09/04/2025 | ⌛     |                 |
+| AlunoK        | Script de login  |  01/01/2024    | 09/04/2025 | ❌    |       |
 
 
 Legenda:
