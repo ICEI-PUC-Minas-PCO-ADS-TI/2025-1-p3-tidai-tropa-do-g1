@@ -1,4 +1,4 @@
-# DocMind – Inteligência artificial para gestão inteligente de documentos.
+# Crows - Inteligência Ampliada
 
 `CURSO: Análise e Desenvolvimento de Sistemas`
 
