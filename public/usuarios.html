@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esqueleto pag usuários</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <!-- Seu CSS personalizado -->
+  <link rel="stylesheet" href="usuarios.css">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <!-- HEADER COM LOGO -->
+  <header class="custom-header d-flex justify-content-center align-items-center">
+    <img src="logo_semletra.png" alt="Logo" class="logo-img">
+  </header>
+
+  <!-- CONTEÚDO DIVIDIDO EM DUAS COLUNAS -->
+  <main class="container-fluid mt-4">
+    <div class="row">
+
+     <!-- COLUNA ESQUERDA - GRUPOS -->
+<div class="col-12 col-md-3 px-4 grupos-container text-center">
+    <h4 class="mb-4">Grupos</h4>
+  
+    <!-- Botões de Grupos -->
+    <div class="d-grid gap-2 mb-4">
+      <button class="btn group-btn">Controladoria</button>
+      <button class="btn group-btn">Financeiro</button>
+      <button class="btn group-btn">Recursos Humanos</button>
+      <button class="btn group-btn">TI</button>
+    </div>
+  
+    <!-- Botões de Ação -->
+    <div class="mb-4 d-grid gap-2">
+      <button class="btn custom-btn">+ Novo Grupo</button>
+      <button class="btn custom-btn">+ Novo Usuário</button>
+    </div>
+  </div>
+  
+  <!-- COLUNA DIREITA - USUÁRIOS -->
+<div class="col-12 col-md-9 px-4 usuarios-container text-center">
+    <h4 class="mb-4 mt-4">Usuários</h4>
+  
+    <!-- Filtros e Pesquisa -->
+<div class="row mb-4">
+
+    <!-- Tipo de Usuário (Select) -->
+    <div class="col-12 col-md-4 mb-2 mb-md-0">
+      <select class="form-select custom-input" id="tipoUsuario">
+        <option value="" disabled selected hidden>Tipo de Usuário</option>
+        <option value="controladoria">Controladoria</option>
+        <option value="financeiro">Financeiro</option>
+        <option value="rh">Recursos Humanos</option>
+        <option value="ti">TI</option>
+      </select>
+    </div>
+  
+    <!-- Barra de Pesquisa -->
+    <div class="col-12 col-md-8">
+      <div class="input-group">
+        <input type="text" class="form-control custom-input" placeholder="Pesquisar..." id="pesquisaUsuario">
+        <span class="input-group-text custom-input">
+          <i class="bi bi-search"></i>
+        </span>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+    <!-- CARDS DE USUÁRIO -->
+    <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="user-card d-flex align-items-center p-3 rounded">
+            <i class="bi bi-person-circle fs-3 me-3"></i>
+            <span>Nome do Usuário</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="user-card d-flex align-items-center p-3 rounded">
+            <i class="bi bi-person-circle fs-3 me-3"></i>
+            <span>Nome do Usuário</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="user-card d-flex align-items-center p-3 rounded">
+            <i class="bi bi-person-circle fs-3 me-3"></i>
+            <span>Nome do Usuário</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="user-card d-flex align-items-center p-3 rounded">
+              <i class="bi bi-person-circle fs-3 me-3"></i>
+              <span>Nome do Usuário</span>
+            </div>
+          </div>
+
+  </main>
+
+<!-- FOOTER -->
+<footer class="main-footer mt-5 py-3">
+    <div class="container text-center">
+      <ul class="list-inline mb-0">
+        <li class="list-inline-item mx-3">
+          <a href="#quem-somos" class="footer-link">Quem somos nós?</a>
+        </li>
+        <li class="list-inline-item mx-3">
+          <a href="#duvidas" class="footer-link">Dúvidas Frequentes</a>
+        </li>
+        <li class="list-inline-item mx-3">
+          <a href="#termos" class="footer-link">Termos de Uso</a>
+        </li>
+        <li class="list-inline-item mx-3">
+          <a href="#contato" class="footer-link">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  
+
+
+</body>
+</html>
