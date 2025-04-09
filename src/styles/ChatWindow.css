@@ -1,0 +1,65 @@
+.chat-window {
+  flex: 1; /* Ocupar o espaço restante ao lado da sidebar */
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  padding: 20px;
+}
+
+/* Container das mensagens */
+.messages-container {
+  flex: 1;
+  overflow-y: auto; /* Se a conversa for longa, permite rolagem */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilo de cada mensagem */
+.message {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  line-height: 1.4;
+  gap: 10px;
+}
+
+/* Mensagens da esquerda (IA) */
+.message.left {
+  align-self: flex-start;
+  background-color: #3a3a3a;
+}
+
+/* Mensagens da direita (Usuário) */
+.message.right {
+  align-self: flex-end;
+  background-color: #585858;
+}
+
+/* Estilização das imagens de avatar */
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Ajuste no input */
+.input-container {
+  border-top: 1px solid #444;
+  padding: 10px 0 0 0;
+  display: flex;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #3a3a3a;
+  color: #fff;
+  font-size: 1rem;
+}

@@ -1,0 +1,283 @@
+:root {
+  --primary-color: #bb9149;
+  --primary-hover: #ffb84d;
+  --background-dark: #3c3b3b;
+  --form-background: #3c3b3b;
+  --input-background: #313131;
+  --text-color: #ffffff;
+  --footer-bg: #1f1f1f;
+  --footer-text: #ccc;
+  --button-text: #000000;
+  --link-color: #bb9149;
+  --link-hover: #ffb84d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-color);
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  padding: 0;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.register-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.register-form {
+  width: 100%;
+  margin: 0 auto 20px;
+  padding: 0;
+  position: relative;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.password-row {
+  justify-content: center;
+  gap: 30px;
+}
+
+.form-group-password {
+  flex: 0 0 18%;
+  max-width: 30%;
+}
+
+.form-group-spacer {
+  display: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  outline: none;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(187, 145, 73, 0.2);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-cadastrar {
+  width: 25%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--button-text);
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: background-color 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-cadastrar:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-cadastrar:active {
+  transform: translateY(0);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.login-link p {
+  color: var(--text-color);
+  margin: 0;
+}
+
+.login-link a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.login-link a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+footer.rodape {
+  background-color: var(--footer-bg);
+  padding: 15px 0;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+footer.rodape ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer.rodape li a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+footer.rodape li a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.register-form::-webkit-scrollbar {
+  width: 6px;
+}
+
+.register-form::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.register-form::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .register-content {
+    width: 95%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .btn-cadastrar {
+    width: 50%;
+  }
+  
+  .form-group-password {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  
+  .form-group-spacer {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-content {
+    width: 100%;
+  }
+
+  .logo {
+    width: 150px !important;
+  }
+
+  footer.rodape ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+  }
+  
+  .btn-cadastrar {
+    width: 50%;
+    padding: 12px;
+  }
+}
