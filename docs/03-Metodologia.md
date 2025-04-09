@@ -78,8 +78,8 @@ Atualizado em: 08/04/2025
 | Luis Sampaio  | Wireframes       | 01/04/2025     | 09/04/2025 | ✔️    | 02/04/2025      |
 | Luis Sampaio  | User Flow        | 02/04/2025     | 09/04/2025 | ✔️    | 03/04/2025      |
 | Luis Sampaio  | Diagrama de fluxo| 05/04/2025     | 09/04/2025 | ✔️    | 07/04/2025      |
-| AlunoY        | Página de login  | 01/02/2024     | 09/04/2025 | ⌛     |                 |
-| AlunoK        | Script de login  |  01/01/2024    | 09/04/2025 | ❌    |       |
+| Igor Pereira  | Página de login  | 01/04/2024     | 01/04/2025 | ✔️    | 03/04/2025      |
+| Igor Pereira  | Tela Principal (Chat)| 01/01/2024 | 01/04/2025  | ✔️    | 03/04/2025      |
 
 
 Legenda:
