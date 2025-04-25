@@ -28,29 +28,32 @@ Os seguinte diagrama ilustra como será o fluxo a ser seguido por usuários na a
 > - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
 > - [Fluxograma online: seis sites para fazer gráfico sem instalar nada](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml) -->
 
-## Wireframes
-
-São protótipos usados no design de interface para sugerir a estrutura de um site web e seu relacionamento entre suas páginas. Um wireframe web é uma ilustração que mostra o layout dos elementos fundamentais na interface.
-
-![Exemplo de wireframe](images/wireframe.png)
- 
-> **Links úteis**:
-> - [Protótipos: baixa, média ou alta fidelidade?](https://medium.com/ladies-that-ux-br/prot%C3%B3tipos-baixa-m%C3%A9dia-ou-alta-fidelidade-71d897559135)
-> - [Protótipos vs wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
-
-
 ## Interface do sistema
 
 As imagens a seguir representam os projetos de interface do sistema, onde definimos o design e o posicionamento das funcionalidades da Crows IA.
 
-###Login
+### Login
 A página de Login, onde o usuário pode se autenticar
 ![Página de Login](images/Login.png)
+
+### Cadastro
+Página onde usuários não registrados poderão criar suas credenciais
+![Página de Cadastro](images/Cadastro.png)
+
+### Home
+Página inicial do sistema, que conta com algumas informações do usuário, um breve resumo dos arquivos disponíveis para esse usuário acessar e um campo de ChatBot com a IA da plataforma
+![Página de Home](images/Home.png)
+
+### Usuários
+Nessa página, os admnistradores de organizações poderão gerenciar seus usuários, podendo visualizar, mover, adicionar, remover, entre outras ações envolvendo os usuários
+![Página de Usuários](images/Usuarios.png)
+
+### Adicionar Usuários
+Nessa página, os admnistradores de organizações poderão visualizar um modal no qual será possível preencher o cadastro de um novo usuário
+![Página de Usuários](images/AdicionarUsuarios.png)
+
+### Edição de Grupos
+Página onde os admnistradores de organizações poderão gerenciar seus grupos de usuários, podendo visualizar, mover, adicionar, remover, entre outras ações envolvendo os grupos
+![Edição de Grupos](images/EdicaoDeGrupos.png)
 
 > Apresente as principais interfaces da plataforma em sua versão final.
