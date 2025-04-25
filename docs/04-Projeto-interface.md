@@ -24,10 +24,6 @@ Os seguinte diagrama ilustra como será o fluxo a ser seguido por usuários na a
 
 ![Diagrama de fluxo](images/Diagrama_de_fluxo.jpeg)
 
-<!-- > **Links úteis**:
-> - [Como criar um diagrama de fluxo de usuário](https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram)
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml) -->
-
 ## Interface do sistema
 
 As imagens a seguir representam os projetos de interface do sistema, onde definimos o design e o posicionamento das funcionalidades da Crows IA.
@@ -55,5 +51,3 @@ Nessa página, os admnistradores de organizações poderão visualizar um modal 
 ### Edição de Grupos
 Página onde os admnistradores de organizações poderão gerenciar seus grupos de usuários, podendo visualizar, mover, adicionar, remover, entre outras ações envolvendo os grupos
 ![Edição de Grupos](images/EdicaoDeGrupos.png)
-
-> Apresente as principais interfaces da plataforma em sua versão final.
