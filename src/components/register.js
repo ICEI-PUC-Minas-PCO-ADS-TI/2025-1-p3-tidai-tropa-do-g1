@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Register.css";
 import { useNavigate } from "react-router-dom";
+import { handleRegisterClick } from "../back/registerFuncs";
 
 function Register() {
   const navigate = useNavigate();
@@ -80,7 +81,7 @@ function Register() {
             <div className="form-group-spacer"></div>
           </div>
 
-          <button className="btn-cadastrar">Cadastrar</button>
+          <button className="btn-cadastrar" onClick={handleRegisterClick}>Cadastrar</button>
           
           <div className="login-link">
             <p>Já tem uma conta? <a onClick={handleLoginClick}>Faça login</a></p>
