@@ -1,0 +1,11 @@
+.user-card {
+  background-color: #313131;
+  color: white;
+  border: 1px solid #444;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  background-color: #2a2a2a;
+}

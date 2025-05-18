@@ -1,0 +1,35 @@
+.grupos-container {
+  background-color: #3a3a3a;
+  border-right: 1px solid #444;
+  min-height: 80vh;
+  color: #fff;
+}
+
+.group-btn {
+  background-color: #313131;
+  color: white;
+  border: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.group-btn:hover {
+  background-color: #1f1f1f;
+}
+
+.custom-btn {
+  background-color: #BB9149;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.custom-btn:hover {
+  background-color: #a47436;
+}
