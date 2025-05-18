@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
+import { loginUser } from "../back/loginFuncs";
 
 function Login() {
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate("/ChatPage");
+  const [login, setLogin] = useState("");
+  const [senha, setSenha] = useState("");
+  const [organizacao, setOrganizacao] = useState("");
+
+  const handleLoginClick = () => {
+    const sucesso = loginUser(login.trim().toLowerCase(), senha, organizacao.trim());
+    if (sucesso) {
+      navigate("/ChatPage");
+    }
   };
 
   const handleRegisterClick = () => {
@@ -19,43 +27,51 @@ function Login() {
         <img src="/main.png" alt="crows-logo" className="logo" />
       </div>
 
-      {/* Formulário de login */}
       <div className="login-form">
         <div className="form-group">
           <label>Login</label>
-          <input type="text" placeholder="Código de Login" />
+          <input
+            type="text"
+            placeholder="Código de Login"
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
+          />
         </div>
 
         <div className="form-group">
           <label>Senha</label>
-          <input type="password" placeholder="Senha" />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+          />
         </div>
 
         <div className="form-group">
           <label>Organização</label>
-          <input type="text" placeholder="Código da organização" />
+          <input
+            type="text"
+            placeholder="Código da organização"
+            value={organizacao}
+            onChange={(e) => setOrganizacao(e.target.value)}
+          />
         </div>
 
-        <button className="btn-entrar" onClick={handleClick}>
+        <button className="btn-entrar" onClick={handleLoginClick}>
           Entrar
         </button>
-        <button className="btn-cadastro" onClick={handleRegisterClick}>Não tenho Login</button>
+        <button className="btn-cadastro" onClick={handleRegisterClick}>
+          Não tenho Login
+        </button>
       </div>
 
       <footer className="rodape">
         <ul>
-          <li>
-            <a href="#quem-somos">Quem somos nós?</a>
-          </li>
-          <li>
-            <a href="#duvidas">Dúvidas Frequentes</a>
-          </li>
-          <li>
-            <a href="#termos">Termos de Uso</a>
-          </li>
-          <li>
-            <a href="#contato">Contato</a>
-          </li>
+          <li><a href="#quem-somos">Quem somos nós?</a></li>
+          <li><a href="#duvidas">Dúvidas Frequentes</a></li>
+          <li><a href="#termos">Termos de Uso</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </footer>
     </div>
