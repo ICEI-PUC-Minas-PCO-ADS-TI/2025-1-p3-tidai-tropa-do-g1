@@ -8,7 +8,7 @@ body {
 
 /* Logo */
 .logo {
-  width: 200px !important;
+  width: 12.5rem !important;
   height: auto !important;
   display: block;
   margin: 0 auto;
@@ -16,7 +16,7 @@ body {
 
 .logo-container {
   text-align: center;
-  margin-bottom: 5px !important;
+  margin-bottom: 0.3125rem !important;
 }
 
 /* Container geral */
@@ -31,31 +31,31 @@ body {
 
 /* Formulário */
 .login-form {
-  width: 300px;
+  width: 18.75rem;
   margin: 0 auto;
   background-color: #3c3b3b;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 5px;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  margin-top: 0.3125rem;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .form-group label {
   display: block;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-size: 0.9rem;
 }
 
 .form-group input {
-  padding: 8px;
+  padding: 0.5rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: none;
   background-color: #313131;
 }
@@ -73,12 +73,12 @@ input::placeholder {
 .btn-entrar,
 .btn-cadastro {
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .btn-entrar {
@@ -102,7 +102,7 @@ input::placeholder {
 /* Rodapé */
 footer {
   background-color: #1f1f1f;
-  padding: 10px;
+  padding: 0.625rem;
   text-align: center;
 }
 
@@ -110,7 +110,7 @@ footer ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.25rem;
   padding: 0;
   margin: 0;
 }
@@ -129,7 +129,7 @@ footer li a:hover {
 @media (max-width: 600px) {
   .login-form {
     width: 90%;
-    padding: 10px;
+    padding: 0.625rem;
   }
   header h2 {
     font-size: 1.5rem;

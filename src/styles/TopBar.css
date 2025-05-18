@@ -1,18 +1,18 @@
 .top-bar {
   background-color: #3a3a3a;
   color: #fff;
-  padding: 15px;
+  padding: 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #555;
+  border-bottom: 0.0625rem solid #555;
   width: 100%;
-  max-width: 1200px;
+  max-width: 75rem;
   margin: 0 auto;
   opacity: 100%;
 }
 
 .logo_top {
-  width: 60px;
+  width: 3.75rem;
   height: auto;
 }

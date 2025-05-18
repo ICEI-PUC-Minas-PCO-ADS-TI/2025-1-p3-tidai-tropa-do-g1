@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   background-color: #2e2e2e;
-  padding: 20px;
+  padding: 1.25rem; /* 20px */
 }
 
 /* Container das mensagens */
@@ -12,7 +12,7 @@
   overflow-y: auto; /* Se a conversa for longa, permite rolagem */
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
 }
 
 /* Estilo de cada mensagem */
@@ -20,11 +20,11 @@
   display: flex;
   align-items: center;
   max-width: 60%;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 0.625rem; /* 10px */
+  border-radius: 0.5rem; /* 8px */
   color: #fff;
   line-height: 1.4;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
 }
 
 /* Mensagens da esquerda (IA) */
@@ -41,23 +41,23 @@
 
 /* Estilização das imagens de avatar */
 .message img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
   border-radius: 50%;
 }
 
 /* Ajuste no input */
 .input-container {
   border-top: 1px solid #444;
-  padding: 10px 0 0 0;
+  padding: 0.625rem 0 0 0;
   display: flex;
 }
 
 .input-container input {
   flex: 1;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: none;
   background-color: #3a3a3a;
   color: #fff;
