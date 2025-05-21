@@ -18,9 +18,7 @@ function Register() {
 
       {/* Formulário de registro - agora sem o quadrado cinza */}
       <div className="register-content">
-        <div className="register-form">
-          <h2>Cadastro</h2>
-          
+        <div className="register-form">          
           {/* Primeira linha: Nome e Organização */}
           <div className="form-row">
             <div className="form-group">
