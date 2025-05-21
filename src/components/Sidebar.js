@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCog } from "react-icons/fa";
 import ProfileModal from "./ProfileModal";
+import UploadModal from "../back/UploadModal";
 import { useNavigate } from "react-router-dom";
 import "../styles/Sidebar.css";
 
@@ -11,15 +12,14 @@ function Sidebar({ userImage, setUserImage }) {
     fornecedores: false,
   });
 
+  const [showUploadModal, setShowUploadModal] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
 
-  // Dados do perfil
   const [userInfo, setUserInfo] = useState({
     nome: "Nome User",
     foto: "/user.png",
   });
 
-  // Atualiza os dados quando o modal for fechado
   useEffect(() => {
     const nome = localStorage.getItem("perfil_nome") || "Nome User";
     const foto = localStorage.getItem("perfil_foto") || "/user.png";
@@ -31,11 +31,16 @@ function Sidebar({ userImage, setUserImage }) {
   };
 
   const navigate = useNavigate();
-  
+
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        <img src="/grupo.png" alt="Grupo" className="icon-left" onClick={() => navigate("/usuarios")}/>
+        <img
+          src="/grupo.png"
+          alt="Grupo"
+          className="icon-left"
+          onClick={() => navigate("/usuarios")}
+        />
         <FaCog
           className="icon-right gear-icon"
           onClick={() => setShowProfileModal(true)}
@@ -44,11 +49,15 @@ function Sidebar({ userImage, setUserImage }) {
 
       <div className="user-info">
         <img src={userImage} alt="Avatar do Usuário" className="user-avatar" />
-
         <h3>{userInfo.nome}</h3>
         <p>PUC Minas</p>
         <p>Administrador</p>
-        <button className="btn-gerenciar">Gerenciar Arquivos</button>
+        <button
+          className="btn-gerenciar"
+          onClick={() => setShowUploadModal(true)}
+        >
+          Adicionar Arquivos
+        </button>
       </div>
 
       <div className="menu">
@@ -146,6 +155,10 @@ function Sidebar({ userImage, setUserImage }) {
           userImage={userImage}
           setUserImage={setUserImage}
         />
+      )}
+
+      {showUploadModal && (
+        <UploadModal onClose={() => setShowUploadModal(false)} />
       )}
     </div>
   );
