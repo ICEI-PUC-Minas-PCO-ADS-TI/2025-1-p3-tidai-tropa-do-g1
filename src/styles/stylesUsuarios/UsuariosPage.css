@@ -3,3 +3,25 @@ body {
   color: #ffffff;
 }
 
+.usuarios-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.usuarios-main {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #3a3a3a;
+  border-right: 1px solid #444;
+}
+
+.painel {
+  flex: 1;
+  background-color: #3a3a3a;
+  padding: 20px;
+}

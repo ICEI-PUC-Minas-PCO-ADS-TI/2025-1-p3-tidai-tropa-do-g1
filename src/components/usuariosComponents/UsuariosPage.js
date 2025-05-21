@@ -10,12 +10,14 @@ function UsuariosPage() {
   return (
     <div className="usuarios-page">
       <TopBar />
-      <main className="container-fluid mt-4">
-        <div className="row">
+      <div className="usuarios-main">
+        <div className="sidebar">
           <SidebarGrupos />
+        </div>
+        <div className="painel">
           <PainelUsuarios />
         </div>
-      </main>
+      </div>
       <FooterUsuarios />
     </div>
   );
