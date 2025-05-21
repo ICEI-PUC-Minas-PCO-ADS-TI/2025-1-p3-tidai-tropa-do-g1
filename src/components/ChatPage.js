@@ -28,11 +28,26 @@ function ChatPage() {
   const RespostaFake = (input) => {
     const lower = input.toLowerCase();
 
-    if (lower.includes("Preço") || lower.includes("Valor")) {
-      return "Nosso sistema oferece planos a partir de R$49,90 mensais.";
+    if (
+      lower.includes("segurança documentos pacientes") ||
+      lower.includes("acesso equipe") ||
+      lower.includes("privacidade informações")
+    ) {
+      return "A **segurança e privacidade** são prioridades, garantindo que apenas sua equipe autorizada tenha acesso aos documentos.";
     }
     if (lower.includes("funciona") || lower.includes("como usar")) {
       return "Você pode começar fazendo login e subindo seus documentos na área inicial.";
+    }
+
+    if (
+      lower.includes("chatbot") ||
+      lower.includes("inteligência artificial")
+    ) {
+      return "Nosso sistema possui um chatbot com inteligência artificial onde você pode fazer consultas sobre seu banco de dados e ele retornará as informações contidas nos documentos. O que você gostaria de perguntar ao chatbot?";
+    }
+
+    if (lower.includes("oi") || lower.includes("ola")) {
+      return "Oi, como posso te ajudar?";
     }
 
     if (lower.includes("documento") || lower.includes("pdf")) {
@@ -41,6 +56,14 @@ function ChatPage() {
 
     if (lower.includes("erro") || lower.includes("problema")) {
       return "Poxa! Vamos investigar isso. Pode me dar mais detalhes sobre o erro?";
+    }
+
+    if (
+      lower.includes("organizar documentos anexados") ||
+      lower.includes("filtrar documentos") ||
+      lower.includes("buscar contratos orçamentos")
+    ) {
+      return "Nosso sistema permite organizar e filtrar os documentos anexados, facilitando a busca por contratos e orçamentos antigos. Você pode criar categorias e usar filtros. Gostaria de saber mais sobre as opções de organização?";
     }
 
     //Resposta padrão

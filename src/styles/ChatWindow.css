@@ -1,5 +1,5 @@
 .chat-window {
-  flex: 1; /* Ocupar o espaço restante ao lado da sidebar */
+  flex: 1;
   display: flex;
   flex-direction: column;
   background-color: #2e2e2e;
@@ -9,13 +9,32 @@
 /* Container das mensagens */
 .messages-container {
   flex: 1;
-  overflow-y: auto; /* Se a conversa for longa, permite rolagem */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0.625rem; /* 10px */
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #2e2e2e;
 }
 
-/* Estilo de cada mensagem */
+.messages-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 2px solid #2e2e2e;
+}
+.messages-container::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
 .message {
   display: flex;
   align-items: center;
@@ -27,26 +46,24 @@
   gap: 0.625rem; /* 10px */
 }
 
-/* Mensagens da esquerda (IA) */
+/* Mensagem (IA) */
 .message.left {
   align-self: flex-start;
   background-color: #3a3a3a;
 }
 
-/* Mensagens da direita (Usuário) */
+/* Mensagem (Usuário) */
 .message.right {
   align-self: flex-end;
   background-color: #585858;
 }
 
-/* Estilização das imagens de avatar */
 .message img {
   width: 2.5rem; /* 40px */
   height: 2.5rem; /* 40px */
   border-radius: 50%;
 }
 
-/* Ajuste no input */
 .input-container {
   border-top: 1px solid #444;
   padding: 0.625rem 0 0 0;

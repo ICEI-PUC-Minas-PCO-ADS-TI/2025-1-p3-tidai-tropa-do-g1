@@ -27,12 +27,12 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
     };
 
     if (file) {
-      reader.readAsDataURL(file); // converte imagem em base64
+      reader.readAsDataURL(file);
     }
   };
 
   const handleSalvar = () => {
-    // Aqui você pode enviar os dados para a API ou armazenar localmente
+    // enviar os dados para a API ou armazenar localmente
     localStorage.setItem("perfil_nome", nome);
     localStorage.setItem("perfil_email", email);
     localStorage.setItem("perfil_foto", fotoPreview);
