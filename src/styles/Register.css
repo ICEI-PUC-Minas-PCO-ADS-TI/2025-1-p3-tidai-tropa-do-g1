@@ -137,16 +137,15 @@ body {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   background-color: var(--primary-color);
-  color: var(--button-text);
+  color: var(--text-color);
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   transition: background-color 0.3s, transform 0.2s;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 

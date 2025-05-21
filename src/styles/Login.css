@@ -79,11 +79,11 @@ input::placeholder {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 0.625rem;
+  color: #ffffff;
 }
 
 .btn-entrar {
   background-color: #bb9149;
-  color: #000000;
 }
 
 .btn-entrar:hover {
@@ -92,7 +92,6 @@ input::placeholder {
 
 .btn-cadastro {
   background-color: #313131;
-  color: #000000;
 }
 
 .btn-cadastro:hover {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaCog } from "react-icons/fa";
 import ProfileModal from "./ProfileModal";
+import { useNavigate } from "react-router-dom";
 import "../styles/Sidebar.css";
 
 function Sidebar({ userImage, setUserImage }) {
@@ -29,10 +30,12 @@ function Sidebar({ userImage, setUserImage }) {
     setOpenMenus((prev) => ({ ...prev, [menu]: !prev[menu] }));
   };
 
+  const navigate = useNavigate();
+  
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        <img src="/grupo.png" alt="Grupo" className="icon-left" />
+        <img src="/grupo.png" alt="Grupo" className="icon-left" onClick={() => navigate("/usuarios")}/>
         <FaCog
           className="icon-right gear-icon"
           onClick={() => setShowProfileModal(true)}
