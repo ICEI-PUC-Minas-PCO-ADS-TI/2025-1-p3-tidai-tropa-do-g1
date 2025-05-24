@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Register.css";
 import { useNavigate } from "react-router-dom";
-import { handleRegisterClick } from "../back/registerFuncs";
+import { handleRegisterClick } from "../front/registerFuncs";
 
 function Register() {
   const navigate = useNavigate();

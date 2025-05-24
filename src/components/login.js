@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
-import { loginUser } from "../back/loginFuncs";
+import { loginUser } from "../front/loginFuncs";
 
 function Login() {
   const navigate = useNavigate();
