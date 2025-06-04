@@ -51,7 +51,8 @@ input[type="password"] {
 }
 
 .btn-salvar,
-.btn-fechar {
+.btn-fechar,
+.btn-logout {
   padding: 8px 16px;
   border: none;
   border-radius: 6px;
@@ -60,6 +61,11 @@ input[type="password"] {
 
 .btn-salvar {
   background-color: #007bff;
+  color: white;
+}
+
+.btn-logout {
+  background-color: #8b0202;
   color: white;
 }
 

@@ -13,7 +13,6 @@ function App() {
       <Route path="/ChatPage" element={<ChatPage />} />
       <Route path="/register" element={<Register />} />
       <Route path="/usuarios" element={<UsuariosPage />} />
-
     </Routes>
   );
 }
