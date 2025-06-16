@@ -16,10 +16,8 @@ function Register() {
         <img src="/main.png" alt="crows-logo" className="logo" />
       </div>
 
-      {/* Formulário de registro - agora sem o quadrado cinza */}
       <div className="register-content">
-        <div className="register-form">          
-          {/* Primeira linha: Nome e Organização */}
+        <div className="register-form">
           <div className="form-row">
             <div className="form-group">
               <label>Nome</label>
@@ -32,7 +30,6 @@ function Register() {
             </div>
           </div>
 
-          {/* Segunda linha: CNPJ, CPF e Telefone */}
           <div className="form-row">
             <div className="form-group">
               <label>CNPJ</label>
@@ -50,7 +47,6 @@ function Register() {
             </div>
           </div>
 
-          {/* Terceira linha: E-mail e Confirmação de e-mail */}
           <div className="form-row">
             <div className="form-group">
               <label>E-mail</label>
@@ -63,7 +59,6 @@ function Register() {
             </div>
           </div>
 
-          {/* Quarta linha: Senha e Confirmação de senha */}
           <div className="form-row password-row">
             <div className="form-group form-group-password">
               <label>Senha</label>
@@ -74,15 +69,18 @@ function Register() {
               <label>Confirmação de senha</label>
               <input type="password" placeholder="Senha" />
             </div>
-            
-            {/* Elemento vazio para equalizar o espaço como na linha CNPJ/CPF/Telefone */}
+
             <div className="form-group-spacer"></div>
           </div>
 
-          <button className="btn-cadastrar" onClick={handleRegisterClick}>Cadastrar</button>
-          
+          <button className="btn-cadastrar" onClick={handleRegisterClick}>
+            Cadastrar
+          </button>
+
           <div className="login-link">
-            <p>Já tem uma conta? <a onClick={handleLoginClick}>Faça login</a></p>
+            <p>
+              Já tem uma conta? <a onClick={handleLoginClick}>Faça login</a>
+            </p>
           </div>
         </div>
       </div>

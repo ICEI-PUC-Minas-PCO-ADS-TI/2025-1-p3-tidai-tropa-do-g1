@@ -1,4 +1,104 @@
-/*** Função para validar CPF*/
+import api from "../services/api";
+
+/*** Função para validar CPF */
+function validarCPF(cpf) {
+  cpf = cpf.replace(/[^\d]+/g, "");
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+
+  let soma = 0;
+  for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
+  let resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.charAt(9))) return false;
+
+  soma = 0;
+  for (let i = 0; i < 10; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  return resto === parseInt(cpf.charAt(10));
+}
+
+/* Função para validar e-mail */
+function validarEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+/* Função para validar senha */
+function validarSenha(senha) {
+  return /^(?=.*[a-z])(?=.*[A-Z]).{5,}$/.test(senha);
+}
+
+/* Função de cadastro utilizando a API */
+export async function handleRegisterClick() {
+  const inputs = document.querySelectorAll(".register-form input");
+
+  const [
+    nomeInput,
+    organizacaoInput,
+    cnpjInput,
+    telefoneInput,
+    cpfInput,
+    emailInput,
+    emailConfirmInput,
+    senhaInput,
+    senhaConfirmInput,
+  ] = inputs;
+
+  if (emailInput.value !== emailConfirmInput.value) {
+    alert("Os e-mails não coincidem.");
+    return;
+  }
+
+  if (senhaInput.value !== senhaConfirmInput.value) {
+    alert("As senhas não coincidem.");
+    return;
+  }
+
+  const usuario = {
+    nome: nomeInput.value.trim(),
+    organizacao: organizacaoInput.value.trim(),
+    cnpj: cnpjInput.value.trim(),
+    telefone: telefoneInput.value.trim(),
+    cpf: cpfInput.value.trim(),
+    email: emailInput.value.trim(),
+    senha: senhaInput.value.trim(),
+    foto: "", // Você pode tratar a foto depois no ProfileModal
+  };
+
+  // Validações
+  if (!validarCPF(usuario.cpf)) {
+    alert("CPF inválido.");
+    return;
+  }
+
+  if (!validarEmail(usuario.email)) {
+    alert("E-mail inválido.");
+    return;
+  }
+
+  if (!validarSenha(usuario.senha)) {
+    alert(
+      "A senha deve ter no mínimo 5 caracteres, com pelo menos uma letra maiúscula e uma minúscula."
+    );
+    return;
+  }
+
+  try {
+    const response = await api.post("/Usuarios", usuario);
+    if (response.status === 201 || response.status === 200) {
+      alert("Cadastro realizado com sucesso!");
+      window.location.href = "/";
+    } else {
+      alert("Erro ao realizar cadastro.");
+    }
+  } catch (error) {
+    console.error("Erro ao cadastrar usuário:", error);
+    alert("Erro ao se comunicar com o servidor.");
+  }
+}
+
+/*** Função para validar CPF
 function validarCPF(cpf) {
   cpf = cpf.replace(/[^\d]+/g, "");
   if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
@@ -44,7 +144,7 @@ function validarCPF(cpf) {
 
 /**
  * Função para validar e-mail
- */
+ 
 function validarEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
@@ -53,14 +153,14 @@ function validarEmail(email) {
 /**
  * Função para validar senha
  * Mínimo 5 caracteres, 1 maiúscula, 1 minúscula
- */
+ 
 function validarSenha(senha) {
   return /^(?=.*[a-z])(?=.*[A-Z]).{5,}$/.test(senha);
 }
 
 /**
  * Função para coletar os dados do formulário de cadastro e salvar no localStorage.
- */
+ 
 export function handleRegisterClick() {
   const inputs = document.querySelectorAll(".register-form input");
 
@@ -140,3 +240,4 @@ export function handleRegisterClick() {
     input.value = "";
   });
 }
+*/

@@ -1,4 +1,36 @@
-export function loginUser(login, senha, organizacao) {
+import api from "../services/api";
+
+export async function loginUser(login, senha, organizacao) {
+  try {
+    const response = await api.get("/Usuarios");
+    const usuarios = response.data;
+
+    const usuario = usuarios.find(
+      (u) =>
+        u.email.toLowerCase() === login.toLowerCase() &&
+        u.senha === senha &&
+        u.organizacao.toLowerCase() === organizacao.toLowerCase()
+    );
+
+    if (usuario) {
+      localStorage.setItem("usuarioLogadoId", usuario.id);
+      localStorage.setItem("usuarioLogadoNome", usuario.nome);
+      localStorage.setItem("usuarioLogadoEmail", usuario.email);
+      localStorage.setItem("usuarioLogadoOrganizacao", usuario.organizacao);
+      localStorage.setItem("perfil_foto", usuario.foto);
+      return true;
+    } else {
+      alert("Login ou senha incorretos.");
+      return false;
+    }
+  } catch (error) {
+    console.error("Erro ao fazer login:", error);
+    alert("Erro ao se comunicar com o servidor.");
+    return false;
+  }
+}
+
+/*export function loginUser(login, senha, organizacao) {
   // Busca os usuários cadastrados no localStorage
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
@@ -17,4 +49,4 @@ export function loginUser(login, senha, organizacao) {
     alert("Login ou senha incorretos.");
     return false;
   }
-}
+}*/

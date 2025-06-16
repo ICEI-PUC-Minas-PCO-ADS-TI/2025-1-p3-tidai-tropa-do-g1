@@ -10,8 +10,12 @@ function Login() {
   const [senha, setSenha] = useState("");
   const [organizacao, setOrganizacao] = useState("");
 
-  const handleLoginClick = () => {
-    const sucesso = loginUser(login.trim().toLowerCase(), senha, organizacao.trim());
+  const handleLoginClick = async () => {
+    const sucesso = await loginUser(
+      login.trim().toLowerCase(),
+      senha,
+      organizacao.trim().toLowerCase()
+    );
     if (sucesso) {
       navigate("/ChatPage");
     }
@@ -68,10 +72,18 @@ function Login() {
 
       <footer className="rodape">
         <ul>
-          <li><a href="#quem-somos">Quem somos nós?</a></li>
-          <li><a href="#duvidas">Dúvidas Frequentes</a></li>
-          <li><a href="#termos">Termos de Uso</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li>
+            <a href="#quem-somos">Quem somos nós?</a>
+          </li>
+          <li>
+            <a href="#duvidas">Dúvidas Frequentes</a>
+          </li>
+          <li>
+            <a href="#termos">Termos de Uso</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
         </ul>
       </footer>
     </div>
