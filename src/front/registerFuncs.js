@@ -1,6 +1,5 @@
 import api from "../services/api";
 
-/*** Função para validar CPF */
 function validarCPF(cpf) {
   cpf = cpf.replace(/[^\d]+/g, "");
   if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
@@ -18,18 +17,15 @@ function validarCPF(cpf) {
   return resto === parseInt(cpf.charAt(10));
 }
 
-/* Função para validar e-mail */
 function validarEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
-/* Função para validar senha */
 function validarSenha(senha) {
   return /^(?=.*[a-z])(?=.*[A-Z]).{5,}$/.test(senha);
 }
 
-/* Função de cadastro utilizando a API */
 export async function handleRegisterClick() {
   const inputs = document.querySelectorAll(".register-form input");
 
@@ -57,17 +53,30 @@ export async function handleRegisterClick() {
 
   const usuario = {
     nome: nomeInput.value.trim(),
-    organizacao: organizacaoInput.value.trim(),
-    cnpj: cnpjInput.value.trim(),
-    telefone: telefoneInput.value.trim(),
-    cpf: cpfInput.value.trim(),
     email: emailInput.value.trim(),
     senha: senhaInput.value.trim(),
-    foto: "", // Você pode tratar a foto depois no ProfileModal
+    documento: cpfInput.value.trim(),
+    tipoDocumento: "CPF",
+    dataNascimento: new Date().toISOString(),
+    tipoUsuario: "Comum",
+    ativo: true,
+    organizacaoId: 0,
+    organizacao: {
+      id: 0,
+      nome: organizacaoInput.value.trim(),
+      cnpj: cnpjInput.value.trim(),
+      dataCriacao: new Date().toISOString(),
+      ramo: "Tecnologia",
+      telefone: telefoneInput.value.trim(),
+      cep: "00000-000",
+      email: emailInput.value.trim(),
+      senha: senhaInput.value.trim(),
+      imagemPerfil: null,
+    },
+    foto: null,
   };
 
-  // Validações
-  if (!validarCPF(usuario.cpf)) {
+  if (!validarCPF(usuario.documento)) {
     alert("CPF inválido.");
     return;
   }
@@ -90,11 +99,26 @@ export async function handleRegisterClick() {
       alert("Cadastro realizado com sucesso!");
       window.location.href = "/";
     } else {
-      alert("Erro ao realizar cadastro.");
+      alert("Erro ao realizar cadastro: " + JSON.stringify(response.data));
     }
   } catch (error) {
     console.error("Erro ao cadastrar usuário:", error);
-    alert("Erro ao se comunicar com o servidor.");
+    let errorMessage = "Erro ao se comunicar com o servidor.";
+    if (error.response && error.response.data && error.response.data.errors) {
+      errorMessage = "Erros de validação:\n";
+      for (const key in error.response.data.errors) {
+        if (error.response.data.errors.hasOwnProperty(key)) {
+          errorMessage += `- ${key}: ${error.response.data.errors[key].join(
+            ", "
+          )}\n`;
+        }
+      }
+    } else if (error.response && error.response.data) {
+      errorMessage = "Erro do servidor: " + JSON.stringify(error.response.data);
+    } else if (error.message) {
+      errorMessage = "Erro de rede: " + error.message;
+    }
+    alert(errorMessage);
   }
 }
 
