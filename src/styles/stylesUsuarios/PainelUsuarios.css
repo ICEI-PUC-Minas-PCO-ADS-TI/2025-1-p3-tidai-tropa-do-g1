@@ -1,34 +1,39 @@
-.usuarios-container {
-  background-color: #3a3a3a;
-  min-height: 80vh;
-  color: #fff;
+.painel {
+  flex: 1;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .usuarios-container h4 {
-  margin-top: 2rem;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.custom-input {
-  background-color: #313131;
-  color: #ffffff;
-  border: none;
-  box-shadow: none;
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.custom-input::placeholder {
-  color: #ccc;
+.filtros select,
+.filtros input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #444;
+  color: white;
+  border: 1px solid #666;
 }
 
-.custom-input:focus {
-  border: 1px solid #BB9149;
-  box-shadow: none;
-  background-color: #313131;
-  color: #ffffff;
+.filtros input::placeholder {
+  color: #aaa;
 }
 
-.input-group-text {
-  background-color: #313131;
-  color: #fff;
-  border: none;
+.usuarios-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
 }
