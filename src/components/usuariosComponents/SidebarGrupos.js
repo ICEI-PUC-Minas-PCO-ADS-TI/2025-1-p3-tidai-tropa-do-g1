@@ -1,17 +1,18 @@
-// src/components/SidebarGrupos.js
 import React from "react";
 import "../../styles/stylesUsuarios/SidebarGrupos.css";
+import GrupoBotao from "./GrupoBotao";
 
 function SidebarGrupos() {
+  const grupos = ["Controladoria", "Financeiro", "Recursos Humanos", "TI"];
+
   return (
     <div className="grupos-container">
       <h4>Grupos</h4>
 
       <div className="grupo-lista">
-        <button className="group-btn">Controladoria</button>
-        <button className="group-btn">Financeiro</button>
-        <button className="group-btn">Recursos Humanos</button>
-        <button className="group-btn">TI</button>
+        {grupos.map((grupo, index) => (
+          <GrupoBotao key={index} nome={grupo} onClick={() => console.log(`Clicou em ${grupo}`)} />
+        ))}
       </div>
 
       <div className="grupo-acoes">
