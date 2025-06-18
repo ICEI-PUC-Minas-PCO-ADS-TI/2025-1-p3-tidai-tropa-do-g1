@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/stylesUsuarios/SidebarGrupos.css";
 import GrupoBotao from "./GrupoBotao";
 
-function SidebarGrupos() {
+function SidebarGrupos({ grupoSelecionado, setGrupoSelecionado }) {
   const grupos = ["Controladoria", "Financeiro", "Recursos Humanos", "TI"];
 
   return (
@@ -11,7 +11,12 @@ function SidebarGrupos() {
 
       <div className="grupo-lista">
         {grupos.map((grupo, index) => (
-          <GrupoBotao key={index} nome={grupo} onClick={() => console.log(`Clicou em ${grupo}`)} />
+          <GrupoBotao
+            key={index}
+            nome={grupo}
+            ativo={grupoSelecionado.toLowerCase() === grupo.toLowerCase()}
+            onClick={() => setGrupoSelecionado(grupo.toLowerCase())}
+          />
         ))}
       </div>
 

@@ -68,3 +68,7 @@
 .custom-btn:hover {
   background-color: #0056b3;
 }
+.group-btn.ativo {
+  background-color: #007bff;
+  color: white;
+}

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import UserCard from "./UserCard";
 import SearchBar from "./SearchBar";
-import TipoUsuarioSelect from "./TipoUsuarioSelect";
 import "../../styles/stylesUsuarios/PainelUsuarios.css";
 
-// Lista de usuários com seus grupos
 const todosUsuarios = [
   { nome: "Douglas", grupo: "ti" },
   { nome: "Ingrid", grupo: "ti" },
@@ -14,13 +12,11 @@ const todosUsuarios = [
   { nome: "Luiz", grupo: "controladoria" },
 ];
 
-function PainelUsuarios() {
-  const [tipoSelecionado, setTipoSelecionado] = useState("");
+function PainelUsuarios({ grupoSelecionado }) {
   const [busca, setBusca] = useState("");
 
-  // Filtro baseado no tipo e na busca
   const usuariosFiltrados = todosUsuarios.filter(usuario => {
-    const condicaoGrupo = tipoSelecionado ? usuario.grupo === tipoSelecionado : true;
+    const condicaoGrupo = grupoSelecionado ? usuario.grupo === grupoSelecionado : true;
     const condicaoBusca = usuario.nome.toLowerCase().includes(busca.toLowerCase());
     return condicaoGrupo && condicaoBusca;
   });
@@ -30,10 +26,6 @@ function PainelUsuarios() {
       <h4>Usuários</h4>
 
       <div className="filtros">
-        <TipoUsuarioSelect
-          value={tipoSelecionado}
-          onChange={(e) => setTipoSelecionado(e.target.value)}
-        />
         <SearchBar
           placeholder="Pesquisar..."
           value={busca}
