@@ -1,52 +1,56 @@
 import api from "../services/api";
 
-export async function loginUser(login, senha, organizacao) {
+/**
+ * Autentica um usuário enviando as credenciais para a API.
+ * @param {object} credentials - Um objeto contendo { email, senha, organizacao }.
+ * @returns {object} Os dados do usuário logado.
+ * @throws {Error} Lança um erro se o login falhar.
+ */
+export async function loginUser(credentials) {
+  const { email, senha, organizacao } = credentials;
+
+  if (!email || !senha || !organizacao) {
+    throw new Error("E-mail, senha e organização são obrigatórios.");
+  }
+
   try {
-    const response = await api.get("/Usuarios");
-    const usuarios = response.data;
+    // 1. Envia as credenciais para um endpoint POST dedicado ao login.
+    const response = await api.post("/usuarios/login", {
+      email: email.trim().toLowerCase(),
+      senha: senha,
+      organizacao: organizacao.trim(), // Enviamos o nome/código da organização
+    });
 
-    const usuario = usuarios.find(
-      (u) =>
-        u.email.toLowerCase() === login.toLowerCase() &&
-        u.senha === senha &&
-        u.organizacao.toLowerCase() === organizacao.toLowerCase()
-    );
+    // 2. Se o login for bem-sucedido (status 200), a API retornará os dados do usuário e o token.
+    const { usuario, token } = response.data;
 
-    if (usuario) {
-      localStorage.setItem("usuarioLogadoId", usuario.id);
-      localStorage.setItem("usuarioLogadoNome", usuario.nome);
-      localStorage.setItem("usuarioLogadoEmail", usuario.email);
-      localStorage.setItem("usuarioLogadoOrganizacao", usuario.organizacao);
-      localStorage.setItem("perfil_foto", usuario.foto);
-      return true;
+    if (usuario && token) {
+      // 3. Armazena os dados no localStorage para uso na aplicação.
+      localStorage.setItem("authToken", token); // Guarde o token!
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuario)); // Guarde o objeto do usuário
+      
+      // Configura o token no cabeçalho do Axios para requisições futuras
+      api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+      return usuario; // Retorna os dados do usuário para a página de Login
     } else {
-      alert("Login ou senha incorretos.");
-      return false;
+      throw new Error("Resposta da API inválida após o login.");
     }
+
   } catch (error) {
-    console.error("Erro ao fazer login:", error);
-    alert("Erro ao se comunicar com o servidor.");
-    return false;
+    console.error("Erro ao fazer login:", error.response?.data || error.message);
+
+    // 4. Trata erros específicos, como "Credenciais inválidas".
+    if (error.response && (error.response.status === 401 || error.response.status === 400)) {
+      throw new Error(error.response.data.message || "Login, senha ou organização incorretos.");
+    } else {
+      throw new Error("Erro de comunicação com o servidor. Tente novamente mais tarde.");
+    }
   }
 }
 
-/*export function loginUser(login, senha, organizacao) {
-  // Busca os usuários cadastrados no localStorage
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  // Procura um usuário que corresponda aos campos preenchidos
-  const user = usuarios.find(
-    (u) =>
-      u.email === login && u.senha === senha && u.organizacao === organizacao
-  );
-
-  if (user) {
-    alert("Logado com sucesso!");
-    localStorage.setItem("usuarioLogadoEmail", login);
-    localStorage.setItem("usuarioLogadoOrganizacao", organizacao);
-    return true;
-  } else {
-    alert("Login ou senha incorretos.");
-    return false;
-  }
-}*/
+export function logoutUser() {
+  localStorage.removeItem("authToken");
+  localStorage.removeItem("usuarioLogado");
+  delete api.defaults.headers.common['Authorization'];
+}

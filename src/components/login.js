@@ -6,18 +6,26 @@ import { loginUser } from "../front/loginFuncs";
 function Login() {
   const navigate = useNavigate();
 
-  const [login, setLogin] = useState("");
+  // Renomeado 'login' para 'email' para maior clareza
+  const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [organizacao, setOrganizacao] = useState("");
 
-  const handleLoginClick = async () => {
-    const sucesso = await loginUser(
-      login.trim().toLowerCase(),
-      senha,
-      organizacao.trim().toLowerCase()
-    );
-    if (sucesso) {
-      navigate("/ChatPage");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Usando um formulário, prevenimos o reload
+    setError("");
+    setIsLoading(true);
+
+    try {
+      await loginUser({ email, senha, organizacao });
+      navigate("/ChatPage"); // Navega para a página principal após sucesso
+    } catch (err) {
+      setError(err.message); // Exibe o erro retornado pelo authService
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -31,14 +39,16 @@ function Login() {
         <img src="/main.png" alt="crows-logo" className="logo" />
       </div>
 
-      <div className="login-form">
+      {/* Usar a tag <form> é uma boa prática para acessibilidade */}
+      <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Login</label>
+          <label>E-mail de Login</label>
           <input
-            type="text"
-            placeholder="Código de Login"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
+            type="email" // Alterado para type="email"
+            placeholder="seu-email@dominio.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
 
@@ -49,6 +59,7 @@ function Login() {
             placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
+            required
           />
         </div>
 
@@ -56,19 +67,23 @@ function Login() {
           <label>Organização</label>
           <input
             type="text"
-            placeholder="Código da organização"
+            placeholder="Código ou nome da organização"
             value={organizacao}
             onChange={(e) => setOrganizacao(e.target.value)}
+            required
           />
         </div>
 
-        <button className="btn-entrar" onClick={handleLoginClick}>
-          Entrar
+        {/* Exibe mensagens de erro para o usuário */}
+        {error && <p className="error-message">{error}</p>}
+
+        <button type="submit" className="btn-entrar" disabled={isLoading}>
+          {isLoading ? "Entrando..." : "Entrar"}
         </button>
-        <button className="btn-cadastro" onClick={handleRegisterClick}>
+        <button type="button" className="btn-cadastro" onClick={handleRegisterClick}>
           Não tenho Login
         </button>
-      </div>
+      </form>
 
       <footer className="rodape">
         <ul>
