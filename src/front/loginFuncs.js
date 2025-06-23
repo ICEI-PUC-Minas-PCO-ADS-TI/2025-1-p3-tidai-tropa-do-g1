@@ -1,47 +1,39 @@
 import api from "../services/api";
 
-export async function loginUser(credentials) {
-  const { email, senha, organizacao } = credentials;
-
+export async function loginUser({ email, senha, organizacao }) {
   if (!email || !senha || !organizacao) {
     throw new Error("E-mail, senha e organização são obrigatórios.");
   }
 
   try {
-    const response = await api.post("/usuarios/login", {
-      email: email.trim().toLowerCase(),
-      senha: senha,
-      organizacao: organizacao.trim(),
-    });
+    const response = await api.get("/Usuarios");
+    const usuarios = response.data;
 
-    const { usuario, token } = response.data;
-
-    if (usuario && token) {
-      localStorage.setItem("authToken", token);
-      localStorage.setItem("usuarioLogado", JSON.stringify(usuario));
-      api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-      return usuario;
-    } else {
-      throw new Error("Resposta da API inválida após o login.");
-    }
-  } catch (error) {
-    console.error(
-      "Erro ao fazer login:",
-      error.response?.data || error.message
+    const usuarioEncontrado = usuarios.find(
+      (u) =>
+        u.email.toLowerCase() === email.trim().toLowerCase() &&
+        u.senha === senha &&
+        u.organizacao &&
+        u.organizacao.nome.toLowerCase() === organizacao.trim().toLowerCase()
     );
 
-    if (
-      error.response &&
-      (error.response.status === 401 || error.response.status === 400)
-    ) {
-      throw new Error(
-        error.response.data.message || "Login, senha ou organização incorretos."
-      );
+    if (usuarioEncontrado) {
+      const fakeToken = "fake-token-" + Date.now();
+
+      localStorage.setItem("authToken", fakeToken);
+      localStorage.setItem("usuarioLogado", JSON.stringify(usuarioEncontrado));
+
+      api.defaults.headers.common["Authorization"] = `Bearer ${fakeToken}`;
+
+      return usuarioEncontrado;
     } else {
-      throw new Error(
-        "Erro de comunicação com o servidor. Tente novamente mais tarde."
-      );
+      throw new Error("Email, senha ou organização incorretos.");
     }
+  } catch (error) {
+    console.error("Erro ao fazer login:", error);
+    throw new Error(
+      "Erro de comunicação com o servidor. Tente novamente mais tarde."
+    );
   }
 }
 

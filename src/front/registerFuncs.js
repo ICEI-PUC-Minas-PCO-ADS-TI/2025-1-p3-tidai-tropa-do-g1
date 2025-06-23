@@ -32,67 +32,67 @@ export async function registrarOrganizacao(formData) {
   if (!validarCPF(formData.cpf)) {
     throw new Error("CPF inválido.");
   }
-
   if (!validarEmail(formData.email)) {
     throw new Error("E-mail inválido.");
   }
-
   if (!validarSenha(formData.senha)) {
     throw new Error(
       "A senha deve ter no mínimo 5 caracteres, com pelo menos uma letra maiúscula e uma minúscula."
     );
   }
 
-  const timestamp = Date.now();
   const dataNascimentoIso = formData.dataNascimento
     ? new Date(formData.dataNascimento).toISOString()
     : null;
 
-  const payload = {
-    nome: formData.nomeUsuario.trim(),
-    documento: formData.cpf.replace(/[^\d]/g, ""),
-    tipoDocumento: "CPF",
-    dataNascimento: dataNascimentoIso,
-    email: `teste-${timestamp}-${Math.random()
-      .toString(36)
-      .substring(7)}@crows.com`,
-    senha: formData.senha.trim(),
-    tipoUsuario: "Admin",
-    ativo: true,
-    foto: null,
-    organizacao: {
+  try {
+    const organizacaoPayload = {
       id: 0,
       nome: formData.nomeOrganizacao.trim(),
-      cnpj: `000000000001${String(timestamp).slice(-4)}${Math.floor(
-        Math.random() * 100
-      )
-        .toString()
-        .padStart(2, "0")}`,
+      cnpj: formData.cnpj.replace(/[^\d]/g, ""),
       dataCriacao: new Date().toISOString(),
       ramo: formData.ramo.trim(),
       telefone: formData.telefone.replace(/[^\d]/g, ""),
       cep: formData.cep.replace(/[^\d]/g, ""),
-      email: `org-${timestamp}-${Math.random()
-        .toString(36)
-        .substring(7)}@crows.com`,
+      email: formData.email.trim(),
       senha: formData.senha.trim(),
       imagemPerfil: null,
-    },
-  };
+    };
 
-  try {
-    const response = await api.post("/Usuarios", payload);
+    const responseOrg = await api.post("/Organizacoes", organizacaoPayload);
 
-    if (response.status === 201 || response.status === 200) {
-      return response.data;
+    if (responseOrg.status !== 201 && responseOrg.status !== 200) {
+      throw new Error(
+        "Erro ao cadastrar organização: " + JSON.stringify(responseOrg.data)
+      );
+    }
+
+    const organizacaoCriada = responseOrg.data;
+
+    const usuarioPayload = {
+      nome: formData.nomeUsuario.trim(),
+      documento: formData.cpf.replace(/[^\d]/g, ""),
+      tipoDocumento: "CPF",
+      dataNascimento: dataNascimentoIso,
+      email: formData.email.trim(),
+      senha: formData.senha.trim(),
+      tipoUsuario: "Admin",
+      ativo: true,
+      foto: null,
+      organizacaoId: organizacaoCriada.id,
+    };
+
+    const responseUser = await api.post("/Usuarios", usuarioPayload);
+
+    if (responseUser.status === 201 || responseUser.status === 200) {
+      return responseUser.data;
     } else {
       throw new Error(
-        `Erro desconhecido ao cadastrar. Status HTTP: ${response.status}`
+        `Erro desconhecido ao cadastrar usuário. Status HTTP: ${responseUser.status}`
       );
     }
   } catch (error) {
-    console.error("Erro ao cadastrar organização:", error);
-
+    console.error("Erro no processo de cadastro:", error);
     let errorMessage = "Erro ao se comunicar com o servidor.";
 
     if (error.response) {
@@ -128,7 +128,6 @@ export async function registrarOrganizacao(formData) {
     } else {
       errorMessage = "Erro inesperado: " + error.message;
     }
-
     throw new Error(errorMessage);
   }
 }
