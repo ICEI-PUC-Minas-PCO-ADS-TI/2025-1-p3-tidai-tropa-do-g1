@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import api from "../services/api";
 import "../styles/ProfileModal.css";
 
 function ProfileModal({ onClose, userImage, setUserImage }) {
   const navigate = useNavigate();
 
-  const [nome, setNome] = useState("");
-  const [emailAntigo, setEmailAntigo] = useState("");
-  const [novoEmail, setNovoEmail] = useState("");
+  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+  const [id, setId] = useState(usuarioLogado?.id || "");
+  const [nome, setNome] = useState(usuarioLogado?.nome || "");
+  const [email, setEmail] = useState(usuarioLogado?.email || "");
   const [senhaAntiga, setSenhaAntiga] = useState("");
   const [senhaNova, setSenhaNova] = useState("");
-  const [fotoPreview, setFotoPreview] = useState(userImage || "");
+  const [fotoPreview, setFotoPreview] = useState(
+    usuarioLogado?.foto || userImage || ""
+  );
+
+  useEffect(() => {
+    setUserImage(fotoPreview);
+  }, [fotoPreview]);
 
   function handleImageChange(e) {
     const file = e.target.files[0];
@@ -24,84 +32,55 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
     }
   }
 
-  function handleLogout() {
-    localStorage.removeItem("usuarioLogadoEmail");
-    localStorage.removeItem("usuarioLogadoOrganizacao");
-    navigate("/");
+  async function handleSalvar() {
+    try {
+      if (!senhaAntiga) {
+        alert("Por favor, insira sua senha atual para confirmar.");
+        return;
+      }
+
+      const loginConfirm = await api.post("/usuarios/login", {
+        email: email,
+        senha: senhaAntiga,
+        organizacao: usuarioLogado.organizacao.nome,
+      });
+
+      if (!loginConfirm.data || !loginConfirm.data.token) {
+        alert("Senha atual incorreta.");
+        return;
+      }
+
+      const payload = {
+        id: id,
+        nome: nome.trim(),
+        email: email.trim().toLowerCase(),
+        senha: senhaNova ? senhaNova : senhaAntiga,
+        foto: fotoPreview,
+        documento: usuarioLogado.documento,
+        tipoDocumento: usuarioLogado.tipoDocumento,
+        dataNascimento: usuarioLogado.dataNascimento,
+        tipoUsuario: usuarioLogado.tipoUsuario,
+        ativo: true,
+        organizacaoId: usuarioLogado.organizacaoId,
+      };
+
+      const response = await api.put(`/usuarios/${id}`, payload);
+
+      localStorage.setItem("usuarioLogado", JSON.stringify(response.data));
+
+      alert("Perfil atualizado com sucesso!");
+      onClose();
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao atualizar perfil. Verifique suas informações.");
+    }
   }
 
-  function handleSalvar() {
-    const emailLogado = localStorage.getItem("usuarioLogadoEmail");
-    const organizacaoLogada = localStorage.getItem("usuarioLogadoOrganizacao");
-
-    if (!emailLogado || !organizacaoLogada) {
-      alert("Erro: nenhum usuário está logado.");
-      return;
-    }
-
-    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    const index = usuarios.findIndex(
-      (u) => u.email === emailLogado && u.organizacao === organizacaoLogada
-    );
-
-    if (index === -1) {
-      alert("Usuário logado não encontrado.");
-      return;
-    }
-
-    if (emailAntigo.trim().toLowerCase() !== emailLogado) {
-      alert("Email antigo não confere com o usuário logado.");
-      return;
-    }
-
-    if (senhaAntiga !== usuarios[index].senha) {
-      alert("Senha antiga incorreta.");
-      return;
-    }
-
-    if (!senhaNova) {
-      alert("Por favor, insira a nova senha.");
-      return;
-    }
-
-    if (
-      novoEmail.trim().toLowerCase() !== emailLogado &&
-      usuarios.some(
-        (u) =>
-          u.email === novoEmail.trim().toLowerCase() && u.email !== emailLogado
-      )
-    ) {
-      alert("Este email já está em uso por outro usuário.");
-      return;
-    }
-
-    // Atualiza dados do usuário
-    usuarios[index] = {
-      ...usuarios[index],
-      nome: nome.trim(),
-      email: novoEmail.trim().toLowerCase(),
-      senha: senhaNova,
-      foto: fotoPreview,
-      organizacao: usuarios[index].organizacao,
-    };
-
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    localStorage.setItem("usuarioLogadoEmail", novoEmail.trim().toLowerCase());
-    localStorage.setItem("perfil_nome", nome.trim());
-    localStorage.setItem("perfil_email", novoEmail.trim().toLowerCase());
-    localStorage.setItem("perfil_foto", fotoPreview);
-
-    alert("Perfil atualizado com sucesso!");
-
-    setNome("");
-    setEmailAntigo("");
-    setNovoEmail("");
-    setSenhaAntiga("");
-    setSenhaNova("");
-    setFotoPreview("");
-
-    onClose();
+  function handleLogout() {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("usuarioLogado");
+    delete api.defaults.headers.common["Authorization"];
+    navigate("/");
   }
 
   return (
@@ -126,26 +105,18 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
           onChange={(e) => setNome(e.target.value)}
         />
 
-        <label>Email antigo (confirmação):</label>
+        <label>Email:</label>
         <input
           type="email"
-          placeholder="Digite seu email antigo"
-          value={emailAntigo}
-          onChange={(e) => setEmailAntigo(e.target.value)}
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
 
-        <label>Novo email:</label>
-        <input
-          type="email"
-          placeholder="Digite seu novo email"
-          value={novoEmail}
-          onChange={(e) => setNovoEmail(e.target.value)}
-        />
-
-        <label>Senha antiga:</label>
+        <label>Senha atual:</label>
         <input
           type="password"
-          placeholder="Senha antiga"
+          placeholder="Senha atual"
           value={senhaAntiga}
           onChange={(e) => setSenhaAntiga(e.target.value)}
         />
@@ -153,7 +124,7 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
         <label>Nova senha:</label>
         <input
           type="password"
-          placeholder="Nova senha"
+          placeholder="Nova senha (ou deixe em branco)"
           value={senhaNova}
           onChange={(e) => setSenhaNova(e.target.value)}
         />

@@ -80,7 +80,11 @@ function Login() {
         <button type="submit" className="btn-entrar" disabled={isLoading}>
           {isLoading ? "Entrando..." : "Entrar"}
         </button>
-        <button type="button" className="btn-cadastro" onClick={handleRegisterClick}>
+        <button
+          type="button"
+          className="btn-cadastro"
+          onClick={handleRegisterClick}
+        >
           Não tenho Login
         </button>
       </form>
