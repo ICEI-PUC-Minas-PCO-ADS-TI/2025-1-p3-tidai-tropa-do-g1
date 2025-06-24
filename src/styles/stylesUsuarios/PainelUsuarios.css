@@ -1,14 +1,16 @@
 .painel {
   flex: 1;
-  background-color: #2f2f2f;
-  border-radius: 10px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
   padding: 20px;
   overflow-y: auto;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-.usuarios-container h4 {
+.painel h4 {
   margin-bottom: 20px;
   text-align: center;
+  color: white;
 }
 
 .filtros {
@@ -21,15 +23,22 @@
 .filtros select,
 .filtros input {
   flex: 1;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #444;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #3a3a3a;
   color: white;
   border: 1px solid #666;
+  transition: border-color 0.3s;
 }
 
 .filtros input::placeholder {
   color: #aaa;
+}
+
+.filtros select:focus,
+.filtros input:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
 .usuarios-lista {

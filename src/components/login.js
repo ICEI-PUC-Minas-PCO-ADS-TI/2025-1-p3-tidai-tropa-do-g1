@@ -6,24 +6,24 @@ import { loginUser } from "../front/loginFuncs";
 function Login() {
   const navigate = useNavigate();
 
-  // Renomeado 'login' para 'email' para maior clareza
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [organizacao, setOrganizacao] = useState("");
+  const [tipoLogin, setTipoLogin] = useState("usuario");
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Usando um formulário, prevenimos o reload
+    e.preventDefault();
     setError("");
     setIsLoading(true);
 
     try {
-      await loginUser({ email, senha, organizacao });
-      navigate("/ChatPage"); // Navega para a página principal após sucesso
+      await loginUser({ email, senha, organizacao, tipoLogin });
+      navigate("/ChatPage");
     } catch (err) {
-      setError(err.message); // Exibe o erro retornado pelo authService
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -39,12 +39,11 @@ function Login() {
         <img src="/main.png" alt="crows-logo" className="logo" />
       </div>
 
-      {/* Usar a tag <form> é uma boa prática para acessibilidade */}
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label>E-mail de Login</label>
           <input
-            type="email" // Alterado para type="email"
+            type="email"
             placeholder="seu-email@dominio.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -67,14 +66,37 @@ function Login() {
           <label>Organização</label>
           <input
             type="text"
-            placeholder="Código ou nome da organização"
+            placeholder="Nome da organização"
             value={organizacao}
             onChange={(e) => setOrganizacao(e.target.value)}
             required
           />
         </div>
 
-        {/* Exibe mensagens de erro para o usuário */}
+        <div className="radio-group">
+          <label>Tipo de Login:</label>
+          <div>
+            <label>
+              <input
+                type="radio"
+                value="usuario"
+                checked={tipoLogin === "usuario"}
+                onChange={() => setTipoLogin("usuario")}
+              />
+              Usuário
+            </label>
+            <label style={{ marginLeft: "10px" }}>
+              <input
+                type="radio"
+                value="admin"
+                checked={tipoLogin === "admin"}
+                onChange={() => setTipoLogin("admin")}
+              />
+              Administrador
+            </label>
+          </div>
+        </div>
+
         {error && <p className="error-message">{error}</p>}
 
         <button type="submit" className="btn-entrar" disabled={isLoading}>

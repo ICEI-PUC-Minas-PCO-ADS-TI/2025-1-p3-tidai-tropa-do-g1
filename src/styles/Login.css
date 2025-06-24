@@ -29,6 +29,28 @@ body {
   color: #ffffff;
 }
 
+/* Radio group */
+.radio-group {
+  margin-bottom: 0.9375rem;
+  text-align: center;
+}
+
+.radio-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.radio-options label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+  margin-right: 0.3125rem;
+  cursor: pointer;
+}
+
 /* Formulário */
 .login-form {
   width: 18.75rem;

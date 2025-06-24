@@ -1,9 +1,9 @@
 body {
-  background-color: #3a3a3a;
-  color: #ffffff;
+  background-color: #202020;
+  color: white;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .usuarios-page {
@@ -17,6 +17,6 @@ body {
   flex: 1;
   padding: 20px;
   gap: 20px;
-  background-color: #2f2f2f;
+  background-color: #202020;
   overflow: hidden;
 }

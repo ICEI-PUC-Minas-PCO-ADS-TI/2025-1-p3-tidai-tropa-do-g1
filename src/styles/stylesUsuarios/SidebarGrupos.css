@@ -1,74 +1,72 @@
 .sidebar {
   width: 260px;
   flex-shrink: 0;
-  background-color: #2f2f2f;
+  background-color: #2a2a2a;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Container principal da sidebar */
 .grupos-container {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Espaço entre seções: lista e ações */
+  gap: 16px;
 }
 
-/* Título */
 .grupos-container h4 {
   text-align: center;
   margin-bottom: 10px;
   color: white;
 }
 
-/* Lista de botões de grupo */
 .grupo-lista {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaço entre botões individuais */
+  gap: 10px;
 }
 
-/* Botão de grupo */
 .group-btn {
-  background-color: #555;
+  background-color: #3a3a3a;
   color: white;
   border: none;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   text-align: left;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .group-btn:hover {
-  background-color: #777;
+  background-color: #555;
+  transform: translateY(-2px);
 }
 
-/* Container dos botões de ação */
+.group-btn.ativo {
+  background-color: #007bff;
+  color: white;
+}
+
 .grupo-acoes {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaço entre os botões */
+  gap: 10px;
 }
 
-/* Botões de ação (Novo Grupo, Novo Usuário) */
 .custom-btn {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
   font-weight: bold;
   text-align: center;
 }
 
 .custom-btn:hover {
   background-color: #0056b3;
-}
-.group-btn.ativo {
-  background-color: #007bff;
-  color: white;
+  transform: translateY(-2px);
 }

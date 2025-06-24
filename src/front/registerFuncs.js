@@ -46,6 +46,7 @@ export async function registrarOrganizacao(formData) {
     : null;
 
   try {
+    // ✅ Cria primeiro a Organização
     const organizacaoPayload = {
       id: 0,
       nome: formData.nomeOrganizacao.trim(),
@@ -69,17 +70,20 @@ export async function registrarOrganizacao(formData) {
 
     const organizacaoCriada = responseOrg.data;
 
+    // ✅ Cria automaticamente o primeiro usuário Admin vinculado à organização
     const usuarioPayload = {
+      id: 0,
       nome: formData.nomeUsuario.trim(),
       documento: formData.cpf.replace(/[^\d]/g, ""),
       tipoDocumento: "CPF",
       dataNascimento: dataNascimentoIso,
       email: formData.email.trim(),
       senha: formData.senha.trim(),
-      tipoUsuario: "Admin",
+      tipoUsuario: "Administrador",
       ativo: true,
-      foto: null,
       organizacaoId: organizacaoCriada.id,
+      organizacao: null,
+      grupoUsuarios: [],
     };
 
     const responseUser = await api.post("/Usuarios", usuarioPayload);

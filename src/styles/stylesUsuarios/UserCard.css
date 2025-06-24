@@ -1,17 +1,18 @@
 .user-card {
-  background-color: #444;
-  border: 1px solid #666;
-  border-radius: 10px;
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  border-radius: 12px;
   padding: 15px;
-  color: #fff;
+  color: white;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
   cursor: pointer;
 }
 
 .user-card:hover {
   background-color: #555;
+  transform: translateY(-3px);
 }
 
 .user-card i {
