@@ -35,6 +35,15 @@ function SidebarGrupos({ grupoSelecionado, setGrupoSelecionado }) {
       organizacaoId: usuarioLogado.organizacaoId,
       organizacao: {
         id: usuarioLogado.organizacaoId,
+        nome: usuarioLogado.nome,
+        cnpj: usuarioLogado.cnpj,
+        dataCriacao: usuarioLogado.dataCriacao,
+        ramo: usuarioLogado.ramo,
+        telefone: usuarioLogado.telefone,
+        cep: usuarioLogado.cep,
+        email: usuarioLogado.email,
+        senha: usuarioLogado.senha,
+        imagemPerfil: usuarioLogado.imagemPerfil
       },
     };
 
