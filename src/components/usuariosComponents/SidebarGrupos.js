@@ -1,182 +1,156 @@
 // src/components/usuariosComponents/SidebarGrupos.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/stylesUsuarios/SidebarGrupos.css";
 import GrupoBotao from "./GrupoBotao";
-import { useGrupos } from "../../front/SidebarFuncs";
-import ModalGrupo from "../usuariosComponents/ModalGrupo";
-import api from "../../services/api"; // Assumimos que 'api' é uma instância do Axios ou similar
+import { useGrupos } from "../../front/SidebarFuncs"; // Hook customizado para carregar grupos
+import ModalGrupo from "../usuariosComponents/ModalGrupo"; // Modal para criar/editar grupo
+import api from "../../services/api"; // Instância do Axios ou similar para chamadas de API
 
 function SidebarGrupos({ grupoSelecionado, setGrupoSelecionado }) {
-  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
-  const { grupos, carregarGrupos } = useGrupos(usuarioLogado?.id);
-  const [modalAberto, setModalAberto] = useState(false);
-  const [grupoEditando, setGrupoEditando] = useState(null);
-  const [nomeGrupo, setNomeGrupo] = useState("");
+  // Garante que usuarioLogado seja um objeto e tenha as propriedades necessárias
+  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || '{}');
 
+  // Usando o hook customizado useGrupos para gerenciar grupos e o carregamento
+  // O hook useGrupos deve retornar 'grupos' e 'carregarGrupos'
+  const { grupos, carregarGrupos, loadingGrupos, erroGrupos } = useGrupos(usuarioLogado?.organizacaoId); 
+  // Modifiquei para passar organizacaoId para useGrupos e adicionei loading/erro para feedback
+
+  const [modalAberto, setModalAberto] = useState(false); // Controla a visibilidade do modal de grupo
+  const [grupoEditando, setGrupoEditando] = useState(null); // Armazena o grupo sendo editado (ou null para criação)
+  const [nomeGrupo, setNomeGrupo] = useState(""); // Estado para o nome do grupo no formulário do modal
+
+  // Verifica se o usuário logado é administrador
   const isAdmin = () =>
     usuarioLogado?.tipoUsuario?.toLowerCase() === "administrador";
 
+  // Função para abrir o modal de criação/edição de grupo
   const abrirModalGrupo = (grupo = null) => {
-    setGrupoEditando(grupo);
-    setNomeGrupo(grupo?.nome || "");
-    setModalAberto(true);
+    setGrupoEditando(grupo); // Define o grupo para edição (se null, é criação)
+    setNomeGrupo(grupo?.nome || ""); // Preenche o nome no modal se for edição
+    setModalAberto(true); // Abre o modal
   };
 
+  // Função para salvar (criar ou atualizar) um grupo
   const salvarGrupo = async () => {
     if (!nomeGrupo.trim()) {
       alert("Nome do grupo é obrigatório.");
-      return false;
+      return false; // Retorna false para indicar falha na validação
     }
 
     try {
+      // Payload para a API (dados a serem enviados)
+      // Removido o objeto 'organizacao' completo, pois a API C# deve esperar apenas o 'organizacaoId'
       const payload = {
         nome: nomeGrupo,
-        descricao: `Grupo ${nomeGrupo}`,
-        tipo: nomeGrupo,
-        organizacaoId: usuarioLogado.id,
+        descricao: `Grupo ${nomeGrupo}`, // Descrição simples
+        tipo: nomeGrupo, // Tipo do grupo
+        organizacaoId: usuarioLogado.organizacaoId, // Usando organizacaoId aqui para consistencia
       };
 
       if (grupoEditando) {
+        // Se estiver editando um grupo existente
+        payload.id = grupoEditando.id; // Adiciona o ID ao payload para a atualização
         await api.put(`/Grupos/${grupoEditando.id}`, payload);
         alert("Grupo atualizado com sucesso!");
       } else {
+        // Se estiver criando um novo grupo
         await api.post("/Grupos", payload);
         alert("Grupo criado com sucesso!");
       }
 
-      await carregarGrupos();
-      return true;
-  const [grupos, setGrupos] = useState([]);
-  // Garante que usuarioLogado seja um objeto, mesmo que localStorage esteja vazio ou inválido
-  const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado") || '{}');
-
-  useEffect(() => {
-    // Verifica se usuarioLogado.organizacaoId existe antes de tentar carregar
-    if (usuarioLogado) {
-      carregarGrupos();
-    } else {
-      console.warn("usuarioLogado ou organizacaoId não encontrados no localStorage. Não foi possível carregar grupos.");
-      // Opcional: exibir mensagem para o usuário ou redirecionar para login
-    }
-  }, [usuarioLogado.organizacaoId]); // Recarrega se o ID da organização mudar
-
-  const carregarGrupos = async () => {
-    try {
-      // Adiciona um log antes da requisição para ter certeza de que ela está sendo feita
-      console.log("Tentando carregar grupos para organização:", usuarioLogado.organizacaoId);
-
-      const response = await api.get("/Grupos"); // Faz a requisição GET
-      
-      // Adiciona um log para ver a resposta bruta do servidor
-      console.log("Resposta da API /Grupos:", response.data);
-
-      const gruposFiltrados = response.data.filter(
-        (g) => g.organizacaoId === usuarioLogado.id
-      );
-      setGrupos(gruposFiltrados);
-      console.log("Grupos filtrados e carregados:", gruposFiltrados);
-
+      await carregarGrupos(); // Recarrega a lista de grupos após salvar
+      setModalAberto(false); // Fecha o modal após o sucesso
+      return true; // Retorna true para indicar sucesso
     } catch (err) {
-      console.error("Erro ao salvar grupo:", err);
-      alert("Erro ao salvar grupo.");
-      return false;
-    }
-  };
-
-  const excluirGrupo = async (grupoId) => {
-    if (!window.confirm("Tem certeza que deseja excluir este grupo?")) return;
-      // Tratamento de erro aprimorado para depuração
+      // Tratamento de erro aprimorado (similar ao que já fizemos)
       if (err.response) {
-        // Erro vindo do servidor (status code 4xx ou 5xx)
-        // Por exemplo, 404 Not Found, 401 Unauthorized, 500 Internal Server Error
-        console.error("Erro ao buscar grupos (Resposta do servidor):", 
+        console.error("Erro ao salvar grupo (Resposta do servidor):", 
           "Status:", err.response.status, 
           "Dados:", err.response.data, 
           "Headers:", err.response.headers
         );
-        alert(`Erro ao carregar grupos: ${err.response.status} - ${err.response.data?.message || 'Erro desconhecido do servidor.'}`);
+        alert(`Erro ao salvar grupo: ${err.response.status} - ${err.response.data?.message || 'Erro desconhecido do servidor.'}`);
       } else if (err.request) {
-        // Erro de requisição (ex: sem resposta do servidor, erro de rede, CORS bloqueado)
-        // Isso acontece quando a requisição foi feita, mas nenhuma resposta foi recebida.
-        // O erro CORS geralmente se manifesta aqui, como 'TypeError: Failed to fetch' ou 'Network Error'.
-        console.error("Erro ao buscar grupos (Erro de rede/CORS): Nenhuma resposta recebida do servidor.", err.message);
-        alert("Erro de conexão ao servidor. Verifique se o backend C# está rodando, se a URL da API está correta e se o CORS está configurado.");
+        console.error("Erro ao salvar grupo (Erro de rede/CORS): Nenhuma resposta recebida do servidor.", err.message);
+        alert("Erro de conexão ao servidor. Verifique se o backend C# está rodando e o CORS configurado.");
       } else {
-        // Outros erros que podem ter ocorrido ao configurar a requisição (ex: erro no código do frontend)
-        console.error("Erro ao buscar grupos (Erro desconhecido):", err.message);
-        alert("Erro interno ao carregar grupos.");
+        console.error("Erro ao salvar grupo (Erro desconhecido):", err.message);
+        alert("Erro interno ao salvar grupo.");
       }
+      return false; // Retorna false para indicar falha na operação
     }
   };
 
-  const criarGrupo = async () => {
-    // ... (restante da função criarGrupo, sem alterações aqui) ...
-    const nome = prompt("Digite o nome do novo grupo:");
-    if (!nome) return;
-
-    const payload = {
-      id: 0,
-      nome: nome,
-      descricao: `Grupo ${nome}`,
-      tipo: nome,
-      organizacaoId: usuarioLogado.organizacaoId,
-      organizacao: {
-        id: usuarioLogado.organizacaoId,
-        nome: usuarioLogado.nome,
-        cnpj: usuarioLogado.cnpj,
-        dataCriacao: usuarioLogado.dataCriacao,
-        ramo: usuarioLogado.ramo,
-        telefone: usuarioLogado.telefone,
-        cep: usuarioLogado.cep,
-        email: usuarioLogado.email,
-        senha: usuarioLogado.senha,
-        imagemPerfil: usuarioLogado.imagemPerfil
-      },
-    };
+  // Função para excluir um grupo
+  const excluirGrupo = async (grupoId) => {
+    if (!window.confirm("Tem certeza que deseja excluir este grupo?")) return;
 
     try {
+      console.log("Tentando excluir grupo com ID:", grupoId);
       await api.delete(`/Grupos/${grupoId}`);
       alert("Grupo excluído com sucesso!");
-      await carregarGrupos();
+      await carregarGrupos(); // Recarrega a lista de grupos após exclusão
     } catch (err) {
-      console.error("Erro ao excluir grupo:", err);
-      alert("Erro ao excluir grupo.");
+      if (err.response) {
+        console.error("Erro ao excluir grupo (Resposta do servidor):", 
+          "Status:", err.response.status, 
+          "Dados:", err.response.data, 
+          "Headers:", err.response.headers
+        );
+        alert(`Erro ao excluir grupo: ${err.response.status} - ${err.response.data?.message || 'Erro desconhecido do servidor.'}`);
+      } else if (err.request) {
+        console.error("Erro ao excluir grupo (Erro de rede/CORS): Nenhuma resposta recebida do servidor.", err.message);
+        alert("Erro de conexão ao servidor ao excluir grupo. Verifique se o backend C# está rodando e o CORS configurado.");
+      } else {
+        console.error("Erro ao excluir grupo (Erro desconhecido):", err.message);
+        alert("Erro interno ao excluir grupo.");
+      }
     }
   };
 
   return (
     <div className="grupos-container">
       <h4>Grupos</h4>
+
       <div className="grupo-lista">
-        {grupos.map((grupo) => (
-          <div key={grupo.id} className="grupo-item">
-            <GrupoBotao
-              nome={grupo.nome}
-              ativo={grupoSelecionado === grupo.nome}
-              onClick={() => setGrupoSelecionado(grupo.nome)}
-            />
-            {isAdmin() && (
-              <div className="grupo-actions">
-                <button onClick={() => abrirModalGrupo(grupo)}>✏️</button>
-                <button onClick={() => excluirGrupo(grupo.id)}>🗑️</button>
-              </div>
-            )}
-          </div>
-        ))}
+        {loadingGrupos ? (
+          <p>Carregando grupos...</p>
+        ) : erroGrupos ? (
+          <p className="error-message">Erro ao carregar grupos.</p>
+        ) : grupos.length === 0 ? (
+          <p>Nenhum grupo encontrado.</p>
+        ) : (
+          grupos.map((grupo) => (
+            <div key={grupo.id} className="grupo-item">
+              <GrupoBotao
+                nome={grupo.nome}
+                ativo={grupoSelecionado === grupo.nome}
+                onClick={() => setGrupoSelecionado(grupo.nome)}
+              />
+              {isAdmin() && ( // Ações de edição/exclusão apenas para administradores
+                <div className="grupo-actions">
+                  <button onClick={() => abrirModalGrupo(grupo)}>✏️</button> {/* Botão de editar */}
+                  <button onClick={() => excluirGrupo(grupo.id)}>🗑️</button> {/* Botão de excluir */}
+                </div>
+              )}
+            </div>
+          ))
+        )}
       </div>
 
-      {isAdmin() && (
+      {isAdmin() && ( // Botão "Novo Grupo" apenas para administradores
         <button className="custom-btn" onClick={() => abrirModalGrupo(null)}>
           + Novo Grupo
         </button>
       )}
 
+      {/* Renderiza o modal se modalAberto for true */}
       {modalAberto && (
         <ModalGrupo
           nome={nomeGrupo}
           setNome={setNomeGrupo}
           onClose={() => setModalAberto(false)}
-          onSave={salvarGrupo}
+          onSave={salvarGrupo} // Passa a função salvarGrupo para o modal
         />
       )}
     </div>

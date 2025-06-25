@@ -4,6 +4,7 @@ import ProfileModal from "./ProfileModal";
 import UploadModal from "../back/UploadModal";
 import { useNavigate } from "react-router-dom";
 import "../styles/Sidebar.css";
+import '../styles/UploadModal.css'; 
 
 const API_BASE_URL = 'http://localhost:8000'; 
 
@@ -12,17 +13,23 @@ function Sidebar({ userImage, setUserImage }) {
     financeiro: false,
     notasFiscais: false,
     fornecedores: false,
+    meusDocumentos: false, // <-- Certifique-se que este menu também existe
   });
 
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false);
 
   const [userInfo, setUserInfo] = useState({
-    nome: "Convidado", // Nome padrão até carregar
-    foto: "/user.png", // Foto padrão
-    id: null, // ID padrão, importante que seja null/0 até carregar
+    nome: "Convidado",
+    foto: "/user.png",
+    id: null,
     perfil: "Visitante",
+    organizacaoId: null,
   });
+
+  const [userDocuments, setUserDocuments] = useState([]);
+  const [loadingDocuments, setLoadingDocuments] = useState(true);
+  const [errorLoadingDocuments, setErrorLoadingDocuments] = useState(null);
 
   useEffect(() => {
     const storedUser = localStorage.getItem("usuarioLogado");
@@ -30,22 +37,46 @@ function Sidebar({ userImage, setUserImage }) {
       try {
         const parsedUser = JSON.parse(storedUser);
         setUserInfo({
-          // Prioriza o que vem do localStorage, mas mantem defaults seguros
           nome: parsedUser.nome || "Usuário",
-          foto: parsedUser.imagemPerfil || "/user.png",
-          id: parsedUser.id || null, // Importante para o UploadModal
-          perfil: "Administrador da Organização", // Ou um perfil default
+          foto: parsedUser.foto || "/user.png",
+          id: parsedUser.id || null, 
+          perfil: parsedUser.perfil || "Administrador",
+          organizacaoId: parsedUser.organizacaoId || null,
         });
       } catch (e) {
         console.error("Erro ao parsear usuarioLogado do localStorage:", e);
-        // Em caso de erro de parse, reset para um estado seguro
-        setUserInfo({ nome: "Erro ao carregar", foto: "/user.png", id: null, perfil: "Erro" });
+        setUserInfo(prev => ({ ...prev, nome: "Erro ao carregar", id: null }));
       }
-    } else {
-
-        setUserInfo(prev => ({ ...prev, nome: "Nome User", foto: "/user.png" }));
     }
-  }, [showProfileModal]); // Recarrega se o modal de perfil fechar (possivelmente mudou o nome/foto)
+  }, [showProfileModal]);
+
+  useEffect(() => {
+    const loadUserDocuments = async () => {
+      if (userInfo.id === null) {
+        setLoadingDocuments(false);
+        return;
+      }
+      setLoadingDocuments(true);
+      setErrorLoadingDocuments(null);
+      try {
+        const response = await fetch(`${API_BASE_URL}/documents/list/${userInfo.id}`);
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.detail || 'Falha ao carregar documentos do usuário.');
+        }
+        const data = await response.json();
+        setUserDocuments(data);
+      } catch (error) {
+        console.error("Erro ao carregar documentos do usuário:", error);
+        setErrorLoadingDocuments(error.message);
+        setUserDocuments([]);
+      } finally {
+        setLoadingDocuments(false);
+      }
+    };
+
+    loadUserDocuments();
+  }, [userInfo.id]);
 
 
   const toggleMenu = (menu) => {
@@ -53,6 +84,28 @@ function Sidebar({ userImage, setUserImage }) {
   };
 
   const navigate = useNavigate();
+
+  // --- NOVA FUNÇÃO PARA OBTER O CAMINHO DO ÍCONE ---
+  const getFileIcon = (fileName) => {
+    const extension = fileName.split('.').pop().toLowerCase();
+    switch (extension) {
+      case 'pdf':
+        return "/arquivo-pdf.png"; // Certifique-se que este caminho está correto
+      case 'docx':
+      case 'doc':
+        return "/arquivo-docx.png"; // Certifique-se que este caminho está correto (ex: /public/arquivo-word.png)
+      case 'txt':
+        return "/arquivo-txt.png"; // Certifique-se que este caminho está correto
+      case 'xlsx':
+      case 'xls':
+        return "/arquivo-excel.png"; // Se você tiver um ícone para Excel
+      case 'csv':
+        return "/arquivo-csv.png"; // Se você tiver um ícone para CSV
+      default:
+        return "/arquivo-desconhecido.png"; // Ícone padrão para outros tipos ou desconhecidos
+    }
+  };
+
 
   return (
     <div className="sidebar-container">
@@ -70,7 +123,7 @@ function Sidebar({ userImage, setUserImage }) {
       </div>
 
       <div className="user-info">
-        <img src={userImage} alt="Avatar do Usuário" className="user-avatar" />
+        <img src={userInfo.foto} alt="Avatar do Usuário" className="user-avatar" />
         <h3>{userInfo.nome}</h3>
         <p>{userInfo.nome}</p>
         <p>{userInfo.perfil}</p>
@@ -83,92 +136,35 @@ function Sidebar({ userImage, setUserImage }) {
       </div>
 
       <div className="menu">
-        {/* <ul>
-          <li onClick={() => toggleMenu("financeiro")} className="menu-item">
-            <img
-              src={
-                openMenus.financeiro ? "/seta-para-baixo.png" : "/pra-cima.png"
-              }
-              alt="icone"
+        {/* ... (Seu menu existente) ... */}
+        
+        {/* Adicionando a seção de Meus Documentos */}
+        <li onClick={() => toggleMenu("meusDocumentos")} className="menu-item">
+            <img 
+                src={openMenus.meusDocumentos ? "/seta-para-baixo.png" : "/pra-cima.png"} 
+                alt="icone" 
             />
-            Financeiro
-          </li>
-          {openMenus.financeiro && (
+            Meus Documentos
+        </li>
+        {openMenus.meusDocumentos && (
             <ul className="submenu">
-              <li
-                onClick={() => toggleMenu("notasFiscais")}
-                className="menu-item"
-              >
-                <img
-                  src={
-                    openMenus.notasFiscais
-                      ? "/seta-para-baixo.png"
-                      : "/pra-cima.png"
-                  }
-                  alt="icone"
-                />
-                Notas Fiscais
-              </li>
-              {openMenus.notasFiscais && (
-                <ul className="sub-submenu">
-                  <li>
-                    <img src="/arquivo-pdf.png" alt="icone" /> NF_01.pdf
-                  </li>
-                  <li>
-                    <img src="/arquivo-pdf.png" alt="icone" /> NF_02.pdf
-                  </li>
-                  <li>
-                    <img src="/arquivo-pdf.png" alt="icone" /> NF_03.pdf
-                  </li>
-                </ul>
-              )}
-              <li
-                onClick={() => toggleMenu("fornecedores")}
-                className="menu-item"
-              >
-                <img
-                  src={
-                    openMenus.fornecedores
-                      ? "/seta-para-baixo.png"
-                      : "/pra-cima.png"
-                  }
-                  alt="icone"
-                />
-                Fornecedores
-              </li>
-              {openMenus.fornecedores && (
-                <ul className="sub-submenu">
-                  <li>
-                    <img src="/arquivo-excel.png" alt="icone" />{" "}
-                    CoraçãoEucaristico.xls
-                  </li>
-                  <li>
-                    <img src="/arquivo-excel.png" alt="icone" /> Contagem.xls
-                  </li>
-                  <li>
-                    <img src="/arquivo-excel.png" alt="icone" />{" "}
-                    PraçaDaLiberdade.xls
-                  </li>
-                </ul>
-              )}
+                {loadingDocuments ? (
+                    <li>Carregando documentos...</li>
+                ) : errorLoadingDocuments ? (
+                    <li className="error-message">Erro ao carregar documentos.</li>
+                ) : userDocuments.length === 0 ? (
+                    <li>Nenhum documento encontrado.</li>
+                ) : (
+                    userDocuments.map(doc => (
+                        <li key={doc.id}>
+                            {/* <img src="/arquivo-pdf.png" alt="icone" /> REMOVIDO/COMENTADO */}
+                            <img src={getFileIcon(doc.nome_arquivo)} alt="Ícone do Documento" className="document-icon" /> {/* <-- MUDANÇA AQUI */}
+                            {doc.nome_arquivo}
+                        </li>
+                    ))
+                )}
             </ul>
-          )}
-          <li>
-            <img src="/pra-cima.png" alt="icone" /> Jurídico
-          </li>
-          <li>
-            <img src="/pra-cima.png" alt="icone" /> Suprimentos
-          </li>
-          <li>
-            <img src="/pra-cima.png" alt="icone" /> Controladoria
-          </li>
-          <li>
-            <img src="/pra-cima.png" alt="icone" /> TI
-          </li>
-          <li>
-            <img src="/pra-cima.png" alt="icone" /> Projetos
-          </li>
-        </ul> */}
+        )}
       </div>
 
       {showProfileModal && (
@@ -176,12 +172,15 @@ function Sidebar({ userImage, setUserImage }) {
           onClose={() => setShowProfileModal(false)}
           userImage={userImage}
           setUserImage={setUserImage}
+          userInfo={userInfo}
+          setUserInfo={setUserInfo}
         />
       )}
 
       {showUploadModal && (
-        <UploadModal onClose={() => setShowUploadModal(false)} 
-          userId={userInfo.id}
+        <UploadModal 
+          onClose={() => setShowUploadModal(false)} 
+          userId={userInfo.id} 
         />
       )}
     </div>
