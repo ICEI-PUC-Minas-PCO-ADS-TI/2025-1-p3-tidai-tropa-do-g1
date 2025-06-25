@@ -68,7 +68,6 @@ Durante o desenvolvimento do projeto, a seguinte divisão de papéis foi estabel
 
 ###  Quadro de tarefas
 
-<!-- > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo. -->
 
 #### Sprint 1
 

@@ -43,15 +43,3 @@ Todas as páginas compartilham uma estrutura base composta por:
 
 - **Feedback visual** claro em interações (ex: seleção de grupos, preenchimento de formulários).
 - **Layout responsivo**: blocos bem espaçados que favorecem tanto uso em desktops quanto adaptação para outras resoluções.
-
----
-
-O template padronizado facilita o entendimento das telas por parte do usuário, além de otimizar o desenvolvimento e manutenção do sistema, respeitando os princípios de design centrado no usuário.
-
-
-> **Links úteis**:
->
-> - [CSS website layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website page layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect liquid layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and why icons improve your web design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
