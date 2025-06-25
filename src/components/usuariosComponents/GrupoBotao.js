@@ -3,10 +3,7 @@ import "../../styles/stylesUsuarios/SidebarGrupos.css";
 
 function GrupoBotao({ nome, onClick, ativo }) {
   return (
-    <button
-      className={`group-btn ${ativo ? "ativo" : ""}`}
-      onClick={onClick}
-    >
+    <button className={`group-btn ${ativo ? "ativo" : ""}`} onClick={onClick}>
       {nome}
     </button>
   );
