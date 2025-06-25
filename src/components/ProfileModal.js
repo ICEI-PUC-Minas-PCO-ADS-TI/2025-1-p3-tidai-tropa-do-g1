@@ -15,10 +15,9 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
   const [senhaNova, setSenhaNova] = useState("");
   const [fotoPreview, setFotoPreview] = useState("");
 
-  // Inicializa os dados do usuário
   useEffect(() => {
     if (!usuarioLogado) {
-      alert("Sessão expirada. Faça login novamente.");
+      window.confirm("Sessão expirada. Faça login novamente.");
       navigate("/");
       return;
     }
@@ -27,7 +26,6 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
     setNome(usuarioLogado.nome);
     setEmail(usuarioLogado.email);
 
-    // Garante que a imagem continue aparecendo no modal
     const imagem =
       usuarioLogado.foto ||
       usuarioLogado.imagemPerfil ||
@@ -35,61 +33,65 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
       "https://via.placeholder.com/150";
 
     setFotoPreview(imagem);
-    setUserImage(imagem); // Sincroniza com componente pai
+    setUserImage(imagem);
   }, [navigate, usuarioLogado, setUserImage, userImage]);
 
-  // Logout
+  const handleSalvar = async () => {
+    if (!senhaAntiga) {
+      window.confirm("Informe sua senha atual.");
+      return;
+    }
+
+    const novaSenha = senhaNova || senhaAntiga;
+
+    try {
+      let endpointBase = "Usuarios";
+      let payloadAtual = null;
+
+      try {
+        const responseGet = await api.get(`/Usuarios/${id}`);
+        payloadAtual = responseGet.data;
+      } catch (err) {
+        if (err.response?.status === 404) {
+          endpointBase = "Organizacoes";
+          const responseGet = await api.get(`/Organizacoes/${id}`);
+          payloadAtual = responseGet.data;
+        } else {
+          throw err;
+        }
+      }
+
+      payloadAtual.senha = novaSenha;
+
+      const responsePut = await api.put(`/${endpointBase}/${id}`, payloadAtual);
+      localStorage.setItem("usuarioLogado", JSON.stringify(responsePut.data));
+
+      const confirmacao = window.confirm(
+        "Senha atualizada com sucesso!\n\nVocê será redirecionado para o login."
+      );
+
+      if (confirmacao) {
+        localStorage.removeItem("authToken");
+        localStorage.removeItem("usuarioLogado");
+        localStorage.removeItem("tipoPerfil");
+        delete api.defaults.headers.common["Authorization"];
+        navigate("/");
+      }
+    } catch (err) {
+      console.error("Erro ao atualizar perfil:", err);
+      window.confirm(
+        err.response?.data?.message ||
+          "Erro ao atualizar a senha. Tente novamente."
+      );
+    }
+  };
+
   const handleLogout = () => {
     localStorage.removeItem("authToken");
     localStorage.removeItem("usuarioLogado");
     localStorage.removeItem("tipoPerfil");
     delete api.defaults.headers.common["Authorization"];
     navigate("/");
-  };
-
-  // Salvar nova senha
-  const handleSalvar = async () => {
-    if (!senhaAntiga) {
-      alert("Informe sua senha atual.");
-      return;
-    }
-
-    const novaSenha = senhaNova || senhaAntiga;
-
-    let payload = {};
-    let endpoint = "";
-
-    if (tipoPerfilLogado === "admin") {
-      // Atualiza apenas a senha da organização
-      payload = {
-        ...usuarioLogado,
-        senha: novaSenha,
-        // Imagem permanece a mesma
-        imagemPerfil: usuarioLogado.imagemPerfil,
-      };
-      endpoint = `/Organizacoes/${id}`;
-    } else {
-      // Atualiza apenas a senha do usuário
-      payload = {
-        ...usuarioLogado,
-        senha: novaSenha,
-        foto: usuarioLogado.foto, // Mantém a imagem atual
-      };
-      endpoint = `/Usuarios/${id}`;
-    }
-
-    try {
-      const resp = await api.put(endpoint, payload);
-      localStorage.setItem("usuarioLogado", JSON.stringify(resp.data));
-      alert("Senha atualizada com sucesso!");
-      onClose();
-    } catch (err) {
-      console.error("Erro ao atualizar perfil:", err);
-      alert(
-        err.response?.data?.message ||
-          "Erro ao atualizar a senha. Tente novamente."
-      );
-    }
   };
 
   return (
@@ -103,10 +105,13 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
             className="foto-preview"
           />
         </div>
+
         <label>Nome:</label>
         <p>{nome}</p>
+
         <label>Email:</label>
         <p>{email}</p>
+
         <label>Senha atual:</label>
         <input
           type="password"
@@ -114,6 +119,7 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
           value={senhaAntiga}
           onChange={(e) => setSenhaAntiga(e.target.value)}
         />
+
         <label>Nova senha:</label>
         <input
           type="password"
@@ -121,6 +127,7 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
           value={senhaNova}
           onChange={(e) => setSenhaNova(e.target.value)}
         />
+
         <div className="modal-buttons">
           <button className="btn-salvar" onClick={handleSalvar}>
             Salvar
