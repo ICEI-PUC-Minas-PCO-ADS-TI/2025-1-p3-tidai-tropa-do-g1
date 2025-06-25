@@ -5,6 +5,8 @@ import UploadModal from "../back/UploadModal";
 import { useNavigate } from "react-router-dom";
 import "../styles/Sidebar.css";
 
+const API_BASE_URL = 'http://localhost:8000'; 
+
 function Sidebar({ userImage, setUserImage }) {
   const [openMenus, setOpenMenus] = useState({
     financeiro: false,
@@ -16,15 +18,35 @@ function Sidebar({ userImage, setUserImage }) {
   const [showProfileModal, setShowProfileModal] = useState(false);
 
   const [userInfo, setUserInfo] = useState({
-    nome: "Nome User",
-    foto: "/user.png",
+    nome: "Convidado", // Nome padrão até carregar
+    foto: "/user.png", // Foto padrão
+    id: null, // ID padrão, importante que seja null/0 até carregar
+    perfil: "Visitante",
   });
 
   useEffect(() => {
-    const nome = localStorage.getItem("perfil_nome") || "Nome User";
-    const foto = localStorage.getItem("perfil_foto") || "/user.png";
-    setUserInfo({ nome, foto });
-  }, [showProfileModal]);
+    const storedUser = localStorage.getItem("usuarioLogado");
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUserInfo({
+          // Prioriza o que vem do localStorage, mas mantem defaults seguros
+          nome: parsedUser.nome || "Usuário",
+          foto: parsedUser.imagemPerfil || "/user.png",
+          id: parsedUser.id || null, // Importante para o UploadModal
+          perfil: "Administrador da Organização", // Ou um perfil default
+        });
+      } catch (e) {
+        console.error("Erro ao parsear usuarioLogado do localStorage:", e);
+        // Em caso de erro de parse, reset para um estado seguro
+        setUserInfo({ nome: "Erro ao carregar", foto: "/user.png", id: null, perfil: "Erro" });
+      }
+    } else {
+
+        setUserInfo(prev => ({ ...prev, nome: "Nome User", foto: "/user.png" }));
+    }
+  }, [showProfileModal]); // Recarrega se o modal de perfil fechar (possivelmente mudou o nome/foto)
+
 
   const toggleMenu = (menu) => {
     setOpenMenus((prev) => ({ ...prev, [menu]: !prev[menu] }));
@@ -50,8 +72,8 @@ function Sidebar({ userImage, setUserImage }) {
       <div className="user-info">
         <img src={userImage} alt="Avatar do Usuário" className="user-avatar" />
         <h3>{userInfo.nome}</h3>
-        <p>PUC Minas</p>
-        <p>Administrador</p>
+        <p>{userInfo.nome}</p>
+        <p>{userInfo.perfil}</p>
         <button
           className="btn-gerenciar"
           onClick={() => setShowUploadModal(true)}
@@ -61,7 +83,7 @@ function Sidebar({ userImage, setUserImage }) {
       </div>
 
       <div className="menu">
-        <ul>
+        {/* <ul>
           <li onClick={() => toggleMenu("financeiro")} className="menu-item">
             <img
               src={
@@ -146,7 +168,7 @@ function Sidebar({ userImage, setUserImage }) {
           <li>
             <img src="/pra-cima.png" alt="icone" /> Projetos
           </li>
-        </ul>
+        </ul> */}
       </div>
 
       {showProfileModal && (
@@ -158,7 +180,9 @@ function Sidebar({ userImage, setUserImage }) {
       )}
 
       {showUploadModal && (
-        <UploadModal onClose={() => setShowUploadModal(false)} />
+        <UploadModal onClose={() => setShowUploadModal(false)} 
+          userId={userInfo.id}
+        />
       )}
     </div>
   );

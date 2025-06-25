@@ -32,9 +32,8 @@ function ProfileModal({ onClose, userImage, setUserImage }) {
       setNome(usuarioLogado.nome || "");
       setEmail(usuarioLogado.email || "");
       setFotoPreview(
-        usuarioLogado.foto ||
           usuarioLogado.imagemPerfil ||
-          "https://via.placeholder.com/150"
+          "/user.png"
       );
     } else {
       // Se não há dados logados, redireciona para a tela de login
