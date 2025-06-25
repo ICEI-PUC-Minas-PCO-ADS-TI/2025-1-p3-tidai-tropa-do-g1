@@ -47,6 +47,25 @@ Durante o desenvolvimento do projeto, a seguinte divisão de papéis foi estabel
 - Desenvolvedor _back-end_: Victor Schneider, Luis Sampaio, Thiago Moreira.
 - Testes: Thiago Moreira, Igor Maia e Igor Pereira, Victor Schneider, Luis Sampaio.
 
+#### Sprint 3
+- _Scrum master_: Thiago Moreira.
+- Desenvolvedor _front-end_: Victor Schneider, Luis Sampaio, Igor Pereira.
+- Desenvolvedor _back-end_: Igor Maia, Luis Sampaio, Victor Schneider.
+- Testes: Igor Pereira, Thiago Moreira, Igor Maia, Luis Sampaio, Victor Schneider.
+
+#### Sprint 4
+- _Scrum master_: Igor Maia.
+- Desenvolvedor _front-end_: Thiago Moreira, Luis Sampaio, Victor Schneider.
+- Desenvolvedor _back-end_: Igor Pereira, Victor Schneider, Luis Sampaio.
+- Testes: Igor Maia, Igor Pereira, Thiago Moreira, Victor Schneider, Luis Sampaio.
+
+#### Sprint 5
+- _Scrum master_: Igor Pereira.
+- Desenvolvedor _front-end_: Victor Schneider, Thiago Moreira, Luis Sampaio.
+- Desenvolvedor _back-end_: Igor Maia, Luis Sampaio, Igor Pereira.
+- Testes: Thiago Moreira, Igor Maia, Victor Schneider, Igor Pereira, Luis Sampaio.
+
+
 ###  Quadro de tarefas
 
 <!-- > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo. -->
@@ -73,13 +92,75 @@ Atualizado em: 19/02/2025
 
 Atualizado em: 08/04/2025
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Luis Sampaio  | Wireframes       | 01/04/2025     | 09/04/2025 | ✔️    | 02/04/2025      |
-| Luis Sampaio  | User Flow        | 02/04/2025     | 09/04/2025 | ✔️    | 03/04/2025      |
-| Luis Sampaio  | Diagrama de fluxo| 05/04/2025     | 09/04/2025 | ✔️    | 07/04/2025      |
-| Igor Pereira  | Página de login  | 01/04/2025     | 09/04/2025 | ✔️    | 03/04/2025      |
-| Igor Pereira  | Tela Principal (Chat)| 01/04/2025 | 09/04/2025 | ✔️    | 03/04/2025      |
+| Responsável       | Tarefa/Requisito         | Iniciado em    | Prazo      | Status | Terminado em    |
+| :---------------- | :----------------------- | :------------: | :--------: | :----: | :--------------: |
+| Luis Sampaio      | Wireframes               | 01/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+| Luis Sampaio      | User Flow                | 02/04/2025     | 09/04/2025 | ✔️     | 03/04/2025       |
+| Luis Sampaio      | Diagrama de fluxo        | 05/04/2025     | 09/04/2025 | ✔️     | 07/04/2025       |
+| Igor Pereira      | Página de login          | 01/04/2025     | 09/04/2025 | ✔️     | 03/04/2025       |
+| Igor Pereira      | Tela Principal (Chat)    | 01/04/2025     | 09/04/2025 | ✔️     | 03/04/2025       |
+| Thiago Moreira    | Wireframes               | 02/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+| Igor Maia         | User Flow                | 02/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+| Igor Pereira      | Wireframes               | 02/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+| Victor Schneider  | Protótipo interativo     | 02/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+| Victor Schneider  | Wireframes               | 02/04/2025     | 09/04/2025 | ✔️     | 02/04/2025       |
+
+
+#### Sprint 3
+
+Atualizado em: 21/05/2025
+
+| Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
+| :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
+| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | 📝     |                  |
+| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | 📝     |                  |
+| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | 📝     |                  |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | 📝     |                  |
+| Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | 📝     |                  |
+| Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | 📝     |                  |
+| Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | 📝     |                  |
+
+#### Sprint 4
+
+Atualizado em: 18/05/2025
+
+| Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
+| :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
+| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | ⌛     |                  |
+| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ⌛     |                  |
+| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ⌛     |                  |
+| Luis Sampaio      | Cadastro                                               | 09/05/2025     | 14/05/2025 | ⌛     |                  |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ⌛     |                  |
+| Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | ⌛     |                  |
+| Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | ⌛     |                  |
+| Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | ⌛     |                  |
+
+#### Sprint 5
+
+Atualizado em: 25/06/2025
+
+| Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
+| :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
+| Igor Pereira      | Login                                                  | 08/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Luis Sampaio      | Home                                                   | 09/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Luis Sampaio      | Cadastro                                               | 09/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Igor Maia         | Configurações                                          | 10/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Victor Schneider  | Testes de usabilidade                                  | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Victor Schneider  | Testes de software                                     | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Luis Sampaio      | Testes de usabilidade                                  | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Luis Sampaio      | Testes de software                                     | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Igor Maia         | Testes de usabilidade                                  | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Igor Maia         | Testes de software                                     | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Igor Pereira      | Testes de usabilidade                                  | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Igor Pereira      | Testes de software                                     | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Thiago Moreira    | Testes de usabilidade                                  | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+| Thiago Moreira    | Testes de software                                     | 13/05/2025     | 26/06/2025 | ✔️     | 25/06/2025       |
+
+
 
 
 Legenda:
@@ -103,9 +184,8 @@ Para o desenvolvimento do projeto, o grupo adotará as tecnologias listadas a se
 |-------------------------------------|------------------------------------|----------------------------------------                                                |
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main     |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PCO-ADS-TI/2025-1-p3-tidai-tropa-do-g1/tree/main     |
-| Projeto de interface                | Figma                              | http://....                                                                            |
+| Projeto de interface                | Figma                              | https://www.figma.com/design/qDn2EkwoKOTbbmg7LxYPHI/Untitled?node-id=0-1&t=QEmlJpPjRexYQxLc-1                                                                            |
 | Gerenciamento do projeto            | GitHub Projects                    | https://github.com/orgs/ICEI-PUC-Minas-PCO-ADS-TI/projects/42/views/1                  |
-| Hospedagem                          | Vercel                             | http://....                                                                            |
 
 ### Tecnologias
 
