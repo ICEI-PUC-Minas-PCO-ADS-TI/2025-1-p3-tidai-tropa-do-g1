@@ -47,42 +47,65 @@ Insira aqui o script de criação das tabelas do banco de dados.
 Veja um exemplo:
 
 ```sql
--- Criação da tabela Medico
-CREATE TABLE Medico (
-    MedCodigo INTEGER PRIMARY KEY,
-    MedNome VARCHAR(100)
+-- Criação da tabela Organizacoes
+CREATE TABLE Organizacoes (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    CNPJ VARCHAR(18) UNIQUE NOT NULL,
+    DataCriacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Ramo VARCHAR(100),
+    Telefone VARCHAR(20),
+    CEP VARCHAR(9),
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Senha VARCHAR(255) NOT NULL,
+    ImagemPerfil VARCHAR(255)
 );
 
--- Criação da tabela Paciente
-CREATE TABLE Paciente (
-    PacCodigo INTEGER PRIMARY KEY,
-    PacNome VARCHAR(100)
+-- Criação da tabela Usuarios
+CREATE TABLE Usuarios (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(255) NOT NULL,
+    Documento VARCHAR(50) UNIQUE NOT NULL,
+    TipoDocumento VARCHAR(50),
+    DataNascimento DATE,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Senha VARCHAR(255) NOT NULL,
+    TipoUsuario VARCHAR(50),
+    Ativo BOOLEAN DEFAULT TRUE,
+    OrganizacaoId INT,
+    FOREIGN KEY (OrganizacaoId) REFERENCES Organizacoes(ID)
 );
 
--- Criação da tabela Consulta
-CREATE TABLE Consulta (
-    ConCodigo INTEGER PRIMARY KEY,
-    MedCodigo INTEGER,
-    PacCodigo INTEGER,
-    Data DATE,
-    FOREIGN KEY (MedCodigo) REFERENCES Medico(MedCodigo),
-    FOREIGN KEY (PacCodigo) REFERENCES Paciente(PacCodigo)
+-- Criação da tabela Grupos
+CREATE TABLE Grupos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Descricao TEXT,
+    Nome VARCHAR(255) NOT NULL,
+    Tipo VARCHAR(50),
+    OrganizacaoId INT,
+    FOREIGN KEY (OrganizacaoId) REFERENCES Organizacoes(ID)
 );
 
--- Criação da tabela Medicamento
-CREATE TABLE Medicamento (
-    MdcCodigo INTEGER PRIMARY KEY,
-    MdcNome VARCHAR(100)
+-- Criação da tabela de associação GruposDeUsuarios
+CREATE TABLE GruposDeUsuarios (
+    UsuarioID INT,
+    GrupoID INT,
+    PRIMARY KEY (UsuarioID, GrupoID),
+    FOREIGN KEY (UsuarioID) REFERENCES Usuarios(ID),
+    FOREIGN KEY (GrupoID) REFERENCES Grupos(ID)
 );
 
--- Criação da tabela Prescricao
-CREATE TABLE Prescricao (
-    ConCodigo INTEGER,
-    MdcCodigo INTEGER,
-    Posologia VARCHAR(200),
-    PRIMARY KEY (ConCodigo, MdcCodigo),
-    FOREIGN KEY (ConCodigo) REFERENCES Consulta(ConCodigo),
-    FOREIGN KEY (MdcCodigo) REFERENCES Medicamento(MdcCodigo)
+-- Criação da tabela Documentos
+CREATE TABLE Documentos (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    Tipo VARCHAR(100),
+    Dados TEXT,
+    UsuarioId INT,
+    OrganizacaoID INT,
+    DataEnvio DATETIME DEFAULT CURRENT_TIMESTAMP,
+    IndexadoParaIa BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (UsuarioId) REFERENCES Usuarios(ID),
+    FOREIGN KEY (OrganizacaoID) REFERENCES Organizacoes(ID)
 );
 ```
 Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).

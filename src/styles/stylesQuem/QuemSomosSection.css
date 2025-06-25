@@ -1,0 +1,66 @@
+.quem-somos-section {
+  background-color: #2e2e2e;
+  padding: 4rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quem-somos-container {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #3a3a3a;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.quem-somos-title {
+  font-size: 2.75rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.quem-somos-text {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: #cccccc;
+  margin-bottom: 2rem;
+}
+
+.quem-somos-subtitle {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.quem-somos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+  text-align: left;
+}
+
+.quem-somos-lista li {
+  color: #dddddd;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.quem-somos-lista li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #00bfa6;
+  font-size: 1.1rem;
+}

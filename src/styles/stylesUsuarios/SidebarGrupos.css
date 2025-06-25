@@ -70,3 +70,23 @@
   background-color: #0056b3;
   transform: translateY(-2px);
 }
+
+.grupo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.grupo-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.grupo-actions button:hover {
+  color: #000;
+}

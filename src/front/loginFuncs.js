@@ -19,10 +19,16 @@ export async function loginUser({ email, senha, organizacao, tipoLogin }) {
 
       if (orgEncontrada) {
         const token = "token-" + Date.now();
+
+        const dadosAdmin = {
+          ...orgEncontrada,
+          tipoUsuario: "Administrador",
+        };
+
         localStorage.setItem("authToken", token);
-        localStorage.setItem("usuarioLogado", JSON.stringify(orgEncontrada));
+        localStorage.setItem("usuarioLogado", JSON.stringify(dadosAdmin));
         api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        return orgEncontrada;
+        return dadosAdmin;
       } else {
         throw new Error(
           "Email, senha ou organização incorretos para Administrador."
