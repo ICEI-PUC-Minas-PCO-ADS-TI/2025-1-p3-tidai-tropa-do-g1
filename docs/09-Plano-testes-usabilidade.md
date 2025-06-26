@@ -2,45 +2,24 @@
 
 <span style="color:red">Pré-requisitos: <a href="04-Projeto-interface.md"> Projeto de interface</a></span>, <a href="07-Plano-testes-software.md"> Plano de testes de software</a>
 
-O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. Um plano de teste de usabilidade deverá conter: o detalhamento dos objetivos (ou cenários) em função dos requisitos levantados/implementados, os critérios que serão utilizados para a seleção dos participantes, os procedimentos a serem adotados pelos condutores de teste (por exemplo: os testes serão presenciais ou remotos? O método será observação direta, medição ou avaliação?), os dados a serem coletados (quantidade de cliques, número de erros, tempo, etc.), a ordem de execução das tarefas e das etapas da sessão de teste, os recursos demandados, as métricas coletadas, entre outros.
+[cite_start]O objetivo do Plano de Testes de Usabilidade foi avaliar a qualidade e a experiência do usuário ao interagir com a interface da plataforma CrowsIA. O foco foi entender se as funcionalidades essenciais são intuitivas e se a plataforma atende às expectativas do público-alvo.
 
-Para cada voluntário do teste, é fundamental coletar e apresentar todos os dados/métricas previamente definidos. No entanto, atendendo à LGPD (Lei Geral de Proteção de Dados), nenhum dado sensível que permita identificar o voluntário deverá ser apresentado.
+[cite_start]Para a realização dos testes, foram convidados 3 participantes com perfis de usuários relevantes para a aplicação. [cite_start]Os testes foram conduzidos de forma remota, utilizando o método de observação direta com gravação da tela para análise posterior. [cite_start]Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados (LGPD), nenhum dado sensível que permitisse identificar os voluntários foi coletado ou exposto.
 
-> Exemplo:
+Visando averiguar a qualidade da experiência, foram definidos os seguintes indicadores de avaliação:
 
-O objetivo doPlano de testes de usabilidade é obter informações quanto à expectativa dos usuários em relação à funcionalidade da aplicação de forma geral.
+* [cite_start]**Taxa de sucesso**: Mede se o usuário conseguiu executar a tarefa proposta com êxito.
+* [cite_start]**Satisfação subjetiva**: Avalia como o usuário classifica a experiência com o sistema em uma escala de 1 a 5, sendo 1 "Péssimo" e 5 "Ótimo".
+* [cite_start]**Tempo para conclusão da tarefa**: Compara o tempo em segundos que o usuário levou para executar a tarefa em relação ao tempo de um especialista (desenvolvedor).
 
-Para tanto, foram elaborados quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
-
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
-
-Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
-
-Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da tarefa proposta, conforme a seguinte escala:
-
-1. Péssimo; 
-2. Ruim; 
-3. Regular; 
-4. Bom; 
-5. Ótimo.
-
-Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo utilizado quando um especialista (um desenvolvedor) realiza a mesma tarefa.
-
-Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
-
-> Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico, você deve detalhar quais funcionalidades foram avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+[cite_start]As ferramentas utilizadas para a condução e registro dos testes foram um navegador de internet para acesso à plataforma  [cite_start]e um software de gravação de tela, como o OBS Studio, para registrar a interação do usuário durante os cenários propostos.
 
 ## Cenários de teste de usabilidade
 
-| Nº do cenário | Descrição do cenário |
-|---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iPhone. Encontre no site um iPhone e veja detalhes de localização e contato da loja que o está anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphones nessa faixa de preço. |
+A seguir estão os cenários de teste utilizados durante a avaliação de usabilidade da plataforma CrowsIA.
 
-
-> **Links úteis**:
-> - [Teste de usabilidade: o que é e como fazer passo a passo](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber!](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de testes de usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+| Nº do cenário | Descrição do cenário                                                                                                                                                                                         |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1             | [cite_start]**Novo Cadastro e Primeiras Interações:** O usuário deve realizar um novo cadastro na plataforma, fazer o upload de múltiplos arquivos e, em seguida, utilizar o chatbot para fazer uma requisição sobre o conteúdo de um deles. |
+| 2             | [cite_start]**Exploração Detalhada de Documento:** O usuário deve enviar um único documento para a plataforma e, na sequência, realizar várias perguntas diferentes sobre o conteúdo específico desse mesmo documento, a fim de testar a capacidade de extração de informação da IA. |
+| 3             | [cite_start]**Busca e Resumo de Conteúdo:** Atuando como um usuário já cadastrado, a tarefa é buscar por um documento já existente na base de dados e solicitar ao chatbot que gere um pequeno resumo de seu conteúdo.     |
