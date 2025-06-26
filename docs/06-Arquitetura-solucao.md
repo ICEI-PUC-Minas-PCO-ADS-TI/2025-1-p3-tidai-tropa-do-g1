@@ -132,9 +132,7 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 
 ## Tecnologias
 
-Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 
 | **Dimensão**   | **Tecnologia**          |
@@ -146,6 +144,7 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 | Host           | Azure                   |
 | Containerização| Docker                  |
 | Serviços Web / APIs| A comunicação entre o Front-end e o Back-end é realizada através de uma Rest API|
+| IDE            | Visual Studio Code
 
 
 ## Hospedagem
