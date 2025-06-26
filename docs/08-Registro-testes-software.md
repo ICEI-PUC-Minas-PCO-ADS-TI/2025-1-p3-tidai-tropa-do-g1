@@ -6,21 +6,19 @@ Este documento detalha os resultados da execução dos testes definidos no Plano
 
 ## **Informações Gerais do Ciclo de Teste**
 
-- **Projeto:** Crows Inteligência Ampliada  
-- **Data de Execução:** 25/06/2025  
+- **Crows Inteligência Ampliada **  
+- **Data de Execução:** 23/06/2025  
 - **Responsável pela Execução:** Igor Maia, Victor Schneider 
 
 ---
 
 ## **1. Resumo dos Resultados**
 
-- **Total de Casos de Teste Executados:** 12  
-- **Aprovados:** 12  
-- **Reprovados:** 0  
+- **Total de Casos de Teste Executados:** 12   
 - **Status Geral do Ciclo:**  **Aprovado**  
   > *Todos os testes foram concluídos com sucesso, sem incidentes críticos.*
 
----
+
 
 ## 🔍 **2. Resultados Detalhados dos Testes Funcionais**
 
