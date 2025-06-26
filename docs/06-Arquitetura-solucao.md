@@ -27,26 +27,42 @@ Essa arquitetura permite a escalabilidade da plataforma e a adaptabilidade da IA
 
 ## Diagrama de classes
 
-O diagrama de classes ilustra graficamente a estrutura do software e como cada uma das classes estará interligada. Essas classes servem de modelo para materializar os objetos que serão executados na memória.
+O diagrama de classes ilustra graficamente a estrutura do sistema proposto, representando as principais classes que compõem a aplicação, seus atributos e os relacionamentos entre elas. Esse 
+diagrama serve como base conceitual para a implementação da lógica do sistema orientado a objetos, permitindo uma melhor visualização da arquitetura da aplicação e facilitando o entendimento da 
+interação entre os componentes.
 
-> **Links úteis**:
-> - [Diagramas de classes - documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.7.0?topic=diagrams-class)
-> - [O que é um diagrama de classe UML?](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+No modelo apresentado, as classes representam as principais entidades do sistema: `Organizacao`, `Usuario`, `Grupo`, `Documento` e a associação `GrupoDeUsuario`. Cada classe possui atributos 
+que refletem os dados essenciais a serem armazenados e manipulados durante a execução da aplicação. Os relacionamentos entre essas classes definem regras como cardinalidade, integridade 
+referencial e vínculo entre os dados, por exemplo:
+
+- Uma organização pode ter vários usuários, grupos e documentos vinculados a ela.
+- Um usuário pode participar de vários grupos e enviar diversos documentos.
+- Um grupo pode conter vários usuários, representando uma associação de muitos-para-muitos.
+- Documentos estão associados tanto ao usuário que os enviou quanto à organização a que pertencem.
+
+Esse diagrama é fundamental para garantir a coerência entre o modelo de banco de dados e a estrutura de programação orientada a objetos da aplicação.
+
+![Diagrama de classes](images/Diagrama%20de%20classes.png)
+
 
 ##  Modelo de dados
 
-O desenvolvimento da solução proposta requer a existência de bases de dados que permitam realizar o cadastro de dados e os controles associados aos processos identificados, assim como suas recuperações.
+O Modelo Entidade-Relacionamento conhecido também como pé de galinha, foi elaborado para representar de forma clara e integrada os dados necessários ao funcionamento do sistema. 
+Ele descreve visualmente como as entidades se relacionam entre si, destacando seus atributos e as ligações estabelecidas por meio de chaves primárias e estrangeiras.
 
-Utilizando a notação do DER (Diagrama Entidade-Relacionamento), elabore um modelo, usando alguma ferramenta, que contemple todas as entidades e atributos associados às atividades dos processos identificados. Deve ser gerado um único DER que suporte todos os processos escolhidos, visando, assim, uma base de dados integrada. O modelo deve contemplar também o controle de acesso dos usuários (partes interessadas nos processos) de acordo com os papéis definidos nos modelos do processo de negócio.
+O modelo criado contempla as seguintes entidades:
 
-Apresente o modelo de dados por meio de um modelo relacional que contemple todos os conceitos e atributos apresentados na modelagem dos processos.
+- **Organizacoes**: representa instituições que utilizam o sistema, armazenando dados como CNPJ, nome, ramo de atuação e informações de contato.
+- **Usuarios**: representa os usuários vinculados a uma organização, contendo dados pessoais, tipo de documento, tipo de usuário e informações de acesso.
+- **Grupos**: representam agrupamentos definidos por uma organização, com nome, tipo e descrição.
+- **GruposDeUsuarios**: entidade associativa responsável por gerenciar os vínculos entre usuários e grupos.
+- **Documentos**: armazena arquivos enviados pelos usuários, com metadados como tipo, dados brutos, data de envio e flag de indexação para IA.
 
-### Modelo ER
+Todos os relacionamentos entre essas entidades foram definidos com base nas necessidades funcionais identificadas durante a modelagem dos processos de negócio. A estrutura permite, por exemplo, controlar o acesso de usuários com base em suas organizações e papéis, além de garantir integridade nas associações entre documentos, usuários e grupos.
 
-O Modelo ER representa, por meio de um diagrama, como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
+O modelo ER foi desenvolvido com foco em proporcionar uma base de dados relacional robusta, normalizada e capaz de atender às operações fundamentais da aplicação, incluindo cadastro, consulta, atualização e exclusão dos registros, além de permitir futuras expansões com novas funcionalidades.
 
-> **Links úteis**:
-> - [Como fazer um diagrama entidade relacionamento](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+![Diagrama de Entidade e relacionamento (pé de galinha)](images/Pé%20de%20galinha.png)
 
 ### Esquema relacional
 
@@ -159,13 +175,32 @@ Explique como a hospedagem e o lançamento da plataforma foram realizados.
 
 ## Qualidade de software
 
-Conceituar qualidade é uma tarefa complexa, mas ela pode ser vista como um método gerencial que, por meio de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+Para garantir a entrega de um produto de software que atenda às expectativas dos usuários e stakeholders, a equipe adotou como base algumas subcaracterísticas da norma ISO/IEC 25010. A escolha foi feita com foco na simplicidade, usabilidade e robustez do sistema.
 
-No contexto do desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem atendidas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, esse nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+### 🔹 Subcaracterísticas escolhidas e justificativas
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software. Com base nessas características e nas respectivas subcaracterísticas, identifique as subcaracterísticas que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software, considerando alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão à equipe avaliar os objetos de interesse.
+1. **Usabilidade → Apreensibilidade**
+   - Justificativa: O sistema será utilizado por diferentes tipos de usuários, com variados níveis de familiaridade com tecnologia. É essencial que a interface seja simples e intuitiva.
+   - Métrica: Aplicar teste de usabilidade com usuários reais e medir tempo médio até completar uma tarefa.
 
-> **Links úteis**:
-> - [ISO/IEC 25010:2011 - Systems and Software Engineering — Systems and Software Quality Requirements and Evaluation (SQuaRE) — System and Software Quality Models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de software - Engenharia de Software](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209)
+2. **Confiabilidade → Maturidade**
+   - Justificativa: O sistema deve operar corretamente sem falhas frequentes, garantindo estabilidade durante o uso.
+   - Métrica: Número de erros reportados por semana durante os testes ou após o deploy.
+
+3. **Eficiência de Desempenho → Tempo de resposta**
+   - Justificativa: A aplicação precisa responder rapidamente a comandos e carregamento de dados, evitando frustração dos usuários.
+   - Métrica: Tempo médio de resposta medido com ferramentas como Postman ou Google Lighthouse.
+
+4. **Segurança → Confidencialidade**
+   - Justificativa: O sistema manipula dados sensíveis (como CPF, documentos e senhas), por isso deve garantir que essas informações estejam protegidas.
+   - Métrica: Verificação da existência de criptografia, autenticação por senha e controle de acesso por tipo de usuário.
+
+5. **Manutenibilidade → Modularidade**
+   - Justificativa: Para facilitar correções e atualizações futuras, o sistema deve ser construído de forma modular, separando responsabilidades entre componentes.
+   - Métrica: Quantidade média de classes por módulo; avaliação da independência entre módulos via análise de dependência.
+
+---
+
+### 📝 Conclusão
+
+A adoção dessas subcaracterísticas ajudará a guiar o desenvolvimento do sistema com foco em qualidade desde as etapas iniciais. As métricas propostas serão aplicadas ao longo do projeto como forma de garantir que os padrões desejados estejam sendo atingidos.
