@@ -1,6 +1,5 @@
 # Registro de testes de usabilidade
 
-**Pré-requisitos**: [Projeto de interface](04-Projeto-interface.md), [Plano de testes de usabilidade](08-Plano-testes-usabilidade.md)
 
 Este documento apresenta o relatório e as evidências obtidas a partir da execução do plano de testes de usabilidade. As análises e os relatos dos usuários participantes estão registrados a seguir, conforme os cenários definidos.
 
