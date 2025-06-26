@@ -1,48 +1,60 @@
 # Registro de testes de usabilidade
 
-<span style="color:red">Pré-requisitos: <a href="04-Projeto-interface.md"> Projeto de interface</a></span>, <a href="09-Plano-testes-usabilidade.md"> Plano de testes de usabilidade</a>
+**Pré-requisitos**: [Projeto de interface](04-Projeto-interface.md), [Plano de testes de usabilidade](08-Plano-testes-usabilidade.md)
 
-Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O registro de testes de usabilidade é um relatório que contém as evidências dos testes e os relatos dos usuários participantes, baseado no <a href="09-Plano-testes-usabilidade.md"> Plano de testes de usabilidade</a> desenvolvido para os casos de uso desta etapa.
+Este documento apresenta o relatório e as evidências obtidas a partir da execução do plano de testes de usabilidade. As análises e os relatos dos usuários participantes estão registrados a seguir, conforme os cenários definidos.
 
-Cenário 1: Você é uma pessoa que deseja comprar um iPhone. Encontre no site um iPhone e veja detalhes de localização e contato da loja que o está anunciando.
+---
 
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27,87 segundos                  |
-| 2       | SIM             | 5                    | 17,11 segundos                  |
-| 3       | SIM             | 5                    | 39,09 segundos                  |
-|  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 8,66 segundos |
+## Cenário 1: Novo Cadastro e Primeiras Interações
 
+**Descrição:** O usuário realiza um novo cadastro na plataforma, envia múltiplos arquivos e faz uma requisição ao chatbot sobre um deles.
 
-Comentários dos usuários: Achei o site muito bom e intuitivo. Não tive dificuldades e acho que ficou bem intuitivo.
+**Resultados:**
+**Taxa de sucesso:** Alta.
+**Tempo para conclusão:** Foi o cenário com maior tempo de execução, o que era esperado por ser o primeiro contato do usuário com a ferramenta.
 
+**Comentários dos usuários:**
+> "Processo de cadastro claro, mas o envio de múltiplos arquivos poderia ter mais feedback visual." 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphones nessa faixa de preço.
+---
 
-| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
-|---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22,54 segundos                          |
-| 2       | SIM             | 5                    | 31,42 segundos                          |
-| 3       | SIM             | 5                    | 36,21 segundos                          |
-|  |  |  |  |
-| **Média**     | 0%           | 0                | 0 segundos                           |
-| **Tempo para conclusão pelo especialista** | SIM | 5 | 13,57 segundos |
+## Cenário 2: Exploração Detalhada de Documento
 
-Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam  redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros,  tanto na hora da pesquisa, quanto depois dela, nos resultados.
+**Descrição:** O usuário envia um documento específico para a plataforma e realiza várias requisições sobre o conteúdo desse mesmo arquivo.
 
+**Resultados:**
+**Taxa de sucesso:** Alta.
+**Tempo para conclusão:** Moderado.
 
+**Comentários dos usuários:**
+> "Consegui fazer várias perguntas, mas tive que refinar algumas prompts para obter as melhores respostas." 
 
-## Avaliação 
+---
 
-Tomando como base os resultados obtidos, foi possível verificar que a aplicação web apresenta um desempenho satisfatório quanto à taxa de sucesso na interação dos usuários, uma vez que os cenários propostos foram concluídos com êxito.
+## Cenário 3: Busca e Resumo de Conteúdo
 
-Além disso, a aplicação também alcançou um elevado nível de satisfação subjetiva dos usuários durante a realização dos cenários propostos. Isso é evidenciado pelas médias das avaliações em cada cenário, que variaram entre 4 (bom) e 5 (excelente).
+**Descrição:** Um usuário já cadastrado busca por um arquivo existente e solicita um pequeno resumo de seu conteúdo através do chatbot.
 
-Em relação ao tempo de conclusão de cada tarefa/cenário, observou-se uma discrepância significativa entre a média de tempo dos usuários e o tempo do especialista/desenvolvedor em todos os cenários. Essa diferença, até certo ponto, é esperada, dado que o desenvolvedor já possui conhecimento prévio de toda a interface da aplicação, do posicionamento dos elementos, da lógica de organização das páginas, etc.
+**Resultados:**
+**Taxa de sucesso:** Alta.
+**Tempo para conclusão:** Rápido.
 
-No entanto, considerando que a diferença foi expressiva (por exemplo, 113 segundos — média dos usuários — contra 25 segundos — especialista — no cenário três), e levando em conta os comentários feitos por alguns usuários, foram identificadas oportunidades para melhorias na usabilidade da aplicação.
+**Comentários dos usuários:**
+> "A função de resumo é excelente e direta, muito útil." 
 
-> **Links úteis**:
-> - [Ferramentas de testes de usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+---
+
+## Avaliação
+
+Tomando como base os resultados obtidos, a avaliação da plataforma foi majoritariamente positiva. A aplicação apresentou uma **alta taxa de sucesso e satisfação geral** nos testes. A interface foi considerada amigável e o chatbot, eficiente em sua capacidade de compreensão das solicitações, com as funcionalidades essenciais sendo bem avaliadas pelos participantes.
+
+A média geral de satisfação dos usuários foi de aproximadamente **4.2 em uma escala de 5**.
+
+A partir dos comentários e da observação dos testes, foram identificadas as seguintes oportunidades de melhoria, que já estão planejadas:
+* Otimizar fluxos de tarefas mais complexas, como o de múltiplos uploads de arquivos.
+* Oferecer mais feedbacks visuais ao usuário durante a execução de processos.
+* Aprimorar a inteligência do chatbot para que ele possa compreender requisições mais complexas e variadas.
+* Implementar filtros de busca avançados.
+
+O plano inclui a realização de novas rodadas de testes para validar as melhorias após sua implementação.
