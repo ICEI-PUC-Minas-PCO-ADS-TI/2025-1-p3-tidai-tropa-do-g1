@@ -7,21 +7,21 @@ A arquitetura da CrowsIA descreve sua estrutura robusta e moderna, incluindo seu
 A CrowsIA é dividida em Front-end e Back-end, que se comunicam para gerenciar dados e a IA.
 
  **Front-end:**
-    * **Função:** Interage com o usuário, enviando requisições e recebendo respostas.
-    * **Tecnologias:** Utiliza HTML, CSS, JavaScript (JS) e React, focando em uma interface responsiva e intuitiva.
+     **Função:** Interage com o usuário, enviando requisições e recebendo respostas.
+     **Tecnologias:** Utiliza HTML, CSS, JavaScript (JS) e React, focando em uma interface responsiva e intuitiva.
 
  **Back-end:**
-    * **Função:** Processa a lógica de negócio, dados e a Inteligência Artificial (IA).
-    * **Estrutura:** Consiste em dois módulos:
+     **Função:** Processa a lógica de negócio, dados e a Inteligência Artificial (IA).
+     **Estrutura:** Consiste em dois módulos:
         * **Principal:** Desenvolvido em C#, para dados estruturados (como usuários e permissões).
         * **Complementar (IA/Documentos):** Desenvolvido em Python, otimizado para documentos, IA e Processamento de Linguagem Natural (PNL).
-    * **Tecnologias:** Inclui Node.js, Python e C#.
+     **Tecnologias:** Inclui Node.js, Python e C#.
 
  **Banco de Dados (SGBD):**
-    * **Tecnologias:** MySQL e PostgreSQL. São utilizados para armazenar dados estruturados e otimizados para consultas da IA/PNL.
+     **Tecnologias:** MySQL e PostgreSQL. São utilizados para armazenar dados estruturados e otimizados para consultas da IA/PNL.
 
  **Hospedagem (Deploy):**
-    * **Tecnologia:** A hospedagem da aplicação é realizada na Vercel.
+     **Tecnologia:** A hospedagem da aplicação é realizada na Vercel.
 
 Essa arquitetura permite a escalabilidade da plataforma e a adaptabilidade da IA para diferentes setores.
 
