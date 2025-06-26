@@ -31,7 +31,8 @@ Este documento detalha os resultados da execução dos testes definidos no Plano
 | CT03        | Login com senha incorreta     | Mensagem de erro exibida                       | Obtido com sucesso           | Aprovado   | Validação realizada após 3 tentativas erradas    |
 | CT04        | E-mail inválido no cadastro   | Bloqueio por formato inválido                  | Obtido com sucesso           | Aprovado   | Verificado com diferentes padrões inválidos       |
 
-📁 **Evidências:** [Drive - CT01 a CT04](http://exemplo.com/evidencias)
+📁 **Evidências:** 
+![Login](images/Login.jpg)
 
 ---
 
@@ -42,7 +43,8 @@ Este documento detalha os resultados da execução dos testes definidos no Plano
 | CT05        | Cadastro de documento          | Documento salvo com sucesso               | Obtido com sucesso | Aprovado   | Testado com arquivos .pdf e .docx            |
 | CT06        | Usuário não logado             | Acesso bloqueado                          | Obtido com sucesso | Aprovado   | Sistema redireciona corretamente ao login    |
 
-📁 **Evidências:** [Drive - CT05 a CT06](http://exemplo.com/evidencias)
+📁 **Evidências:** 
+![ADicionando documentos](images/AdicionarArquivo.jpg)
 
 ---
 
@@ -53,7 +55,8 @@ Este documento detalha os resultados da execução dos testes definidos no Plano
 | CT07        | Resposta do chatbot com um documento enviado   | Resposta coerente com o conteúdo                         | Obtido com sucesso | Aprovado   | -                                              |
 | CT08        | Resposta com múltiplos documentos cadastrados  | Resposta integrada e adequada com as fontes envolvidas   | Obtido com sucesso | Aprovado   | IA priorizou os documentos mais recentes       |
 
-📁 **Evidências:** [Drive - CT07 a CT08](http://exemplo.com/evidencias)
+📁 **Evidências:**
+![Chatbot](images/ChatTeste.jpg)
 
 ---
 
