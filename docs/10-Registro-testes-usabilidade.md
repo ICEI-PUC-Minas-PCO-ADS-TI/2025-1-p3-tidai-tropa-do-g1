@@ -15,7 +15,7 @@ Este documento apresenta o relatório e as evidências obtidas a partir da execu
 **Tempo para conclusão:** Foi o cenário com maior tempo de execução, o que era esperado por ser o primeiro contato do usuário com a ferramenta.
 
 **Comentários dos usuários:**
-> "Processo de cadastro claro, mas o envio de múltiplos arquivos poderia ter mais feedback visual." 
+> "Processo de cadastro claro, mas o envio de vários arquivos poderia ter mais feedback visual." 
 
 ---
 
@@ -28,7 +28,7 @@ Este documento apresenta o relatório e as evidências obtidas a partir da execu
 **Tempo para conclusão:** Moderado.
 
 **Comentários dos usuários:**
-> "Consegui fazer várias perguntas, mas tive que refinar algumas prompts para obter as melhores respostas." 
+> "Consegui fazer várias perguntas, mas tive que melhorar alguns comandos para obter as melhores respostas." 
 
 ---
 
