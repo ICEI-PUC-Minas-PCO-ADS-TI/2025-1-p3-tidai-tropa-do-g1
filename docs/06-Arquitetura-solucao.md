@@ -145,7 +145,10 @@ Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](.
 | Host           | Azure                   |
 | Containerização| Docker                  |
 | Serviços Web / APIs| A comunicação entre o Front-end e o Back-end é realizada através de uma Rest API|
-| IDE            | Visual Studio Code
+| IDE            | Visual Studio Code 
+
+![WhatsApp Image 2025-06-25 at 22 41 46](https://github.com/user-attachments/assets/39522e86-edb8-4393-80e7-854b5522b670)
+
 
 
 ## Hospedagem
