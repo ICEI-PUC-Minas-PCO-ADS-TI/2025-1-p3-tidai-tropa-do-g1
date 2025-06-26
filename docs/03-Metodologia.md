@@ -111,10 +111,10 @@ Atualizado em: 21/05/2025
 
 | Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
 | :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
-| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | 📝     |                  |
-| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | 📝     |                  |
-| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | 📝     |                  |
-| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | 📝     |                  |
+| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
+| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
+| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ✔️     | 20/06/2025       |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ✔️     |                  |
 | Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | 📝     |                  |
 | Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | 📝     |                  |
 | Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | 📝     |                  |
@@ -125,7 +125,7 @@ Atualizado em: 18/05/2025
 
 | Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
 | :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
-| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | ⌛     |                  |
+| Igor Pereira      | Integração Front com o back                            | 08/05/2025     | 13/05/2025 | ✔️    |  23/06/2025      |
 | Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ⌛     |                  |
 | Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ⌛     |                  |
 | Luis Sampaio      | Cadastro                                               | 09/05/2025     | 14/05/2025 | ⌛     |                  |
