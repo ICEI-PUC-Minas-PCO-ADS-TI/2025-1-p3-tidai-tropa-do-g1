@@ -4,8 +4,6 @@
 
 A arquitetura da CrowsIA descreve sua estrutura robusta e moderna, incluindo seus componentes e o ambiente de hospedagem.
 
-**Arquitetura da Solução**
-
 A CrowsIA é dividida em Front-end e Back-end, que se comunicam para gerenciar dados e a IA.
 
  **Front-end:**
