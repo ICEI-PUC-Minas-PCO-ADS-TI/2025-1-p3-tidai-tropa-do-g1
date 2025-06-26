@@ -13,8 +13,8 @@ A CrowsIA é dividida em Front-end e Back-end, que se comunicam para gerenciar d
  **Back-end:**
      **Função:** Processa a lógica de negócio, dados e a Inteligência Artificial (IA).
      **Estrutura:** Consiste em dois módulos:
-        * **Principal:** Desenvolvido em C#, para dados estruturados (como usuários e permissões).
-        * **Complementar (IA/Documentos):** Desenvolvido em Python, otimizado para documentos, IA e Processamento de Linguagem Natural (PNL).
+         **Principal:** Desenvolvido em C#, para dados estruturados (como usuários e permissões).
+         **Complementar (IA/Documentos):** Desenvolvido em Python, otimizado para documentos, IA e Processamento de Linguagem Natural (PNL).
      **Tecnologias:** Inclui Node.js, Python e C#.
 
  **Banco de Dados (SGBD):**
