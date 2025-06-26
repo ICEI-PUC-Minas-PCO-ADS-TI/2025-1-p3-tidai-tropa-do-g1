@@ -91,9 +91,8 @@ Serão aplicados para observar aspectos de usabilidade, resposta da interface e 
 
 | ID   | Descrição                                 | Entrada                              | Resultado Esperado                         |
 |------|--------------------------------------------|--------------------------------------|--------------------------------------------|
-| NF04 | Proteção das credenciais do usuário        | Processo de cadastro                 | Senhas são armazenadas de forma criptografada |
-| NF05 | Prevenção contra tentativas de acesso malicioso | Diversas entradas incorretas no login | Conta é bloqueada temporariamente após tentativas excessivas |
-| NF06 | Tempo de resposta da IA deve ser menor que 6 segundos | Mensagem/Pergunta (Consulta) | O Chat responde rapidamente |
+| NF04 | Prevenção contra tentativas de acesso malicioso | Diversas entradas incorretas no login | Conta é bloqueada temporariamente após tentativas excessivas |
+| NF05 | Tempo de resposta da IA deve ser menor que 6 segundos | Mensagem/Pergunta (Consulta) | O Chat responde rapidamente |
 ---
 
 ## 8. Relatório de Resultados
