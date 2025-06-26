@@ -114,7 +114,7 @@ Atualizado em: 21/05/2025
 | Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
 | Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
 | Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ✔️     | 20/06/2025       |
-| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ✔️     |                  |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ✔️     | 20/06/2025       |
 | Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | 📝     |                  |
 | Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | 📝     |                  |
 | Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | 📝     |                  |
