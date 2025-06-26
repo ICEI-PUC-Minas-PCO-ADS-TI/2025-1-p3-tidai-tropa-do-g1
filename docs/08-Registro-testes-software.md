@@ -6,7 +6,7 @@ Este documento detalha os resultados da execução dos testes definidos no Plano
 
 ## **Informações Gerais do Ciclo de Teste**
 
-- **Crows Inteligência Ampliada **  
+ ***Crows Inteligência Ampliada***  
 - **Data de Execução:** 23/06/2025  
 - **Responsável pela Execução:** Igor Maia, Victor Schneider 
 
