@@ -1,6 +1,5 @@
 # Plano de testes de usabilidade
 
-<span style="color:red">Pré-requisitos: <a href="04-Projeto-interface.md"> Projeto de interface</a></span>, <a href="07-Plano-testes-software.md"> Plano de testes de software</a>
 
 O objetivo do Plano de Testes de Usabilidade foi avaliar a qualidade e a experiência do usuário ao interagir com a interface da plataforma CrowsIA. O foco foi entender se as funcionalidades essenciais são intuitivas e se a plataforma atende às expectativas do público-alvo.
 
