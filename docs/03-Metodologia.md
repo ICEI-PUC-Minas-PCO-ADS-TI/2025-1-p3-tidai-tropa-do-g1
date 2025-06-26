@@ -111,13 +111,12 @@ Atualizado em: 21/05/2025
 
 | Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
 | :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
-| Igor Pereira      | Login                                                  | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
-| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ✔️     | 20/06/2025       |
-| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ✔️     | 20/06/2025       |
-| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ✔️     | 20/06/2025       |
-| Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | 📝     |                  |
-| Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | 📝     |                  |
-| Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | 📝     |                  |
+| Igor Pereira      | Login                                                  | 08/05/2025     | 20/05/2025 | ✔️     | 20/06/2025       |
+| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 21/05/2025 | ✔️     | 20/06/2025       |
+| Luis Sampaio      | Home                                                   | 09/05/2025     | 21/05/2025 | ✔️     | 20/06/2025       |
+| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 20/05/2025 | ✔️     | 20/06/2025       |
+| Igor Maia         | Configurações, alteração de senha.                     | 10/05/2025     | 20/05/2025 | ✔️     | 20/06/2025       |
+
 
 #### Sprint 4
 
@@ -125,14 +124,12 @@ Atualizado em: 18/05/2025
 
 | Responsável       | Tela                            | Iniciado em    | Prazo      | Status | Terminado em    |
 | :---------------- | :------------------------------ | :------------: | :--------: | :----: | :--------------: |
-| Igor Pereira      | Integração Front com o back                            | 08/05/2025     | 13/05/2025 | ✔️    |  23/06/2025      |
-| Thiago Moreira    | Desenvolvimento da API do banco                        | 08/05/2025     | 13/05/2025 | ⌛     |                  |
-| Luis Sampaio      | Home                                                   | 09/05/2025     | 14/05/2025 | ⌛     |                  |
-| Luis Sampaio      | Cadastro                                               | 09/05/2025     | 14/05/2025 | ⌛     |                  |
-| Victor Schneider  | Desenvolvimento da implementação com IA                | 09/05/2025     | 16/05/2025 | ⌛     |                  |
-| Igor Maia         | Configurações                                          | 10/05/2025     | 17/05/2025 | ⌛     |                  |
-| Thiago Moreira    | Configurações de grupos                                | 13/05/2025     | 20/05/2025 | ⌛     |                  |
-| Victor Schneider  | Configurações de usuários                              | 13/05/2025     | 20/05/2025 | ⌛     |                  |
+| Igor Pereira      | Integração Front com o back (login e cadastro da organização)  | 09/05/2025     | 22/05/2025 | ✔️    |  22/06/2025      |
+| Thiago Moreira    | Desenvolvimento da API do banco (pequenos ajustes no cors)     | 08/05/2025     | 22/05/2025 | ✔️    |  22/06/2025      |
+| Luis Sampaio      | Cadastro                                                       | 10/05/2025     | 22/05/2025 | ✔️    |  22/06/2025      |
+| Victor Schneider  | Testes de comunicação da IA com o banco de dados               | 10/05/2025     | 22/05/2025 | ✔️    |  22/06/2025      |
+| Igor Maia         | Integração Front com o back (login e cadastro da organização)  | 10/05/2025     | 22/05/2025 | ✔️    |  22/06/2025      |
+
 
 #### Sprint 5
 
