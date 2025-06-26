@@ -8,9 +8,9 @@
 
 Visando averiguar a qualidade da experiência, foram definidos os seguintes indicadores de avaliação:
 
-* [cite_start]**Taxa de sucesso**: Mede se o usuário conseguiu executar a tarefa proposta com êxito.
-* [cite_start]**Satisfação subjetiva**: Avalia como o usuário classifica a experiência com o sistema em uma escala de 1 a 5, sendo 1 "Péssimo" e 5 "Ótimo".
-* [cite_start]**Tempo para conclusão da tarefa**: Compara o tempo em segundos que o usuário levou para executar a tarefa em relação ao tempo de um especialista (desenvolvedor).
+**Taxa de sucesso**: Mede se o usuário conseguiu executar a tarefa proposta com êxito.
+**Satisfação subjetiva**: Avalia como o usuário classifica a experiência com o sistema em uma escala de 1 a 5, sendo 1 "Péssimo" e 5 "Ótimo".
+**Tempo para conclusão da tarefa**: Compara o tempo em segundos que o usuário levou para executar a tarefa em relação ao tempo de um especialista (desenvolvedor).
 
 [cite_start]As ferramentas utilizadas para a condução e registro dos testes foram um navegador de internet para acesso à plataforma  [cite_start]e um software de gravação de tela, como o OBS Studio, para registrar a interação do usuário durante os cenários propostos.
 
