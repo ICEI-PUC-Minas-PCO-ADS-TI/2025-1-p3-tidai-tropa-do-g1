@@ -50,7 +50,7 @@ Durante o desenvolvimento do projeto, a seguinte divisão de papéis foi estabel
 #### Sprint 3
 - _Scrum master_: Thiago Moreira.
 - Desenvolvedor _front-end_: Victor Schneider, Luis Sampaio, Igor Pereira.
-- Desenvolvedor _back-end_: Igor Maia, Luis Sampaio, Victor Schneider.
+- Desenvolvedor _back-end_: Igor Maia, Luis Sampaio, Victor Schneider, Igor Pereira.
 - Testes: Igor Pereira, Thiago Moreira, Igor Maia, Luis Sampaio, Victor Schneider.
 
 #### Sprint 4
