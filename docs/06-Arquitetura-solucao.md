@@ -2,9 +2,30 @@
 
 <span style="color:red">Pré-requisitos: <a href="04-Projeto-interface.md"> Projeto de interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+A arquitetura da CrowsIA descreve sua estrutura robusta e moderna, incluindo seus componentes e o ambiente de hospedagem.
 
-![Arquitetura da Solução](images/arquitetura.png)
+**Arquitetura da Solução**
+
+A CrowsIA é dividida em Front-end e Back-end, que se comunicam para gerenciar dados e a IA.
+
+ **Front-end:**
+    * **Função:** Interage com o usuário, enviando requisições e recebendo respostas.
+    * **Tecnologias:** Utiliza HTML, CSS, JavaScript (JS) e React, focando em uma interface responsiva e intuitiva.
+
+ **Back-end:**
+    * **Função:** Processa a lógica de negócio, dados e a Inteligência Artificial (IA).
+    * **Estrutura:** Consiste em dois módulos:
+        * **Principal:** Desenvolvido em C#, para dados estruturados (como usuários e permissões).
+        * **Complementar (IA/Documentos):** Desenvolvido em Python, otimizado para documentos, IA e Processamento de Linguagem Natural (PNL).
+    * **Tecnologias:** Inclui Node.js, Python e C#.
+
+ **Banco de Dados (SGBD):**
+    * **Tecnologias:** MySQL e PostgreSQL. São utilizados para armazenar dados estruturados e otimizados para consultas da IA/PNL.
+
+ **Hospedagem (Deploy):**
+    * **Tecnologia:** A hospedagem da aplicação é realizada na Vercel.
+
+Essa arquitetura permite a escalabilidade da plataforma e a adaptabilidade da IA para diferentes setores.
 
 ## Diagrama de classes
 
@@ -124,6 +145,7 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 | Back-end       | Node.js, Pyhton, C#     |
 | SGBD           | MySQL e postgresql      |
 | Deploy         | Vercel                  |
+| Host           | Azure                   |
 
 
 ## Hospedagem
