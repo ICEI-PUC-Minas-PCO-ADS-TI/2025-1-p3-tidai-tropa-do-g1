@@ -4,7 +4,7 @@
 
 O objetivo do Plano de Testes de Usabilidade foi avaliar a qualidade e a experiência do usuário ao interagir com a interface da plataforma CrowsIA. O foco foi entender se as funcionalidades essenciais são intuitivas e se a plataforma atende às expectativas do público-alvo.
 
-Para a realização dos testes, foram convidados 3 participantes com perfis de usuários relevantes para a aplicação. [cite_start]Os testes foram conduzidos de forma remota, utilizando o método de observação direta com gravação da tela para análise posterior. [cite_start]Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados (LGPD), nenhum dado sensível que permitisse identificar os voluntários foi coletado ou exposto.
+Para a realização dos testes, foram convidados 3 participantes com perfis de usuários relevantes para a aplicação. Os testes foram conduzidos de forma remota, utilizando o método de observação direta com gravação da tela para análise posterior. Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados (LGPD), nenhum dado sensível que permitisse identificar os voluntários foi coletado ou exposto.
 
 Visando averiguar a qualidade da experiência, foram definidos os seguintes indicadores de avaliação:
 
@@ -12,7 +12,7 @@ Visando averiguar a qualidade da experiência, foram definidos os seguintes indi
 **Satisfação subjetiva**: Avalia como o usuário classifica a experiência com o sistema em uma escala de 1 a 5, sendo 1 "Péssimo" e 5 "Ótimo".
 **Tempo para conclusão da tarefa**: Compara o tempo em segundos que o usuário levou para executar a tarefa em relação ao tempo de um especialista (desenvolvedor).
 
-As ferramentas utilizadas para a condução e registro dos testes foram um navegador de internet para acesso à plataforma  [cite_start]e um software de gravação de tela, como o OBS Studio, para registrar a interação do usuário durante os cenários propostos.
+As ferramentas utilizadas para a condução e registro dos testes foram um navegador de internet para acesso à plataforma e um software de gravação de tela, como o OBS Studio, para registrar a interação do usuário durante os cenários propostos.
 
 ## Cenários de teste de usabilidade
 
