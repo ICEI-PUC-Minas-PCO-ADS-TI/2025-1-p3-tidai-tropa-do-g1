@@ -144,6 +144,8 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 | SGBD           | MySQL e postgresql      |
 | Deploy         | Vercel                  |
 | Host           | Azure                   |
+| Containerização| Docker                  |
+| Serviços Web / APIs| A comunicação entre o Front-end e o Back-end é realizada através de uma Rest API|
 
 
 ## Hospedagem
