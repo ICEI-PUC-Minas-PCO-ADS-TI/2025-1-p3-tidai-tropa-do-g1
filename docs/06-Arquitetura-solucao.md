@@ -118,12 +118,12 @@ Descreva qual(is) tecnologias você vai usar para resolver o seu problema, ou se
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
 
-| **Dimensão**   | **Tecnologia**  |
-| ---            | ---             |
+| **Dimensão**   | **Tecnologia**          |
+| ---            | ---                     |
 | Front-end      | HTML + CSS + JS + React |
-| Back-end       | Node.js         |
-| SGBD           | MySQL           |
-| Deploy         | Vercel          |
+| Back-end       | Node.js, Pyhton, C#     |
+| SGBD           | MySQL e postgresql      |
+| Deploy         | Vercel                  |
 
 
 ## Hospedagem
