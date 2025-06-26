@@ -64,22 +64,7 @@ O modelo ER foi desenvolvido com foco em proporcionar uma base de dados relacion
 
 ![Diagrama de Entidade e relacionamento (pé de galinha)](images/Pé%20de%20galinha.png)
 
-### Esquema relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-
-![Exemplo de um modelo relacional](images/modelo_relacional.png "Exemplo de modelo relacional.")
----
-
-> **Links úteis**:
-> - [Criando um modelo relacional - documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/12.0.0?topic=designer-creating-relational-model)
-
 ### Modelo físico
-
-Insira aqui o script de criação das tabelas do banco de dados.
-
-Veja um exemplo:
 
 ```sql
 -- Criação da tabela Organizacoes
